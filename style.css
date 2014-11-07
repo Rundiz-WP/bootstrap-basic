@@ -1,0 +1,53 @@
+/*
+Theme Name: Bootstrap Basic
+Theme URI: 
+Author: Vee Winch
+Author URI: http://okvee.net
+Description: Bootstrap v.3 basic theme for developers to build their new theme very fast and easy.
+Version: 1.0.3.1
+License: MIT
+License URI: http://opensource.org/licenses/MIT
+Text Domain: bootstrap-basic
+Domain Path: /languages/
+Tags: white, gray, light, one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, front-page-post-form, post-formats, threaded-comments, translation-ready
+
+This theme built with Twitter Bootstrap v.3. It is basic theme with basic style for build new theme with Bootstrap.
+
+*/
+
+
+/*
+Required WordPress CSS
+*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.bypostauthor {
+}
+.gallery-caption {
+}
+.sticky {
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}

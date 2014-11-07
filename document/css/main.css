@@ -1,0 +1,102 @@
+/*
+  Author: Vee Winch.
+  Package: Okvee PROJECT_NAME. or known as PROJECT_NAME.
+*/
+
+
+body {
+	padding: 80px 0 0;
+}
+
+
+
+.ancient-browser-alert {
+	background: #820000;
+	color: #F4DEDE;
+	font-size: 13px;
+	padding: 5px;
+	text-align: center;
+}
+.ancient-browser-alert a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+
+
+.brand-logo {
+	background: url('../img/product-thumbnail.png') no-repeat 50% 50%;
+	background-size: contain;
+	height: 50px;
+	margin: 0;
+	text-indent: -999999px;
+	width: 50px;
+}
+.brand-logo a.navbar-brand {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+
+
+.btn-default {
+	background-image: none;
+	filter: none;
+}
+.btn-default:active,
+.btn-default.active {
+	border-color: #adadad;
+}
+
+
+
+.document-main-section {
+	margin-top: 80px;
+}
+.document-main-section h2 {
+	border-bottom: 1px solid #ccc;
+}
+
+
+
+.navbar {
+	background-image: none;
+	filter: none;
+}
+.navbar .container .brand-logo .navbar-brand {
+	margin: 0;
+}
+.navbar .navbar-nav > .active > a {
+	background-color: #e7e7e7;
+}
+
+
+
+.panel-default > .panel-heading {
+	background-image: none;
+	filter: none;
+}
+
+
+
+.the-page-end {
+	margin-bottom: 80px;
+}
+
+
+
+.thumbnail img {
+	height: auto;
+	max-width: 100%;
+}
+
+
+
+#features .list-unstyled > li ul {
+	list-style: none;
+	padding-left: 20px;
+	padding-top: 5px;
+}
+
+

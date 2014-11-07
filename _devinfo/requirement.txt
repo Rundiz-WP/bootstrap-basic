@@ -1,0 +1,6 @@
+PHP 5.3 
+	- Output Buffer "On" or "Limited" but not "Off"
+
+WordPress 3.4
+
+Cross browser: Firefox, Chrome, Opera, Internet Explorer 8-10

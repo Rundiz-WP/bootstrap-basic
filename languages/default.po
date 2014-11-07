@@ -1,0 +1,322 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bootstrap-basic\n"
+"POT-Creation-Date: 2013-11-06 17:36+0700\n"
+"PO-Revision-Date: 2013-11-06 17:37+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: default\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_x;esc_attr_x;esc_html__;"
+"esc_html_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:7
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: ../404.php:11
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: ../404.php:17 ../searchform.php:11 ../inc/template-tags.php:155
+#: ../inc/widgets/BootstrapSearchWidget.php:97
+msgid "Search &hellip;"
+msgstr ""
+
+#: ../404.php:20 ../searchform.php:13 ../inc/template-tags.php:158
+#: ../inc/widgets/BootstrapSearchWidget.php:100
+msgid "Search"
+msgstr ""
+
+#: ../404.php:31
+msgid "Most Used Categories"
+msgstr ""
+
+#: ../404.php:48
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: ../archive.php:34
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: ../archive.php:42
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: ../archive.php:45
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: ../archive.php:48
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: ../archive.php:51
+msgid "Asides"
+msgstr ""
+
+#: ../archive.php:54
+msgid "Images"
+msgstr ""
+
+#: ../archive.php:57
+msgid "Videos"
+msgstr ""
+
+#: ../archive.php:60
+msgid "Quotes"
+msgstr ""
+
+#: ../archive.php:63
+msgid "Links"
+msgstr ""
+
+#: ../archive.php:66
+msgid "Archives"
+msgstr ""
+
+#: ../comments.php:25 ../comments.php:45
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:27 ../comments.php:47
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:28 ../comments.php:48
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:57
+msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:95
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:101
+msgid "Email"
+msgstr ""
+
+#: ../comments.php:107
+msgid "Website"
+msgstr ""
+
+#: ../comments.php:114
+msgid "Comment"
+msgstr ""
+
+#: ../comments.php:120
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+
+#: ../content-aside.php:18 ../content-link.php:30 ../content-page.php:14
+#: ../content-quote.php:18 ../content-single.php:18 ../content.php:27
+msgid "Pages:"
+msgstr ""
+
+#: ../content-aside.php:33 ../content-aside.php:43 ../content-link.php:43
+#: ../content-link.php:53 ../content-quote.php:30 ../content-quote.php:40
+#: ../content-single.php:28 ../content-single.php:31 ../content.php:41
+#: ../content.php:51
+msgid ", "
+msgstr ""
+
+#: ../content-single.php:39
+#, php-format
+msgid ""
+"<span class=\"glyphicon glyphicon-link\"></span> <a href=\"%1$s\" title="
+"\"Permalink to %2$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: ../footer.php:17
+#, php-format
+msgid "Powered by %s"
+msgstr ""
+
+#: ../footer.php:19
+#, php-format
+msgid "Theme: %s"
+msgstr ""
+
+#: ../functions.php:30
+msgid "Primary Menu"
+msgstr ""
+
+#: ../functions.php:54
+msgid "Header right"
+msgstr ""
+
+#: ../functions.php:63
+msgid "Navigation bar right"
+msgstr ""
+
+#: ../functions.php:72
+msgid "Sidebar left"
+msgstr ""
+
+#: ../functions.php:81
+msgid "Sidebar right"
+msgstr ""
+
+#: ../functions.php:90
+msgid "Footer left"
+msgstr ""
+
+#: ../functions.php:99
+msgid "Footer right"
+msgstr ""
+
+#: ../header.php:58
+msgid "Skip to content"
+msgstr ""
+
+#: ../header.php:74
+msgid "Toggle navigation"
+msgstr ""
+
+#: ../image.php:24
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
+"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
+"rel=\"gallery\">%8$s</a>"
+msgstr ""
+
+#: ../image.php:42
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr ""
+
+#: ../image.php:43
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../no-results.php:10
+msgid "Nothing Found"
+msgstr ""
+
+#: ../no-results.php:15
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../no-results.php:17
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../no-results.php:20
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../search.php:20
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../searchform.php:11 ../inc/widgets/BootstrapSearchWidget.php:97
+msgid "Search for:"
+msgstr ""
+
+#: ../inc/extras.php:122
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../inc/template-tags.php:17
+msgid "Posted in"
+msgstr ""
+
+#: ../inc/template-tags.php:40
+msgid "Pingback:"
+msgstr ""
+
+#: ../inc/template-tags.php:42 ../inc/template-tags.php:83
+#: ../inc/template-tags.php:141
+msgid "Edit"
+msgstr ""
+
+#: ../inc/template-tags.php:76
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../inc/template-tags.php:90
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../inc/template-tags.php:95
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:107
+msgid "Reply"
+msgstr ""
+
+#: ../inc/template-tags.php:108
+msgid "Log in to Reply"
+msgstr ""
+
+#: ../inc/template-tags.php:191
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:260
+#, php-format
+msgid ""
+"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
+"%2$s</span>"
+msgstr ""
+
+#: ../inc/template-tags.php:268
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: ../inc/template-tags.php:283
+msgid "Tagged"
+msgstr ""
+
+#: ../inc/widgets/BootstrapSearchWidget.php:20
+msgid "Bootstrap Navbar Search"
+msgstr ""
+
+#: ../inc/widgets/BootstrapSearchWidget.php:21
+msgid "Display Search widget for Bootstrap navbar."
+msgstr ""
+
+#: ../inc/widgets/BootstrapSearchWidget.php:43
+msgid "Form alignment:"
+msgstr ""
+
+#: ../inc/widgets/BootstrapSearchWidget.php:45
+msgid "Left"
+msgstr ""
+
+#: ../inc/widgets/BootstrapSearchWidget.php:46
+msgid "Right"
+msgstr ""
