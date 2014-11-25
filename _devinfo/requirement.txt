@@ -3,4 +3,4 @@ PHP 5.3
 
 WordPress 3.4
 
-Cross browser: Firefox, Chrome, Opera, Internet Explorer 8-10
+Cross browser: Firefox, Chrome, Opera, Internet Explorer 9-10
