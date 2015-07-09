@@ -146,6 +146,17 @@ add_action('wp_enqueue_scripts', 'bootstrapBasicEnqueueScripts');
 
 
 /**
+ * admin page displaying help.
+ */
+if (is_admin()) {
+	require get_template_directory() . '/inc/BootstrapBasicAdminHelp.php';
+	$bbsc_adminhelp = new BootstrapBasicAdminHelp();
+	add_action('admin_menu', [$bbsc_adminhelp, 'themeHelpMenu']);
+	unset($bbsc_adminhelp);
+}
+
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';

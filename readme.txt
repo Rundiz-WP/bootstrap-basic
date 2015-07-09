@@ -24,6 +24,14 @@ Bootstrap v.3 basic theme. For build new theme based on Bootstrap.
 
 ==More feature==
 
-This theme can use all Bootstrap classes and element style, example: for responsive image please add img-responsive class to image element.
-However there is some more feature here such as responsive video.
-To do responsive video: Cloak video element (video element or embeded video) with <div class="flexvideo">...your video...</div>
+WordPress Menu
+To display menu correctly, please create at least 1 menu and set as primary and save.
+
+Bootstrap features
+This theme can use all Bootstrap classes, elements and styles.
+
+Responsive image
+For responsive image please add img-responsive class to img element.
+
+Responsive video
+Cloak video element (video element or embeded video) with <div class="flexvideo">...your video...</div>.
