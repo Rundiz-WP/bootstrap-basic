@@ -151,7 +151,7 @@ add_action('wp_enqueue_scripts', 'bootstrapBasicEnqueueScripts');
 if (is_admin()) {
 	require get_template_directory() . '/inc/BootstrapBasicAdminHelp.php';
 	$bbsc_adminhelp = new BootstrapBasicAdminHelp();
-	add_action('admin_menu', [$bbsc_adminhelp, 'themeHelpMenu']);
+	add_action('admin_menu', array($bbsc_adminhelp, 'themeHelpMenu'));
 	unset($bbsc_adminhelp);
 }
 
