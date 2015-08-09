@@ -126,10 +126,8 @@ if (post_password_required()) {
 	/**
 	 * WordPress comment form does not support action/filter form and input submit elements. Rewrite these code when there is support available.
 	 * @todo Change form class modification to use WordPress hook action/filter when it's available.
-	 * @todo Change input submit class modification to use WordPress hook action/filter when it's available.
 	 */
 	$comment_form = str_replace('class="comment-form', 'class="comment-form form form-horizontal', ob_get_clean());
-	$comment_form = preg_replace('#(<input\b[^>]*\s)(type="submit")#i', '$1 type="submit" class="btn btn-primary"', $comment_form);
 	echo $comment_form;
 	
 	unset($comment_allowed_tags, $comment_form);
