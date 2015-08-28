@@ -1,2 +1,15 @@
 
-
+* icon sizes upload. sizes available right now: 
+	favicon.ico: [16x16, 32x32, 48x48, 64x64] multiple sizes in one file.
+	favicon-**x**.png: 16x16, 32x32
+	android-touch-icon-**x**.png: 36x36, 48x48, 72x72, 96x96, 144x144, 192x192
+	apple-touch-icon-**x**.png: 60x60, 76x76, 120x120, 152x152, 180x180
+	microsoft tile picture *.png: 144x144
+(reference: 
+	http://stackoverflow.com/questions/2268204/favicon-dimensions#answer-23734416
+	https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
+	https://developer.chrome.com/multidevice/android/installtohomescreen
+	http://blogs.msdn.com/b/ie/archive/2012/06/08/high-quality-visuals-for-pinned-sites-in-windows-8.aspx
+	https://en.wikipedia.org/wiki/Favicon
+	https://mathiasbynens.be/notes/touch-icons
+).
