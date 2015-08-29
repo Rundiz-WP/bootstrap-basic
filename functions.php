@@ -34,6 +34,10 @@ if (!function_exists('bootstrapBasicSetup')) {
 		// enable support for post thumbnail or feature image on posts and pages
 		add_theme_support('post-thumbnails');
 
+		// allow the use of html5 markup
+		// @link https://codex.wordpress.org/Theme_Markup
+		add_theme_support('html5', array('caption', 'comment-form', 'comment-list', 'gallery', 'search-form'));
+
 		// add support menu
 		register_nav_menus(array(
 			'primary' => __('Primary Menu', 'bootstrap-basic'),
