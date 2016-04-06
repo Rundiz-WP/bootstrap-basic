@@ -1,0 +1,13 @@
+/*
+This file is for fix things that Bootstrap ignore it and not release the fixes.
+*/
+
+
+/* 
+abbr use border-bottom or double lines of dots
+https://github.com/twbs/bootstrap/issues/16574
+*/
+abbr[title], acronym[title] {
+	border-bottom: none;
+}
+

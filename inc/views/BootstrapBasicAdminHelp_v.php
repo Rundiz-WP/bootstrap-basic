@@ -1,5 +1,5 @@
 <div class="wrap">
-	<h2>Theme help</h2>
+	<h2>Bootstrap Basic help</h2>
 
 	<h3>Menu</h3>
 	<p>To display menu correctly, please create at least 1 menu and set as primary and save.</p>
@@ -15,5 +15,5 @@
 
 	<?php do_action('bootstrapbasic_theme_help_content'); ?>
 	
-	<p style="margin-top: 20px;"><span style="font-size: 1.2rem;">&#128147;</span> If my theme can safe your life, your jobs, your projects please <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9HQE4GVV4KTZE" target="donations_link">buy me some foods</a>.</p>
+	<p style="margin-top: 20px;"><span style="font-size: 1.2rem;">&#128147;</span> If my theme can help you, your jobs, your projects please <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9HQE4GVV4KTZE" target="donations_link">buy me some foods</a>.</p>
 </div>

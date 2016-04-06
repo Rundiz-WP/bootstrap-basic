@@ -7,7 +7,7 @@ if (!class_exists('BootstrapBasicAdminHelp')) {
 
 		public function themeHelpMenu()
 		{
-			add_theme_page(__('Theme help', 'bootstrap-basic'), __('Theme help', 'bootstrap-basic'), 'edit_posts', 'theme_help', array($this, 'themeHelpPage'));
+			add_theme_page(__('Bootstrap Basic help', 'bootstrap-basic'), __('Bootstrap Basic help', 'bootstrap-basic'), 'edit_posts', 'theme_help', array($this, 'themeHelpPage'));
 		}// themeHelpMenu
 
 

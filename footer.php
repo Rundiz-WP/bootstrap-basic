@@ -16,7 +16,7 @@
 						if (!dynamic_sidebar('footer-left')) {
 							printf(__('Powered by %s', 'bootstrap-basic'), 'WordPress');
 							echo ' | ';
-							printf(__('Theme: %s', 'bootstrap-basic'), '<a href="http://okvee.net">Bootstrap Basic</a>');
+							printf(__('Theme: %s', 'bootstrap-basic'), '<a href="http://rundiz.com">Bootstrap Basic</a>');
 						} 
 						?> 
 					</div>
