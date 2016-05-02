@@ -13,15 +13,15 @@ img.aligncenter {
 
 
 
-/* chromeframe error */
-.chromeframe {
+/* ancient-browser-alert error */
+.ancient-browser-alert {
 	background: #a00;
 	color: #faa;
 	display: block;
 	padding: 3px 0;
 	text-align: center;
 }
-.chromeframe a {
+.ancient-browser-alert a {
 	color: #fff;
 	text-decoration: underline;
 }
