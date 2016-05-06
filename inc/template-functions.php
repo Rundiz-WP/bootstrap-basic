@@ -1,7 +1,7 @@
 <?php
 /**
  * Template functions
- * for functions to work with template example: get main column size, calcuate or check things, ...
+ * for functions to work with template example: get main column size, calculate or check things, ...
  * 
  * @package bootstrap-basic
  */
