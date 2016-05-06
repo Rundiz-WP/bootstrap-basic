@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for dispalying single post (read full post page).
+ * Template for displaying single post (read full post page).
  * 
  * @package bootstrap-basic
  */
