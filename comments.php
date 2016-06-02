@@ -112,7 +112,7 @@ if (post_password_required()) {
 							'</div>',
 			),
 			'comment_field' => '<div class="form-group">' . 
-							'<label class="control-label col-md-2" for="comment">' . _x('Comment') . '</label> ' . 
+							'<label class="control-label col-md-2" for="comment">' . __('Comment') . '</label> ' . 
 							'<div class="col-md-10">' . 
 							'<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" class="form-control"></textarea>' . 
 							'</div>' . 
