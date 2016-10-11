@@ -8,7 +8,7 @@
 get_header();
 
 /**
- * determine main column size from actived sidebar
+ * determine main column size from active sidebar
  */
 $main_column_size = bootstrapBasicGetMainColumnSize();
 ?> 
