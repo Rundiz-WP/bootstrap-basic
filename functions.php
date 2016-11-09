@@ -72,57 +72,58 @@ if (!function_exists('bootstrapBasicWidgetsInit')) {
     function bootstrapBasicWidgetsInit() 
     {
         register_sidebar(array(
-            'name'          => __('Header right', 'bootstrap-basic'),
-            'id'            => 'header-right',
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h1 class="widget-title">',
-            'after_title'   => '</h1>',
+            'name' => __('Sidebar right', 'bootstrap-basic'),
+            'id' => 'sidebar-right',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h1 class="widget-title">',
+            'after_title' => '</h1>',
         ));
 
         register_sidebar(array(
-            'name'          => __('Navigation bar right', 'bootstrap-basic'),
-            'id'            => 'navbar-right',
+            'name' => __('Sidebar left', 'bootstrap-basic'),
+            'id' => 'sidebar-left',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h1 class="widget-title">',
+            'after_title' => '</h1>',
+        ));
+
+        register_sidebar(array(
+            'name' => __('Header right', 'bootstrap-basic'),
+            'id' => 'header-right',
+            'description' => __('Header widget area on the right side next to site title.', 'bootstrap-basic'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h1 class="widget-title">',
+            'after_title' => '</h1>',
+        ));
+
+        register_sidebar(array(
+            'name' => __('Navigation bar right', 'bootstrap-basic'),
+            'id' => 'navbar-right',
             'before_widget' => '',
-            'after_widget'  => '',
-            'before_title'  => '',
-            'after_title'   => '',
+            'after_widget' => '',
+            'before_title' => '',
+            'after_title' => '',
         ));
 
         register_sidebar(array(
-            'name'          => __('Sidebar left', 'bootstrap-basic'),
-            'id'            => 'sidebar-left',
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</aside>',
-            'before_title'  => '<h1 class="widget-title">',
-            'after_title'   => '</h1>',
-        ));
-
-        register_sidebar(array(
-            'name'          => __('Sidebar right', 'bootstrap-basic'),
-            'id'            => 'sidebar-right',
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</aside>',
-            'before_title'  => '<h1 class="widget-title">',
-            'after_title'   => '</h1>',
-        ));
-
-        register_sidebar(array(
-            'name'          => __('Footer left', 'bootstrap-basic'),
-            'id'            => 'footer-left',
+            'name' => __('Footer left', 'bootstrap-basic'),
+            'id' => 'footer-left',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h1 class="widget-title">',
-            'after_title'   => '</h1>',
+            'after_widget' => '</div>',
+            'before_title' => '<h1 class="widget-title">',
+            'after_title' => '</h1>',
         ));
 
         register_sidebar(array(
-            'name'          => __('Footer right', 'bootstrap-basic'),
-            'id'            => 'footer-right',
+            'name' => __('Footer right', 'bootstrap-basic'),
+            'id' => 'footer-right',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h1 class="widget-title">',
-            'after_title'   => '</h1>',
+            'after_widget' => '</div>',
+            'before_title' => '<h1 class="widget-title">',
+            'after_title' => '</h1>',
         ));
     }// bootstrapBasicWidgetsInit
 }
