@@ -1,6 +1,6 @@
-PHP 5.3 
+PHP 5.4+
 	- Output Buffer "On" or "Limited" but not "Off"
 
-WordPress 3.4
+WordPress 4.0
 
 Cross browser: Firefox, Chrome, Opera, Internet Explorer 9-10

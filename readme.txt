@@ -4,7 +4,7 @@ Author URI: http://rundiz.com
 Description: Bootstrap v.3 basic theme. For build new theme based on Bootstrap.
 Text Domain: bootstrap-basic
 Domain Path: /languages/
-Tags: white, gray, light, one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, front-page-post-form, post-formats, threaded-comments, translation-ready
+Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, front-page-post-form, post-formats, threaded-comments, translation-ready
 
 Bootstrap Basic WordPress theme, Copyright (C) 2013 Vee Winch
 Bootstrap Basic WordPress theme is licensed under the MIT.
