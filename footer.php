@@ -14,9 +14,9 @@
 					<div class="col-md-6 footer-left">
 						<?php 
 						if (!dynamic_sidebar('footer-left')) {
-							printf(__('Powered by %s', 'bootstrap-basic'), 'WordPress');
+							printf(__('Powered by %s', 'bootstrap-basic'), '<a href="https://wordpress.org" rel="nofollow">WordPress</a>');
 							echo ' | ';
-							printf(__('Theme: %s', 'bootstrap-basic'), '<a href="http://rundiz.com">Bootstrap Basic</a>');
+							printf(__('Theme: %s', 'bootstrap-basic'), '<a href="http://rundiz.com" rel="nofollow">Bootstrap Basic</a>');
 						} 
 						?> 
 					</div>
