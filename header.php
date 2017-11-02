@@ -23,7 +23,7 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<!--[if lt IE 8]>
-			<p class="ancient-browser-alert">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a>.</p>
+			<p class="ancient-browser-alert">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/" target="_blank">upgrade your browser</a>.</p>
 		<![endif]-->
 		
 		
