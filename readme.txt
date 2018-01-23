@@ -6,7 +6,7 @@ Text Domain: bootstrap-basic
 Domain Path: /languages/
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, front-page-post-form, post-formats, threaded-comments, translation-ready
 
-Bootstrap Basic WordPress theme, Copyright (C) 2013 Vee Winch
+Bootstrap Basic WordPress theme, Copyright (C) 2018 Rundiz.com
 Bootstrap Basic WordPress theme is licensed under the MIT.
 
 Bootstrap Basic Uses Bootstrap https://getbootstrap.com/, licensed under Apache 2.0.
