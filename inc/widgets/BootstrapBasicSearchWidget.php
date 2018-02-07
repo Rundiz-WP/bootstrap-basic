@@ -115,5 +115,23 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
 
 
 // wordpress widget action hooks
-add_action('widgets_init', create_function('', 'return register_widget("BootstrapBasicSearchWidget");'));
+if (defined('PHP_VERSION')) {
+    $php_version = PHP_VERSION;
+} elseif (function_exists('phpversion')) {
+    $php_version = phpversion();
+    if (!is_scalar($php_version)) {
+        // in case that some developers did something with this native php function. :-(
+        $php_version = '4.0';
+    }
+} else {
+    $php_version = '4.0';
+}
+if (version_compare($php_version, '5.3', '>=')) {
+    // if php version is 5.3 or newer, use anonymous function. this is also support php 7.x.
+    add_action('widgets_init', function() {return register_widget("BootstrapBasicSearchWidget");});
+} else {
+    // for php 5.2 or older.
+    add_action('widgets_init', create_function('', 'return register_widget("BootstrapBasicSearchWidget");'));
+}
+unset($php_version);
 
