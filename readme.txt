@@ -1,6 +1,6 @@
 ===Bootstrap Basic===
 Author: Vee Winch
-Author URI: http://rundiz.com
+Author URI: https://rundiz.com
 Description: Bootstrap v.3 basic theme. For build new theme based on Bootstrap.
 Text Domain: bootstrap-basic
 Domain Path: /languages/
