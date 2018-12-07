@@ -31,6 +31,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 									 * what author we're dealing with (if that is the case).
 									 */
 									the_post();
+									/* translators: %s Author name. */
 									printf(__('Author: %s', 'bootstrap-basic'), '<span class="vcard">' . get_the_author() . '</span>');
 									/* Since we called the_post() above, we need to
 									 * rewind the loop back to the beginning that way
@@ -39,12 +40,15 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 									rewind_posts();
 
 								elseif (is_day()) :
+									/* translators: %s Date value. */
 									printf(__('Day: %s', 'bootstrap-basic'), '<span>' . get_the_date() . '</span>');
 
 								elseif (is_month()) :
+									/* translators: %s Month value. */
 									printf(__('Month: %s', 'bootstrap-basic'), '<span>' . get_the_date('F Y') . '</span>');
 
 								elseif (is_year()) :
+									/* translators: %s Year value. */
 									printf(__('Year: %s', 'bootstrap-basic'), '<span>' . get_the_date('Y') . '</span>');
 
 								elseif (is_tax('post_format', 'post-format-aside')) :
@@ -73,6 +77,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 							// Show an optional term description.
 							$term_description = term_description();
 							if (!empty($term_description)) {
+								/* translators: %s Description. */
 								printf('<div class="taxonomy-description">%s</div>', $term_description);
 							} //endif;
 							?>

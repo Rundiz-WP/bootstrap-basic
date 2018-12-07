@@ -17,7 +17,18 @@ if (post_password_required()) {
 	<?php if (have_comments()) { ?>
 		<h2 class="comments-title">
 			<?php
-			printf(_nx('One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'bootstrap-basic'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>');
+			printf(
+				/* translators: %1$s: Number of comments, %2$s: Post title. */
+				_nx(
+					'One comment on &ldquo;%2$s&rdquo;', 
+					'%1$s comments on &ldquo;%2$s&rdquo;', 
+					get_comments_number(), 
+					'comments title', 
+					'bootstrap-basic'
+				), 
+				number_format_i18n(get_comments_number()), 
+				'<span>' . get_the_title() . '</span>'
+			);
 			?> 
 		</h2>
 
@@ -118,6 +129,7 @@ if (post_password_required()) {
 							'</div>' . 
 							'</div>',
 			'comment_notes_after' => '<p class="help-block">' . 
+							/* translators: %s Allowed HTML tags for comment. */
 							sprintf(__('You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'bootstrap-basic'), $comment_allowed_tags) . 
 							'</p>'
 		)

@@ -37,6 +37,7 @@
 				echo bootstrapBasicTagsList($tag_list);
 			}
 			echo ' ';
+			/* translators: %1$s URL, %2$s: Post title. */
 			printf(__('<span class="glyphicon glyphicon-link"></span> <a href="%1$s" title="Permalink to %2$s" rel="bookmark">permalink</a>.', 'bootstrap-basic'), get_permalink(), the_title_attribute('echo=0'));
 		?> 
 

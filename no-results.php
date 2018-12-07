@@ -12,7 +12,10 @@
 
 	<div class="page-content row-with-vspace">
 		<?php if (is_home() && current_user_can('publish_posts')) { ?> 
-			<p><?php printf(__('Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'bootstrap-basic'), esc_url(admin_url('post-new.php'))); ?></p>
+			<p><?php 
+				/* translators: %1$s: Link to add new post. */
+				printf(__('Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'bootstrap-basic'), esc_url(admin_url('post-new.php'))); 
+			?></p>
 		<?php } elseif (is_search()) { ?> 
 			<p><?php _e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'bootstrap-basic'); ?></p>
 			<?php echo bootstrapBasicFullPageSearchForm(); ?> 

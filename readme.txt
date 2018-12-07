@@ -1,10 +1,13 @@
 ===Bootstrap Basic===
 Author: Vee Winch
 Author URI: https://rundiz.com
+Contributors: okvee, christianoliff
+Requires at least: 4.0
+Tested up to: 5.0
 Description: Bootstrap v.3 basic theme. For build new theme based on Bootstrap.
 Text Domain: bootstrap-basic
 Domain Path: /languages/
-Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, front-page-post-form, post-formats, threaded-comments, translation-ready
+Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, post-formats, threaded-comments, translation-ready
 
 Bootstrap Basic WordPress theme, Copyright (C) 2018 Rundiz.com
 Bootstrap Basic WordPress theme is licensed under the MIT.

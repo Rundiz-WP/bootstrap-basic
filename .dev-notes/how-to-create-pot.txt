@@ -1,0 +1,3 @@
+Use this command:
+`wp i18n make-pot . --exclude="assets,languages,*.css,*.js,*.svg,*.eot,*.woff,*.woff2,*.ttf,*.html,*.txt,*.pot"`
+And check the result.

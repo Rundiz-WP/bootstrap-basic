@@ -132,6 +132,7 @@ if (!function_exists('bootstrapBasicWpTitle')) {
 
         // Add a page number if necessary:
         if ($paged >= 2 || $page >= 2) {
+            /* translators: %s: Page number. */
             $title .= " $sep " . sprintf(__('Page %s', 'bootstrap-basic'), max($paged, $page));
         }
 

@@ -76,6 +76,7 @@ if (!function_exists('bootstrapBasicComment')) {
 						echo '<time datetime="';
 							comment_time('c');
 						echo '">';
+						/* translators: %1$s: Comment date, %2$s: Comment time. */
 						printf(_x('%1$s at %2$s', '1: date, 2: time', 'bootstrap-basic'), get_comment_date(), get_comment_time());
 						echo '</time>';
 						echo '</a>';
@@ -95,6 +96,7 @@ if (!function_exists('bootstrapBasicComment')) {
 						} //endif;
 
 						// comment author says
+						/* translators: %s: Comment author link. */
 						printf(__('%s <span class="says">says:</span>', 'bootstrap-basic'), sprintf('<cite class="fn">%s</cite>', get_comment_author_link()));
 					echo '</div><!-- .comment-author -->';
 
@@ -277,6 +279,7 @@ if (!function_exists('bootstrapBasicPostOn')) {
 			esc_html(get_the_modified_date())
 		);
 
+		/* translators: %1$s: Link to post with date/time text, %2$s: Link to author with auth name. */
 		printf(__('<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'bootstrap-basic'),
 			sprintf('<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
 				esc_url(get_permalink()),
@@ -285,6 +288,7 @@ if (!function_exists('bootstrapBasicPostOn')) {
 			),
 			sprintf('<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
 				esc_url(get_author_posts_url(get_the_author_meta('ID'))),
+				/* translators: %s Author name. */
 				esc_attr(sprintf(__('View all posts by %s', 'bootstrap-basic'), get_the_author())),
 				esc_html(get_the_author())
 			)
