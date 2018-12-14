@@ -160,17 +160,19 @@ add_action('widgets_init', 'bootstrapBasicWidgetsInit');
 if (!function_exists('bootstrapBasicEnqueueScripts')) {
     /**
      * Enqueue scripts & styles
+     * 
+     * @global \WP_Scripts $wp_scripts
      */
     function bootstrapBasicEnqueueScripts() 
     {
         global $wp_scripts;
 
         wp_enqueue_style('bootstrap-style');
-        wp_enqueue_style('bootstrap-theme-style', get_template_directory_uri() . '/css/bootstrap-theme.min.css', array(), '3.3.7');
+        wp_enqueue_style('bootstrap-theme-style', get_template_directory_uri() . '/css/bootstrap-theme.min.css', array(), '3.4.0');
         wp_enqueue_style('fontawesome-style', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.7.0');
         wp_enqueue_style('main-style', get_template_directory_uri() . '/css/main.css');
 
-        wp_enqueue_script('modernizr-script', get_template_directory_uri() . '/js/vendor/modernizr.min.js', array(), '3.3.1');
+        wp_enqueue_script('modernizr-script', get_template_directory_uri() . '/js/vendor/modernizr.min.js', array(), '3.6.0');
         wp_register_script('respond-script', get_template_directory_uri() . '/js/vendor/respond.min.js', array(), '1.4.2');
         $wp_scripts->add_data('respond-script', 'conditional', 'lt IE 9');
         wp_enqueue_script('respond-script');

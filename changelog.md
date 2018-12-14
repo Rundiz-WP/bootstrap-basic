@@ -1,6 +1,12 @@
 # Theme change log.
 Started since v1.1
 
+### v1.1.1
+2018-12-14
+
+* Update to [Bootstrap 3.4.0](https://blog.getbootstrap.com/2018/12/13/bootstrap-3-4-0/).
+* Update Modernizr.
+
 ### v1.1
 2018-12-08
 

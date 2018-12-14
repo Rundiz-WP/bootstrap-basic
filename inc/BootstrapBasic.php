@@ -29,7 +29,7 @@ if (!class_exists('BootstrapBasic')) {
          */
         public function registerCommonScripts()
         {
-            wp_register_script('bootstrap-script', get_template_directory_uri() . '/js/vendor/bootstrap.min.js', array(), '3.3.7', true);
+            wp_register_script('bootstrap-script', get_template_directory_uri() . '/js/vendor/bootstrap.min.js', array(), '3.4.0', true);
         }// registerCommonScripts
 
 
@@ -38,7 +38,7 @@ if (!class_exists('BootstrapBasic')) {
          */
         public function registerCommonStyles()
         {
-            wp_register_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.7');
+            wp_register_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.4.0');
         }// registerCommonStyles
 
 

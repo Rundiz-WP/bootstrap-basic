@@ -12,12 +12,12 @@ Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custo
 Bootstrap Basic WordPress theme, Copyright (C) 2018 Rundiz.com
 Bootstrap Basic WordPress theme is licensed under the MIT.
 
-Bootstrap Basic Uses Bootstrap https://getbootstrap.com/, licensed under Apache 2.0.
-Bootstrap Basic Uses Font Awesome http://fontawesome.io, licensed under MIT.
-Bootstrap Basic Uses Font Awesome (font files) http://fontawesome.io, licensed under SIL OFL 1.1.
-Bootstrap Basic Uses html5shiv https://github.com/afarkas/html5shiv, licensed under MIT.
-Bootstrap Basic Uses Modernizr https://modernizr.com, licensed under MIT.
-Bootstrap Basic Uses Respond https://github.com/scottjehl/Respond, licensed under MIT.
+Bootstrap Basic Uses Bootstrap https://getbootstrap.com/ licensed under Apache 2.0.
+Bootstrap Basic Uses Font Awesome http://fontawesome.io licensed under MIT.
+Bootstrap Basic Uses Font Awesome (font files) http://fontawesome.io licensed under SIL OFL 1.1.
+Bootstrap Basic Uses html5shiv https://github.com/afarkas/html5shiv licensed under MIT.
+Bootstrap Basic Uses Modernizr https://modernizr.com licensed under MIT.
+Bootstrap Basic Uses Respond https://github.com/scottjehl/Respond licensed under MIT.
 
 Bootstrap Basic is based on the _s (Underscores) starter theme by Automattic Inc., licensed under GPL.
 
