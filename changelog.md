@@ -6,6 +6,7 @@ Started since v1.1
 
 * Update to [Bootstrap 3.4.0](https://blog.getbootstrap.com/2018/12/13/bootstrap-3-4-0/).
 * Update Modernizr.
+* Removed old, outdated, unnecessary document.
 
 ### v1.1
 2018-12-08
