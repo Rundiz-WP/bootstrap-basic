@@ -1,6 +1,11 @@
 # Theme change log.
 Started since v1.1
 
+### v1.1.3
+2019-03-14
+
+* Fix comment-reply does not enqueue.
+
 ### v1.1.2
 2019-03-14
 
