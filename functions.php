@@ -170,19 +170,26 @@ if (!function_exists('bootstrapBasicEnqueueScripts')) {
         wp_enqueue_style('bootstrap-style');
         wp_enqueue_style('bootstrap-theme-style', get_template_directory_uri() . '/css/bootstrap-theme.min.css', array(), '3.4.0');
         wp_enqueue_style('fontawesome-style', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.7.0');
-        wp_enqueue_style('main-style', get_template_directory_uri() . '/css/main.css');
+        wp_enqueue_style('main-style', get_template_directory_uri() . '/css/main.css', array(), '1.1.2');
 
-        wp_enqueue_script('modernizr-script', get_template_directory_uri() . '/js/vendor/modernizr.min.js', array(), '3.6.0');
-        wp_register_script('respond-script', get_template_directory_uri() . '/js/vendor/respond.min.js', array(), '1.4.2');
+        // js that is useful for development.
+        wp_enqueue_script('modernizr-script', get_template_directory_uri() . '/js/vendor/modernizr.min.js', array(), '3.6.0-20190314', true);
+        // js that is useful for old browsers.
+        wp_register_script('respond-script', get_template_directory_uri() . '/js/vendor/respond.min.js', array(), '1.4.2', true);
         $wp_scripts->add_data('respond-script', 'conditional', 'lt IE 9');
         wp_enqueue_script('respond-script');
-        wp_register_script('html5-shiv-script', get_template_directory_uri() . '/js/vendor/html5shiv.min.js', array(), '3.7.3');
+        wp_register_script('html5-shiv-script', get_template_directory_uri() . '/js/vendor/html5shiv.min.js', array(), '3.7.3', true);
         $wp_scripts->add_data('html5-shiv-script', 'conditional', 'lte IE 9');
         wp_enqueue_script('html5-shiv-script');
-        wp_enqueue_script('jquery');
+
         wp_enqueue_script('bootstrap-script');
-        wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array(), false, true);
-        wp_enqueue_style('bootstrap-basic-style', get_stylesheet_uri());
+        wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.1.2', true);
+        wp_enqueue_style('bootstrap-basic-style', get_stylesheet_uri(), array(), '1.1.2');
+
+        // move jquery to bottom ( https://wordpress.stackexchange.com/a/225936/41315 )
+        $wp_scripts->add_data('jquery', 'group', 1);
+        $wp_scripts->add_data('jquery-core', 'group', 1);
+        $wp_scripts->add_data('jquery-migrate', 'group', 1);
     }// bootstrapBasicEnqueueScripts
 }
 add_action('wp_enqueue_scripts', 'bootstrapBasicEnqueueScripts');

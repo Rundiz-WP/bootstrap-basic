@@ -1,6 +1,12 @@
 # Theme change log.
 Started since v1.1
 
+### v1.1.2
+2019-03-14
+
+* Un-depreacated wp_title
+* Update Bootstrap, Modernizr
+
 ### v1.1.1
 2018-12-14
 
