@@ -111,7 +111,9 @@ if (!function_exists('bootstrapBasicWpTitle')) {
      * 
      * copy from underscore theme.
      * 
-     * @deprecated since version 1.0.10 (deprecated since WordPress 4.4)
+     * @link https://developer.wordpress.org/reference/functions/wp_title/ Document.
+     * @link https://make.wordpress.org/core/2015/10/20/document-title-in-4-4/ wp_title was deprecated.
+     * @link https://core.trac.wordpress.org/changeset/35624 wp_title now un-deprecated.
      */
     function bootstrapBasicWpTitle($title, $sep) 
     {
@@ -147,7 +149,7 @@ if (!function_exists('bootstrapBasicWpTitleSeparator')) {
      * Replace title separator from its original (-) to the new one (|).<br>
      * The old wp_title() has been deprecated. For more info please read at the link below
      * 
-     * @link https://developer.wordpress.org/reference/hooks/wp_title/#comment-1076 wp_title has been deprecated.
+     * @link https://developer.wordpress.org/reference/hooks/document_title_separator/ Document.
      */
     function bootstrapBasicWpTitleSeparator($sep) 
     {
