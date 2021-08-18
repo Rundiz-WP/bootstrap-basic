@@ -1,6 +1,13 @@
 # Theme change log.
 Started since v1.1
 
+### v1.1.4
+2021-08-18
+
+* Fix errors in PHP 8.0.
+* Minor bugs fix.
+* Now supported PHP 8.0.
+
 ### v1.1.3
 2019-03-14
 
