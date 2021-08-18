@@ -26,6 +26,8 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
 
             if (!is_numeric($depth)) {
                 $depth = 0;
+            } else {
+                $depth = (int) $depth;
             }
 
             // display this element

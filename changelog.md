@@ -1,12 +1,13 @@
 # Theme change log.
 Started since v1.1
 
-### v1.1.4
+### v1.1.5
 2021-08-18
 
 * Fix errors in PHP 8.0.
 * Minor bugs fix.
 * Now supported PHP 8.0.
+* Fix missing `wp_body_open()` function.
 
 ### v1.1.3
 2019-03-14

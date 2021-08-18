@@ -22,12 +22,16 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+		<?php 
+		if ( function_exists( 'wp_body_open' ) ) {
+			wp_body_open();
+		} else {
+			do_action( 'wp_body_open' );
+		}
+		?> 
 		<!--[if lt IE 8]>
 			<p class="ancient-browser-alert">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/" target="_blank">upgrade your browser</a>.</p>
 		<![endif]-->
-		
-		
-		
 		
 		
 		<div class="container page-container">
