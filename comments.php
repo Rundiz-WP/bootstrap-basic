@@ -42,7 +42,8 @@ if (post_password_required()) {
 
 		<ul class="media-list">
 			<?php
-			/* Loop through and list the comments. Tell wp_list_comments()
+			/* 
+			 * Loop through and list the comments. Tell wp_list_comments()
 			 * to use bootstrapBasicComment() to format the comments.
 			 * If you want to override this in a child theme, then you can
 			 * define bootstrapBasicComment() and that will be used instead.

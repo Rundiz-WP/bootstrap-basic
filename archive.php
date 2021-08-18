@@ -27,13 +27,15 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 									single_tag_title();
 
 								elseif (is_author()) :
-									/* Queue the first post, that way we know
+									/* 
+									 * Queue the first post, that way we know
 									 * what author we're dealing with (if that is the case).
 									 */
 									the_post();
 									/* translators: %s Author name. */
 									printf(__('Author: %s', 'bootstrap-basic'), '<span class="vcard">' . get_the_author() . '</span>');
-									/* Since we called the_post() above, we need to
+									/* 
+									 * Since we called the_post() above, we need to
 									 * rewind the loop back to the beginning that way
 									 * we can run the loop properly, in full.
 									 */
@@ -88,7 +90,8 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 						while (have_posts()) {
 							the_post();
 
-							/* Include the Post-Format-specific template for the content.
+							/* 
+							 * Include the Post-Format-specific template for the content.
 							 * If you want to override this in a child theme, then include a file
 							 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 							 */

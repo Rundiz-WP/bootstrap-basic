@@ -11,9 +11,15 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
 	{
 
 
+		/**
+		 * @var string Navbar alignment.
+		 */
 		private $navbaralign = 'navbar-right';
 
 
+		/**
+		 * Class construction for theme search widget.
+		 */
 		public function __construct()
 		{
 			parent::__construct(
@@ -128,7 +134,9 @@ if (defined('PHP_VERSION')) {
 }
 if (version_compare($php_version, '5.3', '>=')) {
     // if php version is 5.3 or newer, use anonymous function. this is also support php 7.x.
-    add_action('widgets_init', function() {return register_widget("BootstrapBasicSearchWidget");});
+    add_action('widgets_init', function() {
+        return register_widget('BootstrapBasicSearchWidget');
+    });
 } else {
     // for php 5.2 or older.
     add_action('widgets_init', create_function('', 'return register_widget("BootstrapBasicSearchWidget");'));

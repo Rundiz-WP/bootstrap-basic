@@ -18,7 +18,7 @@ if (!function_exists('bootstrapBasicCommentReplyLinkClass')) {
     function bootstrapBasicCommentReplyLinkClass($class) 
     {
         $class = str_replace("class='comment-reply-link", "class='comment-reply-link btn btn-default btn-sm", $class);
-        $class = str_replace("class=\"comment-reply-login", "class=\"comment-reply-login btn btn-default btn-sm", $class);
+        $class = str_replace('class="comment-reply-login', 'class="comment-reply-login btn btn-default btn-sm', $class);
 
         return $class;
     }// bootstrapBasicCommentReplyLinkClass
@@ -27,6 +27,12 @@ add_filter('comment_reply_link', 'bootstrapBasicCommentReplyLinkClass');
 
 
 if (!function_exists('bootstrapBasicExcerptMore')) {
+    /**
+     * Get excerpt more characters.
+     * 
+     * @param string $more
+     * @return string Return `&hellip;`.
+     */
     function bootstrapBasicExcerptMore($more) 
     {
         return ' &hellip;';
@@ -87,7 +93,7 @@ if (!function_exists('bootstrapBasicNavMenuCssClass')) {
             return $classes;
         }
 
-        if(in_array('current-menu-item', $menu_item->classes)){
+        if (in_array('current-menu-item', $menu_item->classes)) {
             $classes[] = 'active';
         }
 

@@ -27,7 +27,6 @@ if (!function_exists('bootstrapBasicComment')) {
 	 * @param object $comment
 	 * @param array $args
 	 * @param integer $depth
-	 * @return string the content already echo.
 	 */
 	function bootstrapBasicComment($comment, $args, $depth) {
 		$GLOBALS['comment'] = $comment;
@@ -115,8 +114,6 @@ if (!function_exists('bootstrapBasicComment')) {
 					// end reply link
 				echo '</div><!-- .comment-content -->';
 				// end comment content
-
-
 
 			echo '</article><!-- .comment-body -->';
 		} //endif;
@@ -216,45 +213,44 @@ if (!function_exists('bootstrapBasicPagination')) {
 	 * display pagination (1 2 3 ...) instead of previous, next of wordpress style.
 	 * 
 	 * @param string $pagination_align_class
-	 * @return string the content already echo
 	 */
 	function bootstrapBasicPagination($pagination_align_class = 'pagination-center pagination-row') 
 	{
 		global $wp_query;
-			$big = 999999999;
-			$pagination_array = paginate_links(array(
-				'base' => str_replace($big, '%#%', get_pagenum_link($big)),
-				'format' => '/page/%#%',
-				'current' => max(1, get_query_var('paged')),
-				'total' => $wp_query->max_num_pages,
-				'prev_text' => '&laquo;',
-				'next_text' => '&raquo;',
-				'type' => 'array'
-			));
+		$big = 999999999;
+		$pagination_array = paginate_links(array(
+			'base' => str_replace($big, '%#%', get_pagenum_link($big)),
+			'format' => '/page/%#%',
+			'current' => max(1, get_query_var('paged')),
+			'total' => $wp_query->max_num_pages,
+			'prev_text' => '&laquo;',
+			'next_text' => '&raquo;',
+			'type' => 'array'
+		));
 
-			unset($big);
+		unset($big);
 
-			if (is_array($pagination_array) && !empty($pagination_array)) {
-				echo '<nav class="' . $pagination_align_class . '">';
-				echo '<ul class="pagination">';
-				foreach ($pagination_array as $page) {
-					echo '<li';
-					if (strpos($page, '<a') === false && strpos($page, '&hellip;') === false) {
-						echo ' class="active"';
-					}
-					echo '>';
-					if (strpos($page, '<a') === false && strpos($page, '&hellip;') === false) {
-						echo '<span>' . $page . '</span>';
-					} else {
-						echo $page;
-					}
-					echo '</li>';
+		if (is_array($pagination_array) && !empty($pagination_array)) {
+			echo '<nav class="' . $pagination_align_class . '">';
+			echo '<ul class="pagination">';
+			foreach ($pagination_array as $page) {
+				echo '<li';
+				if (strpos($page, '<a') === false && strpos($page, '&hellip;') === false) {
+					echo ' class="active"';
 				}
-				echo '</ul>';
-				echo '</nav>';
+				echo '>';
+				if (strpos($page, '<a') === false && strpos($page, '&hellip;') === false) {
+					echo '<span>' . $page . '</span>';
+				} else {
+					echo $page;
+				}
+				echo '</li>';
 			}
+			echo '</ul>';
+			echo '</nav>';
+		}
 
-			unset($page, $pagination_array);
+		unset($page, $pagination_array);
 	}// bootstrapBasicPagination
 }
 
@@ -262,8 +258,6 @@ if (!function_exists('bootstrapBasicPagination')) {
 if (!function_exists('bootstrapBasicPostOn')) {
 	/**
 	 * display post date/time and author
-	 * 
-	 * @return string
 	 */
 	function bootstrapBasicPostOn() 
 	{
@@ -314,8 +308,6 @@ if (!function_exists('bootstrapBasicTagsList')) {
 if (!function_exists('bootstrapBasicTheAttachedImage')) {
 	/**
 	 * Display attach image with link.
-	 * 
-	 * @return string image element with link.
 	 */
 	function bootstrapBasicTheAttachedImage() 
 	{
@@ -348,7 +340,6 @@ if (!function_exists('bootstrapBasicTheAttachedImage')) {
 					break;
 				}
 			}
-
 
 			if ($next_id) {
 				// get the URL of the next image attachment...

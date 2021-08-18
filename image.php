@@ -35,7 +35,7 @@ get_header();
 
 										echo ' ';
 										bootstrapBasicEditPostLink();
-										//edit_post_link(__('Edit', 'bootstrap-basic'), '<span class="edit-link">', '</span>');
+										// edit_post_link(__('Edit', 'bootstrap-basic'), '<span class="edit-link">', '</span>');
 									?> 
 								</div><!-- .entry-meta -->
 
@@ -68,11 +68,13 @@ get_header();
 								 * NOPE! NO! DON'T! This function really does not works with WordPress image attachment page.
 								 * @todo Check again that WordPress already fix pages in image.php bug and re-enable it. (Last WP version checked but still not work is 3.7.1)
 								*/
-								/* wp_link_pages(array(
+								/* 
+								wp_link_pages(array(
 									   'before' => '<div class="page-links">' . __('Pages:', 'bootstrap-basic') . ' <ul class="pagination">',
 									   'after'  => '</ul></div>',
 									   'separator' => ''
-								));*/
+								));
+								*/
 								?> 
 							</div><!-- .entry-content -->
 
