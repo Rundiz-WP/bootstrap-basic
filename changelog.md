@@ -1,10 +1,11 @@
 # Theme change log.
 Started since v1.1
 
-### v1.1.6
+### v1.1.7
 2021-12-14
 
 * Prevent PHP 8.1 non-string argument errors.
+* Update `Tested up to` to `major.minor` version only as suggested by theme check plugin.
 
 ### v1.1.5
 2021-08-18

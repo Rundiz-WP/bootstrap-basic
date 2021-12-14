@@ -165,7 +165,7 @@ add_filter('wp_title', 'bootstrapBasicWpTitle', 10, 2);
 if (!function_exists('bootstrapBasicWpTitleSeparator')) {
     /**
      * Replace title separator from its original (-) to the new one (|).<br>
-     * The old wp_title() has been deprecated. For more info please read at the link below
+     * The old function `wp_title` has been deprecated. For more info please read at the link below
      * 
      * @link https://developer.wordpress.org/reference/hooks/document_title_separator/ Document.
      */
