@@ -234,6 +234,11 @@ if (!function_exists('bootstrapBasicPagination')) {
 			echo '<nav class="' . $pagination_align_class . '">';
 			echo '<ul class="pagination">';
 			foreach ($pagination_array as $page) {
+                                if (!is_scalar($page)) {
+                                    echo '<!-- $page is not scalar type: ' . var_export($page, true) . ' -->' . PHP_EOL;
+                                    continue;
+                                }
+
 				echo '<li';
 				if (strpos($page, '<a') === false && strpos($page, '&hellip;') === false) {
 					echo ' class="active"';

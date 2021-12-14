@@ -70,7 +70,7 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
 
 
         /**
-         * @link https://gist.github.com/duanecilliers/1817371 copy from this url
+         * @link https://gist.github.com/duanecilliers/1817371 copy from this URL.
          */
         public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) 
         {
