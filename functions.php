@@ -250,6 +250,9 @@ require get_template_directory() . '/inc/template-functions.php';
  * Theme widget & widget hooks
  * --------------------------------------------------------------
  */
-require get_template_directory() . '/inc/widgets/BootstrapBasicSearchWidget.php';
+require get_template_directory() . '/inc/widgets/BootstrapBasicAutoRegisterWidgets.php';
+$BootstrapBasicAutoRegisterWidgets = new BootstrapBasicAutoRegisterWidgets();
+$BootstrapBasicAutoRegisterWidgets->registerAll();
+unset($BootstrapBasicAutoRegisterWidgets);
 require get_template_directory() . '/inc/template-widgets-hook.php';
 

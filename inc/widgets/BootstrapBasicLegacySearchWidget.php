@@ -6,15 +6,15 @@
  */
 
 
-if (!class_exists('BootstrapBasicSearchWidget')) {
-    class BootstrapBasicSearchWidget extends WP_Widget
+if (!class_exists('BootstrapBasicLegacySearchWidget')) {
+    class BootstrapBasicLegacySearchWidget extends WP_Widget
     {
 
 
         /**
-         * @var string Navbar alignment.
+         * @var string Widget title.
          */
-        private $navbaralign = 'navbar-right';
+        private $widget_title;
 
 
         /**
@@ -23,9 +23,9 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
         public function __construct()
         {
             parent::__construct(
-                    'bootstrapbasic_search_widget', // base ID
-                    __('Bootstrap Navbar Search', 'bootstrap-basic'), 
-                    array('description' => __('Display Search widget for Bootstrap navbar.', 'bootstrap-basic'))
+                    'bootstrapbasic_legacysearch_widget', // base ID
+                    __('Bootstrap Legacy Search', 'bootstrap-basic'), 
+                    array('description' => __('Display Search widget for Bootstrap that can be use in sidebar.', 'bootstrap-basic'))
             );
         }// __construct
 
@@ -38,20 +38,15 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
          */
         public function form($instance) 
         {
-            // navbar align
-            if (isset($instance['navbaralign'])) {
-                $navbaralign = $instance['navbaralign'];
-            } else {
-                $navbaralign = $this->navbaralign;
+            // search widget title
+            if (isset($instance['bootstrapbasic-legacysearch-widget-title'])) {
+                $this->widget_title = $instance['bootstrapbasic-legacysearch-widget-title'];
             }
 
             // output form
             $output = '<p>';
-            $output .= '<label for="' . $this->get_field_id('navbaralign') . '">' . __('Form alignment:', 'bootstrap-basic') . '</label>';
-            $output .= '<select id="' . $this->get_field_id('navbaralign') . '" name="' . $this->get_field_name('navbaralign') . '">';
-            $output .= '<option value="navbar-left"' . ($navbaralign == 'navbar-left' ? ' selected="selected"' : '') . '>' . __('Left', 'bootstrap-basic') . '</option>';
-            $output .= '<option value="navbar-right"' . ($navbaralign == 'navbar-right' ? ' selected="selected"' : '') . '>' . __('Right', 'bootstrap-basic') . '</option>';
-            $output .= '</select>';
+            $output .= '<label for="' . $this->get_field_id('bootstrapbasic-legacysearch-widget-title') . '">' . __('Title:', 'bootstrap-basic') . '</label>';
+            $output .= '<input id="' . $this->get_field_id('bootstrapbasic-legacysearch-widget-title') . '" class="widefat" type="text" value="' . esc_attr($this->widget_title) . '" name="' . $this->get_field_name('bootstrapbasic-legacysearch-widget-title') . '">';
             $output .= '</p>';
 
             echo $output;
@@ -72,10 +67,10 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
         {
             $instance = array();
 
-            if ($new_instance['navbaralign'] != 'navbar-left' && $new_instance['navbaralign'] != 'navbar-right') {
-                $instance['navbaralign'] = $this->navbaralign;
+            if (isset($new_instance['bootstrapbasic-legacysearch-widget-title'])) {
+                $instance['bootstrapbasic-legacysearch-widget-title'] = strip_tags($new_instance['bootstrapbasic-legacysearch-widget-title']);
             } else {
-                $instance['navbaralign'] = $new_instance['navbaralign'];
+                $instance['bootstrapbasic-legacysearch-widget-title'] = '';
             }
 
             return $instance;
@@ -91,18 +86,20 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
          */
         public function widget($args, $instance) 
         {
-            $navbaralign = $this->navbaralign;
-            if (isset($instance['navbaralign']) && $instance['navbaralign'] != null) {
-                $navbaralign = $instance['navbaralign'];
+            $widget_title = $this->widget_title;
+            if (isset($instance['bootstrapbasic-legacysearch-widget-title'])) {
+                $widget_title = $instance['bootstrapbasic-legacysearch-widget-title'];
             }
 
             // set output front-end widget ---------------------------------
             $output = $args['before_widget'];
 
+            if (isset($instance['bootstrapbasic-legacysearch-widget-title']) && $instance['bootstrapbasic-legacysearch-widget-title'] != null) {
+                $output .= $args['before_title'] . apply_filters('widget_title', $instance['bootstrapbasic-legacysearch-widget-title']) . $args['after_title'] . "\n";
+            }
+
             $searchFormArgs = [];
             $searchFormArgs['echo'] = false;
-            $searchFormArgs['bootstrapbasic']['form_classes'] = 'navbar-form ' . $navbaralign;
-            $searchFormArgs['bootstrapbasic']['display_for'] = 'navbar';
 
             $output .= get_search_form($searchFormArgs);
             unset($searchFormArgs);
