@@ -1,0 +1,27 @@
+/*
+Override widget block calendar to display the same as original design.
+
+@since 1.2.0
+*/
+
+
+.wp-block-calendar table th {
+    background-color: transparent;
+}
+.wp-block-calendar .table caption {
+    text-align: center;
+}
+.wp-block-calendar .wp-calendar-nav::after {
+    clear: both;
+}
+.wp-block-calendar .wp-calendar-nav-prev {
+    float: left;
+}
+.wp-block-calendar .wp-calendar-nav-next {
+    float: right;
+}
+.wp-block-calendar tbody td, 
+.wp-block-calendar th {
+    border-left: none;
+    border-right: none;
+}
