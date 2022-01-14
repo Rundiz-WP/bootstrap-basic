@@ -166,11 +166,14 @@ if (!function_exists('bootstrapBasicEnqueueScripts')) {
     function bootstrapBasicEnqueueScripts() 
     {
         global $wp_scripts;
+        $Theme = wp_get_theme();
+        $themeVersion = $Theme->get('Version');
+        unset($Theme);
 
         wp_enqueue_style('bootstrap-style');
         wp_enqueue_style('bootstrap-theme-style', get_template_directory_uri() . '/css/bootstrap-theme.min.css', array(), '3.4.1');
         wp_enqueue_style('fontawesome-style', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.7.0');
-        wp_enqueue_style('main-style', get_template_directory_uri() . '/css/main.css', array(), '1.1.3');
+        wp_enqueue_style('main-style', get_template_directory_uri() . '/css/main.css', array(), $themeVersion);
 
         // js that is useful for development.
         wp_enqueue_script('modernizr-script', get_template_directory_uri() . '/js/vendor/modernizr.min.js', array(), '3.6.0-20190314', true);
@@ -187,8 +190,8 @@ if (!function_exists('bootstrapBasicEnqueueScripts')) {
         }
 
         wp_enqueue_script('bootstrap-script');
-        wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.1.3', true);
-        wp_enqueue_style('bootstrap-basic-style', get_stylesheet_uri(), array(), '1.1.3');
+        wp_enqueue_script('main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), $themeVersion, true);
+        wp_enqueue_style('bootstrap-basic-style', get_stylesheet_uri(), array(), $themeVersion);
 
         // move jquery to bottom ( https://wordpress.stackexchange.com/a/225936/41315 )
         $wp_scripts->add_data('jquery', 'group', 1);

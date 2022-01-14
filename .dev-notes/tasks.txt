@@ -1,6 +1,5 @@
 What I have to do when update this theme?
 - Update Bootstrap version at inc/BootstrapBasic.php in `registerCommonScripts` and `registerCommonStyles` methods.
-- Update Bootstrap (theme) version at functions.php in `bootstrapBasicEnqueueScripts` function.
 - Update Font Awesome version at functions.php in `bootstrapBasicEnqueueScripts` function.
 - Update HTML5 Shiv version at functions.php in `bootstrapBasicEnqueueScripts` function.
 - Update Respond.js version at functions.php in `bootstrapBasicEnqueueScripts` function.
