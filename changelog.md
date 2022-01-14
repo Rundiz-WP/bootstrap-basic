@@ -1,6 +1,15 @@
 # Theme change log.
 Started since v1.1
 
+### v1.2.0
+2022-01-14
+
+* Use common search elements from searchform.php template. The search form in these files were changed: **404.php**, **inc/widgets/BootstrapBasicSearchWidget.php**
+* Add legacy search widget to use on sidebar.
+* Add CSS to override widget block **calendar** to its original style.
+* Wrap calendar table with responsive table class.
+* Tested with WordPress 5.9-RC2-52567
+
 ### v1.1.7
 2021-12-14
 
