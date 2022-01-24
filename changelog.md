@@ -1,6 +1,13 @@
 # Theme change log.
 Started since v1.1
 
+### v1.2.1
+2022-01-24
+
+* Add more condition to check calendar widget block.
+* Removed fixed Bootstrap CSS.
+* Add check function exists in inc/BootstrapBasicWp5.php.
+
 ### v1.2.0
 2022-01-14
 
