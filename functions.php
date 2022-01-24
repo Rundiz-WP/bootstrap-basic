@@ -175,33 +175,13 @@ if (!function_exists('bootstrapBasicEnqueueScripts')) {
         wp_enqueue_style('fontawesome-style', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.7.0');
         wp_enqueue_style('main-style', get_template_directory_uri() . '/css/main.css', array(), $themeVersion);
 
-        // check if there are any calendar widget block. ( https://wordpress.stackexchange.com/a/392496/41315 - original source code )
-        $widget_blocks = get_option('widget_block');
-        if (
-            (is_array($widget_blocks) || is_object($widget_blocks)) && 
-            !empty($widget_blocks) && 
-            function_exists('has_block')
-        ) {
-            foreach ($widget_blocks as $widget_block) {
-                if (
-                    isset($widget_block['content']) && 
-                    !empty($widget_block['content']) && 
-                    has_block('calendar', $widget_block['content'])
-                ) {
-                    $hasCalendarWidget = true;
-                    break;
-                }
-            }// endforeach;
-            unset($widget_block);
-
-            if (isset($hasCalendarWidget)) {
-                // if theme using widget blocks.
-                // enqueue css to fix calendar widget block to render as non widget block.
-                // if you would like it to be render as new widget block, please dequeue this handle.
-                wp_enqueue_style('bootstrapbasic-widgetblocks-calendar', get_template_directory_uri() . '/css/widget-blocks/calendar.css', array(), $themeVersion);
-            }
+        // check if there are any calendar widget block.
+        if (bootstrapBasicHasWidgetBlock('calendar') === true) {
+            // if theme using widget blocks.
+            // enqueue css to fix calendar widget block to render as non widget block.
+            // if you would like it to be render as new widget block, please dequeue this handle.
+            wp_enqueue_style('bootstrapbasic-widgetblocks-calendar', get_template_directory_uri() . '/css/widget-blocks/calendar.css', array(), $themeVersion);
         }
-        unset($widget_blocks);
 
         // js that is useful for development.
         wp_enqueue_script('modernizr-script', get_template_directory_uri() . '/js/vendor/modernizr.min.js', array(), '3.6.0-20190314', true);

@@ -42,3 +42,43 @@ if (!function_exists('bootstrapBasicGetMainColumnSize')) {
 		return $main_column_size;
 	}// bootstrapBasicGetMainColumnSize
 }
+
+
+if (!function_exists('bootstrapBasicHasWidgetBlock')) {
+    /**
+     * Check if currently there are any selected widget block name.
+     * 
+     * @link https://wordpress.stackexchange.com/a/392496/41315 Original source code.
+     * @param string $blockName The widget block name to check.
+     * @return bool Return `true` if found, return `false` if not found or this site is using older version of WordPress that is not supported widget blocks.
+     */
+    function bootstrapBasicHasWidgetBlock($blockName)
+    {
+        if (!is_string($blockName)) {
+            return false;
+        }
+
+        $widget_blocks = get_option('widget_block');
+        if (
+            (is_array($widget_blocks) || is_object($widget_blocks)) && 
+            !empty($widget_blocks) && 
+            function_exists('has_block')
+        ) {
+            foreach ($widget_blocks as $widget_block) {
+                if (
+                    isset($widget_block['content']) && 
+                    !empty($widget_block['content']) && 
+                    has_block($blockName, $widget_block['content'])
+                ) {
+                    // if found selected widget block name.
+                    unset($widget_block, $widget_blocks);
+                    return true;
+                }
+            }// endforeach;
+            unset($widget_block);
+        }
+
+        unset($widget_blocks);
+        return false;
+    }// bootstrapBasicHasWidgetBlock
+}
