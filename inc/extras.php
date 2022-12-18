@@ -17,7 +17,7 @@ if (!function_exists('bootstrapBasicCommentReplyLinkClass')) {
      */
     function bootstrapBasicCommentReplyLinkClass($class) 
     {
-        if (is_scalar($class)) {
+        if (!is_scalar($class)) {
             $class = '';
         }
 
