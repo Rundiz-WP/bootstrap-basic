@@ -29,8 +29,6 @@ if (!function_exists('bootstrapBasicComment')) {
      * @param integer $depth
      */
     function bootstrapBasicComment($comment, $args, $depth) {
-        $GLOBALS['comment'] = $comment;
-
         if ('pingback' == $comment->comment_type || 'trackback' == $comment->comment_type) { 
             echo '<li id="comment-';
                 comment_ID();
