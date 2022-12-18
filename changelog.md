@@ -1,6 +1,13 @@
 # Theme change log.
 Started since v1.1
 
+### v1.2.3
+2022-12-18
+
+* Fix incorrect check type scalar.
+* Fix "Overriding WordPress globals is prohibited" error.
+* Fix using `var_export()`.
+
 ### v1.2.2
 2022-12-18
 
