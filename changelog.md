@@ -1,6 +1,11 @@
 # Theme change log.
 Started since v1.1
 
+### v1.2.2
+2022-12-18
+
+* Fix missing `$depth` argument cause fatal error in WP 6.2.
+
 ### v1.2.1
 2022-01-24
 
