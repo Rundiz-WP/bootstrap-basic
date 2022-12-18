@@ -38,6 +38,7 @@
     <!-- https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/wiki/Customizable-sniff-properties -->
     <config name="minimum_supported_wp_version" value="5.0"/>
     <rule ref="WordPress">
+        <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"></exclude>
         <exclude name="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine"></exclude>
         <exclude name="Generic.Files.EndFileNewline.NotFound"></exclude>
         <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning"></exclude>
