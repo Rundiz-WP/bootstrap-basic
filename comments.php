@@ -20,7 +20,7 @@ if (post_password_required()) {
 			printf(
 				/* translators: %1$s: Number of comments, %2$s: Post title. */
 				_nx(
-					'One comment on &ldquo;%2$s&rdquo;', 
+					'%1$s comment on &ldquo;%2$s&rdquo;', 
 					'%1$s comments on &ldquo;%2$s&rdquo;', 
 					get_comments_number(), 
 					'comments title', 
