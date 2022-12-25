@@ -23,6 +23,4 @@
     </p>
 
     <?php do_action('bootstrapbasic_theme_help_content'); ?>
-
-    <p style="margin-top: 20px;"><span style="font-size: 1.2rem;">&#128147;</span> If my theme can help you, your jobs, your projects please <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9HQE4GVV4KTZE" target="donations_link">buy me some foods</a>.</p>
 </div>
