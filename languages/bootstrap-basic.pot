@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-12-25T10:28:43+07:00\n"
+"POT-Creation-Date: 2022-12-29T13:49:28+07:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: bootstrap-basic\n"
@@ -227,6 +227,7 @@ msgid "Next <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: inc/BootstrapBasicAdminHelp.php:13
+#: inc/views/BootstrapBasicAdminHelp_v.php:2
 msgid "Bootstrap Basic help"
 msgstr ""
 
@@ -290,16 +291,50 @@ msgstr ""
 msgid "Tagged"
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:16
+#: inc/views/BootstrapBasicAdminHelp_v.php:4
+msgid "Menu"
+msgstr ""
+
+#: inc/views/BootstrapBasicAdminHelp_v.php:5
+msgid "To display menu correctly, please create at least 1 menu and set as primary and save."
+msgstr ""
+
+#: inc/views/BootstrapBasicAdminHelp_v.php:7
+msgid "Bootstrap features"
+msgstr ""
+
+#: inc/views/BootstrapBasicAdminHelp_v.php:8
+msgid "This theme can use all Bootstrap classes, elements and styles."
+msgstr ""
+
+#: inc/views/BootstrapBasicAdminHelp_v.php:10
+msgid "Responsive image"
+msgstr ""
+
+#. translators: %1$s sample of responsive image HTML with class.
+#: inc/views/BootstrapBasicAdminHelp_v.php:14
+msgid "For responsive image please add img-responsive class to img element. Example: %1$s"
+msgstr ""
+
+#: inc/views/BootstrapBasicAdminHelp_v.php:19
+msgid "Responsive video</h3>"
+msgstr ""
+
+#. translators: %1$s sample of responsive video HTML with class.
+#: inc/views/BootstrapBasicAdminHelp_v.php:23
+msgid "Cloak video element (video element or embeded video) with %1$s."
+msgstr ""
+
+#: inc/views/BootstrapBasicAdminHelp_v.php:28
 msgid "Bootstrap Basic Change log"
 msgstr ""
 
 #. translators: %1$s: Open link, %2$s: Close link
-#: inc/views/BootstrapBasicAdminHelp_v.php:20
+#: inc/views/BootstrapBasicAdminHelp_v.php:33
 msgid "You can see what was changed in each version or each commits on our %1$sGithub page%2$s."
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:22
+#: inc/views/BootstrapBasicAdminHelp_v.php:37
 msgid "You can also see it on changelog.md file that come with the theme."
 msgstr ""
 
