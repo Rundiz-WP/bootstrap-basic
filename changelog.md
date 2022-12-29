@@ -1,6 +1,15 @@
 # Theme change log.
 Started since v1.1
 
+### v1.2.4
+2022-12-29
+
+* Remove paypal link as never use.
+* Fix "Warning: Missing singular placeholder" error.
+* Fix missing active class on parent menu item that have child item active.
+* Update theme help page to properly use translation.
+* Update help page, add link to Bootstrap 3 doc.
+
 ### v1.2.3
 2022-12-18
 

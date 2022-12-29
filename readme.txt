@@ -31,10 +31,10 @@ WordPress Menu
 To display menu correctly, please create at least 1 menu and set as primary and save.
 
 Bootstrap features
-This theme can use all Bootstrap classes, elements and styles.
+This theme can use all Bootstrap 3 classes, elements and styles.
 
 Responsive image
 For responsive image please add img-responsive class to img element.
 
 Responsive video
-Cloak video element (video element or embeded video) with <div class="flexvideo">...your video...</div>.
+Cloak video element (video element or embeded video) with <div class="flexvideo">...</div>.
