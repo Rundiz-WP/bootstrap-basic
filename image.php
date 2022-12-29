@@ -66,9 +66,10 @@ get_header();
                                  * The other part of this pager is in inc/template-tags.php function name bootstrapBasicLinkPagesLink() which is called by wp_link_pages_link filter.
                                  * 
                                  * NOPE! NO! DON'T! This function really does not works with WordPress image attachment page.
-                                 * @todo Check again that WordPress already fix pages in image.php bug and re-enable it. (Last WP version checked but still not work is 3.7.1)
+                                 * It exists on many official themes such as Twenty Sixteen, Twenty Twenty-One, etc but they are also not working.
+                                 * @todo Check again that WordPress already fix pages in image.php bug and re-enable it. (Last WP version checked but still not work is 6.2-alpha-55019)
                                 */
-                                /* 
+                                /*
                                 wp_link_pages(array(
                                     'before' => '<div class="page-links">' . __('Pages:', 'bootstrap-basic') . ' <ul class="pagination">',
                                     'after'  => '</ul></div>',
