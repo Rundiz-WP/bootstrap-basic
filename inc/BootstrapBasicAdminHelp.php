@@ -1,4 +1,10 @@
 <?php
+/**
+ * Bootstrap Basic theme help page.
+ * 
+ * @package bootstrap-basic
+ */
+
 
 if (!class_exists('BootstrapBasicAdminHelp')) {
     class BootstrapBasicAdminHelp
@@ -24,5 +30,5 @@ if (!class_exists('BootstrapBasicAdminHelp')) {
         }// themeHelpPage
 
 
-    }// end class -------------------------------------------------------------------------------
+    }
 }
