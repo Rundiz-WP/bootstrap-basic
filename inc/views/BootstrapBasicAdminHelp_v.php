@@ -5,7 +5,14 @@
     <p><?php _e('To display menu correctly, please create at least 1 menu and set as primary and save.', 'bootstrap-basic'); ?></p>
 
     <h3><?php _e('Bootstrap features', 'bootstrap-basic'); ?></h3>
-    <p><?php _e('This theme can use all Bootstrap classes, elements and styles.', 'bootstrap-basic'); ?></p>
+    <p><?php 
+    printf(
+        /* translators: $1$s open link to Bootstrap doc, %2$s close link. */
+        __('This theme can use all %1$sBootstrap 3%2$s classes, elements and styles.', 'bootstrap-basic'),
+        '<a href="https://getbootstrap.com/docs/3.4/" target="bootstrap_doc">',
+        '</a>'
+    ); 
+    ?></p>
 
     <h3><?php _e('Responsive image', 'bootstrap-basic'); ?></h3>
     <p><?php 
@@ -27,14 +34,14 @@
 
     <h3><?php _e('Bootstrap Basic Change log', 'bootstrap-basic'); ?></h3>
     <p>
-            <?php 
-            printf(
-                /* translators: %1$s: Open link, %2$s: Close link */
-                __('You can see what was changed in each version or each commits on our %1$sGithub page%2$s.', 'bootstrap-basic'), 
-                '<a href="https://github.com/Rundiz-WP/bootstrap-basic" target="bb_commits">', '</a>'
-            ); 
-            ?> 
-            <?php _e('You can also see it on changelog.md file that come with the theme.', 'bootstrap-basic'); ?> 
+        <?php 
+        printf(
+            /* translators: %1$s: Open link, %2$s: Close link */
+            __('You can see what was changed in each version or each commits on our %1$sGithub page%2$s.', 'bootstrap-basic'), 
+            '<a href="https://github.com/Rundiz-WP/bootstrap-basic" target="bb_commits">', '</a>'
+        ); 
+        ?> 
+        <?php _e('You can also see it on changelog.md file that come with the theme.', 'bootstrap-basic'); ?> 
     </p>
 
     <?php do_action('bootstrapbasic_theme_help_content'); ?>
