@@ -1,18 +1,18 @@
 <?php
 /**
- * My walker nav menu extends wp walker nav menu
+ * My walker nav menu extends WordPress walker nav menu class.
  * 
  * @package bootstrap-basic
  */
 
 
 if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
-    class BootstrapBasicMyWalkerNavMenu extends Walker_Nav_Menu
+    class BootstrapBasicMyWalkerNavMenu extends \Walker_Nav_Menu
     {
 
 
         /**
-         * Overwrite display_element function to add has_children attribute. Not needed in >= Wordpress 3.4
+         * Overwrite display_element function to add has_children attribute. Not needed in >= WordPress 3.4
          * 
          * @link https://gist.github.com/duanecilliers/1817371 copy from this url
          * @inheritDoc
@@ -42,7 +42,7 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
             $id = $element->$id_field;
 
             // descend only when the depth is right and there are childrens for this element
-            if (($max_depth == 0 || $max_depth > $depth + 1) && isset($children_elements[$id])) {
+            if ((0 == $max_depth || $max_depth > $depth + 1) && isset($children_elements[$id])) {
 
                 foreach ($children_elements[$id] as $child) {
 
@@ -70,12 +70,19 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
 
 
         /**
+         * Start element.
+         * 
          * @link https://gist.github.com/duanecilliers/1817371 copy from this URL.
          */
         public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) 
         {
-            if ((is_object($item) && $item->title == null) || (!is_object($item))) {
+            if ((is_object($item) && null == $item->title) || (!is_object($item))) {
                 return ;
+            }
+            if (!is_numeric($depth)) {
+                $depth = 0;
+            } else {
+                $depth = (int) $depth;
             }
 
             $indent = ($depth) ? str_repeat("\t", $depth) : '';
@@ -83,7 +90,6 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
             $li_attributes = '';
             $value = '';
             $class_names = $value;
-
             $classes = empty($item->classes) ? array() : (array) $item->classes;
             // Add class and attribute to LI element that contains a submenu UL.
             if (is_object($args) && $args->has_children) {
@@ -96,6 +102,9 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
 
             // Make sure you still add all of the WordPress classes.
             $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args, $depth));
+            if (strpos($class_names, 'current-menu-parent') !== false && strpos($class_names, 'active') === false) {
+                $class_names .= ' active';
+            }
             $class_names = ' class="' . esc_attr($class_names) . '"';
 
             $id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth);
@@ -103,19 +112,26 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
 
             $output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
 
-            // Add attributes to link element.
-            $attributes = !empty($item->attr_title) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
-            $attributes .=!empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
-            $attributes .=!empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
-            $attributes .=!empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
-            $attributes .= (is_object($args) && $args->has_children) ? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
+            if (isset($item->classes) && is_array($item->classes) && in_array('divider', $item->classes)) {
+                // it is Bootstrap dropdown divider, use this instead of link.
+                $item_output = (is_object($args)) ? $args->before : '';
+                $item_output .= '<div class="' . join(' ', $item->classes) . '"></div>'.PHP_EOL;
+                $item_output .= (is_object($args) ? $args->after : '');
+            } else {
+                // Add attributes to link element.
+                $attributes = !empty($item->attr_title) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
+                $attributes .=!empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
+                $attributes .=!empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
+                $attributes .=!empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
+                $attributes .= (is_object($args) && $args->has_children) ? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
 
-            $item_output = (is_object($args)) ? $args->before : '';
-            $item_output .= '<a' . $attributes . '>';
-            $item_output .= (is_object($args) ? $args->link_before : '') . apply_filters('the_title', $item->title, $item->ID) . (is_object($args) ? $args->link_after : '');
-            $item_output .= (is_object($args) && $args->has_children) ? ' <span class="caret"></span> ' : '';
-            $item_output .= '</a>';
-            $item_output .= (is_object($args) ? $args->after : '');
+                $item_output = (is_object($args)) ? $args->before : '';
+                $item_output .= '<a' . $attributes . '>';
+                $item_output .= (is_object($args) ? $args->link_before : '') . apply_filters('the_title', $item->title, $item->ID) . (is_object($args) ? $args->link_after : '');
+                $item_output .= (is_object($args) && $args->has_children) ? ' <span class="caret"></span> ' : '';
+                $item_output .= '</a>';
+                $item_output .= (is_object($args) ? $args->after : '');
+            }
 
             $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
         }// start_el
