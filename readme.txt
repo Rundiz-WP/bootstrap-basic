@@ -1,13 +1,12 @@
-===Bootstrap Basic===
-Author: Vee Winch
-Author URI: https://rundiz.com
+=== Bootstrap Basic ===
 Contributors: okvee, christianoliff
-Requires at least: 4.0
-Tested up to: 6.2
-Description: Bootstrap v.3 basic theme. For build new theme based on Bootstrap.
-Text Domain: bootstrap-basic
-Domain Path: /languages/
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, post-formats, threaded-comments, translation-ready
+Tested up to: 6.2
+Requires at least: 4.0
+Requires PHP: 5.4
+Stable Tag: 1.2.4
+License: MIT
+License URI: https://opensource.org/licenses/MIT
 
 Bootstrap Basic WordPress theme, Copyright (C) 2018 Rundiz.com
 Bootstrap Basic WordPress theme is licensed under the MIT.
@@ -21,11 +20,12 @@ Bootstrap Basic Uses Respond https://github.com/scottjehl/Respond licensed under
 
 Bootstrap Basic is based on the _s (Underscores) starter theme by Automattic Inc., licensed under GPL.
 
-==Description==
+== Description ==
 
-Bootstrap v.3 basic theme. For build new theme based on Bootstrap.
+Bootstrap v.3 basic theme for developers to build their new theme very fast and easy. 
+To follow what was changed, please look for commits ( https://github.com/Rundiz-WP/bootstrap-basic ) of this theme at Github or changelog.md file that come with the theme.
 
-==More feature==
+== More feature ==
 
 WordPress Menu
 To display menu correctly, please create at least 1 menu and set as primary and save.
