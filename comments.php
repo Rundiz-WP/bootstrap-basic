@@ -65,7 +65,7 @@ if (post_password_required()) {
 
     <?php
     // If comments are closed and there are comments, let's leave a little note, shall we?
-    if (!comments_open() && '0' != get_comments_number() && post_type_supports(get_post_type(), 'comments')) { ?> 
+    if (!comments_open() && '0' !== strval(get_comments_number()) && post_type_supports(get_post_type(), 'comments')) { ?> 
         <p class="no-comments"><?php _e('Comments are closed.', 'bootstrap-basic'); ?></p>
     <?php 
     } //endif; 
@@ -84,20 +84,20 @@ if (post_password_required()) {
     foreach ($comment_allowedtags_array as $item) {
         $formatted_comment_allowedtags .= '<code>';
         
-        if ($comment_allowedtags_array[0] != $item) {
+        if ($comment_allowedtags_array[0] !== $item) {
             $formatted_comment_allowedtags .= '&lt;';
         }
         
         $formatted_comment_allowedtags .= $item;
         
-        if (end($comment_allowedtags_array) != $item) {
+        if (end($comment_allowedtags_array) !== $item) {
             $formatted_comment_allowedtags .= '&gt;';
         }
         
         $formatted_comment_allowedtags .= '</code> ';
     }
     $comment_allowed_tags = $formatted_comment_allowedtags;
-    unset($comment_allowedtags, $comment_allowedtags_array, $formatted_comment_allowedtags);
+    unset($comment_allowedtags, $comment_allowedtags_array, $formatted_comment_allowedtags, $item);
     
     ob_start();
     comment_form(

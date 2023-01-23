@@ -42,7 +42,7 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
             $id = $element->$id_field;
 
             // descend only when the depth is right and there are childrens for this element
-            if ((0 == $max_depth || $max_depth > $depth + 1) && isset($children_elements[$id])) {
+            if ((0 === intval($max_depth) || $max_depth > $depth + 1) && isset($children_elements[$id])) {
 
                 foreach ($children_elements[$id] as $child) {
 
@@ -76,7 +76,7 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
          */
         public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) 
         {
-            if ((is_object($item) && null == $item->title) || (!is_object($item))) {
+            if ((is_object($item) && empty($item->title)) || (!is_object($item))) {
                 return ;
             }
             if (!is_numeric($depth)) {

@@ -49,8 +49,8 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
             $output = '<p>';
             $output .= '<label for="' . $this->get_field_id('navbaralign') . '">' . __('Form alignment:', 'bootstrap-basic') . '</label>';
             $output .= '<select id="' . $this->get_field_id('navbaralign') . '" name="' . $this->get_field_name('navbaralign') . '">';
-            $output .= '<option value="navbar-left"' . ($navbaralign == 'navbar-left' ? ' selected="selected"' : '') . '>' . __('Left', 'bootstrap-basic') . '</option>';
-            $output .= '<option value="navbar-right"' . ($navbaralign == 'navbar-right' ? ' selected="selected"' : '') . '>' . __('Right', 'bootstrap-basic') . '</option>';
+            $output .= '<option value="navbar-left"' . ($navbaralign === 'navbar-left' ? ' selected="selected"' : '') . '>' . __('Left', 'bootstrap-basic') . '</option>';
+            $output .= '<option value="navbar-right"' . ($navbaralign === 'navbar-right' ? ' selected="selected"' : '') . '>' . __('Right', 'bootstrap-basic') . '</option>';
             $output .= '</select>';
             $output .= '</p>';
 
@@ -72,7 +72,7 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
         {
             $instance = array();
 
-            if ($new_instance['navbaralign'] != 'navbar-left' && $new_instance['navbaralign'] != 'navbar-right') {
+            if ($new_instance['navbaralign'] !== 'navbar-left' && $new_instance['navbaralign'] !== 'navbar-right') {
                 $instance['navbaralign'] = $this->navbaralign;
             } else {
                 $instance['navbaralign'] = $new_instance['navbaralign'];
@@ -92,7 +92,7 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
         public function widget($args, $instance) 
         {
             $navbaralign = $this->navbaralign;
-            if (isset($instance['navbaralign']) && $instance['navbaralign'] != null) {
+            if (isset($instance['navbaralign']) && !empty($instance['navbaralign'])) {
                 $navbaralign = $instance['navbaralign'];
             }
 

@@ -12,19 +12,19 @@ if (!function_exists('bootstrapBasicCommentReplyLinkClass')) {
      * modify comment reply link by adding bootstrap button class.
      * 
      * @todo Change comment link class modification to use WordPress hook action/filter when it's available.
-     * @param string $class
+     * @param string $className
      * @return string
      */
-    function bootstrapBasicCommentReplyLinkClass($class) 
+    function bootstrapBasicCommentReplyLinkClass($className) 
     {
-        if (!is_scalar($class)) {
-            $class = '';
+        if (!is_scalar($className)) {
+            $className = '';
         }
 
-        $class = str_replace("class='comment-reply-link", "class='comment-reply-link btn btn-default btn-sm", $class);
-        $class = str_replace('class="comment-reply-login', 'class="comment-reply-login btn btn-default btn-sm', $class);
+        $className = str_replace("class='comment-reply-link", "class='comment-reply-link btn btn-default btn-sm", $className);
+        $className = str_replace('class="comment-reply-login', 'class="comment-reply-login btn btn-default btn-sm', $className);
 
-        return $class;
+        return $className;
     }// bootstrapBasicCommentReplyLinkClass
 }
 add_filter('comment_reply_link', 'bootstrapBasicCommentReplyLinkClass');

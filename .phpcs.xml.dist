@@ -40,6 +40,8 @@
     <rule ref="WordPress">
         <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"></exclude>
         <exclude name="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine"></exclude>
+        <exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.Found"></exclude>
+        <exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed"></exclude>
         <exclude name="Generic.Files.EndFileNewline.NotFound"></exclude>
         <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning"></exclude>
         <exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine"></exclude>
@@ -71,6 +73,7 @@
         <exclude name="Squiz.WhiteSpace.SemicolonSpacing.Incorrect"></exclude>
         <exclude name="Squiz.WhiteSpace.SuperfluousWhitespace.EndFile"></exclude>
         <exclude name="Squiz.WhiteSpace.SuperfluousWhitespace.EndLine"></exclude>
+        <exclude name="Universal.Arrays.DisallowShortArraySyntax.Found"></exclude>
         <exclude name="WordPress.Arrays.ArrayDeclarationSpacing.NoSpaceAfterArrayOpener"></exclude>
         <exclude name="WordPress.Arrays.ArrayDeclarationSpacing.NoSpaceBeforeArrayCloser"></exclude>
         <exclude name="WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound"></exclude>

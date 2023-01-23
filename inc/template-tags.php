@@ -29,7 +29,7 @@ if (!function_exists('bootstrapBasicComment')) {
      * @param integer $depth
      */
     function bootstrapBasicComment($comment, $args, $depth) {
-        if ('pingback' == $comment->comment_type || 'trackback' == $comment->comment_type) { 
+        if ('pingback' === $comment->comment_type || 'trackback' === $comment->comment_type) { 
             echo '<li id="comment-';
                 comment_ID();
                 echo '" ';
@@ -55,7 +55,7 @@ if (!function_exists('bootstrapBasicComment')) {
 
                 // footer
                 echo '<footer class="comment-meta pull-left">';
-                    if (0 != $args['avatar_size']) {
+                    if (0 !== intval($args['avatar_size'])) {
                         echo get_avatar($comment, $args['avatar_size']);
                     }
                 echo '</footer><!-- .comment-meta -->';
@@ -86,7 +86,7 @@ if (!function_exists('bootstrapBasicComment')) {
                         echo '</div><!-- .comment-metadata -->';
 
                         // if comment was not approved
-                        if ('0' == $comment->comment_approved) {
+                        if ('0' === strval($comment->comment_approved)) {
                             echo '<div class="comment-awaiting-moderation text-warning"> <span class="glyphicon glyphicon-info-sign"></span> ';
                                 _e('Your comment is awaiting moderation.', 'bootstrap-basic');
                             echo '</div>';
@@ -141,7 +141,7 @@ if (!function_exists('bootstrapBasicEditPostLink')) {
     function bootstrapBasicEditPostLink() 
     {
         $edit_post_link = get_edit_post_link();
-        if ($edit_post_link != null) {
+        if (!empty($edit_post_link)) {
             $edit_btn = '<a class="post-edit-link btn btn-default btn-xs" href="'.$edit_post_link.'" title="' . __('Edit', 'bootstrap-basic') . '"><i class="edit-post-icon glyphicon glyphicon-pencil" title="' . __('Edit', 'bootstrap-basic') . '"></i></a>';
             unset($edit_post_link);
             echo $edit_btn;
@@ -329,7 +329,7 @@ if (!function_exists('bootstrapBasicTheAttachedImage')) {
         // If there is more than 1 attachment in a gallery...
         if (count($attachment_ids) > 1) {
             foreach ($attachment_ids as $attachment_id) {
-                if ($attachment_id == $post->ID) {
+                if ($attachment_id === $post->ID) {
                     $next_id = current($attachment_ids);
                     break;
                 }

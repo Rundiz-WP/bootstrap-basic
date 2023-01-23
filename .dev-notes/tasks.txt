@@ -4,5 +4,5 @@ What I have to do when update this theme?
 - Update HTML5 Shiv version at functions.php in `bootstrapBasicEnqueueScripts` function.
 - Update Respond.js version at functions.php in `bootstrapBasicEnqueueScripts` function.
 - Update Modernizr version at functions.php in `bootstrapBasicEnqueueScripts` function.
-- Update theme version number at style.css
+- Update theme version number at readme.txt & style.css
 - Write change log in changelog.md

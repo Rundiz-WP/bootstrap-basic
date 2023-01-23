@@ -94,7 +94,7 @@ if (!class_exists('BootstrapBasicLegacySearchWidget')) {
             // set output front-end widget ---------------------------------
             $output = $args['before_widget'];
 
-            if (isset($instance['bootstrapbasic-legacysearch-widget-title']) && $instance['bootstrapbasic-legacysearch-widget-title'] != null) {
+            if (isset($instance['bootstrapbasic-legacysearch-widget-title']) && !empty($instance['bootstrapbasic-legacysearch-widget-title'])) {
                 $output .= $args['before_title'] . apply_filters('widget_title', $instance['bootstrapbasic-legacysearch-widget-title']) . $args['after_title'] . "\n";
             }
 
