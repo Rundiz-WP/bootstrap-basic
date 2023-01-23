@@ -24,7 +24,8 @@ if (!class_exists('BootstrapBasicAutoRegisterWidgets')) {
             foreach ($DirectoryIterator as $fileinfo) {
                 if (!$fileinfo->isDot() && $fileinfo->isFile() && strtolower($fileinfo->getExtension()) === 'php') {
                     $file_name_only = $fileinfo->getBasename('.php');
-                    $class_name = __NAMESPACE__ . (!empty(__NAMESPACE__) ? '\\' : '') . $file_name_only;
+                    $namespace = __NAMESPACE__;
+                    $class_name = $namespace . (!empty($namespace) ? '\\' : '') . $file_name_only;
                     require_once($fileinfo->getRealPath());// needs require to use `class_exists()`.
 
                     if ($class_name !== __CLASS__ && class_exists($class_name)) {
@@ -33,7 +34,7 @@ if (!class_exists('BootstrapBasicAutoRegisterWidgets')) {
                         });
                     }
 
-                    unset($class_name, $file_name_only);
+                    unset($class_name, $file_name_only, $namespace);
                 }
             }// endforeach;
             unset($DirectoryIterator, $fileinfo, $widgets_folder);
