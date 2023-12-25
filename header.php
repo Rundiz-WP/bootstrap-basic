@@ -81,7 +81,7 @@
                                         'container' => false, 
                                         'depth' => 2,
                                         'menu_class' => 'nav navbar-nav', 
-                                        'walker' => new BootstrapBasicMyWalkerNavMenu()
+                                        'walker' => new BootstrapBasicMyWalkerNavMenu(),
                                     )
                                 ); 
                                 ?> 

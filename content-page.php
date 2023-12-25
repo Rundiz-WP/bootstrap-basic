@@ -14,7 +14,7 @@
         wp_link_pages(array(
             'before' => '<div class="page-links">' . __('Pages:', 'bootstrap-basic') . ' <ul class="pagination">',
             'after'  => '</ul></div>',
-            'separator' => ''
+            'separator' => '',
         ));
         ?>
     </div><!-- .entry-content -->

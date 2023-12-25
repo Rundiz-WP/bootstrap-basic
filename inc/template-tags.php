@@ -107,7 +107,7 @@ if (!function_exists('bootstrapBasicComment')) {
                         'depth'     => $depth,
                         'max_depth' => $args['max_depth'],
                         'reply_text' => '<span class="fa fa-reply"></span> ' . __('Reply', 'bootstrap-basic'),
-                        'login_text' => '<span class="fa fa-reply"></span> ' . __('Log in to Reply', 'bootstrap-basic')
+                        'login_text' => '<span class="fa fa-reply"></span> ' . __('Log in to Reply', 'bootstrap-basic'),
                     )));
                     // end reply link
                 echo '</div><!-- .comment-content -->';
@@ -199,7 +199,7 @@ if (!function_exists('bootstrapBasicMoreLinkText')) {
 
 if (!function_exists('bootstrapBasicPagination')) {
     /**
-     * display pagination (1 2 3 ...) instead of previous, next of wordpress style.
+     * display pagination (1 2 3 ...) instead of previous, next of WordPress style.
      * 
      * @param string $pagination_align_class
      */
@@ -214,7 +214,7 @@ if (!function_exists('bootstrapBasicPagination')) {
             'total' => $wp_query->max_num_pages,
             'prev_text' => '&laquo;',
             'next_text' => '&raquo;',
-            'type' => 'array'
+            'type' => 'array',
         ));
 
         unset($big);
@@ -323,7 +323,7 @@ if (!function_exists('bootstrapBasicTheAttachedImage')) {
             'post_type'      => 'attachment',
             'post_mime_type' => 'image',
             'order'          => 'ASC',
-            'orderby'        => 'menu_order ID'
+            'orderby'        => 'menu_order ID',
         ));
 
         // If there is more than 1 attachment in a gallery...

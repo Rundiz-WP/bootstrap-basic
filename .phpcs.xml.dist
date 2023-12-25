@@ -50,7 +50,12 @@
         <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"></exclude>
         <exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect"></exclude>
         <exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact"></exclude>
+        <exclude name="NormalizedArrays.Arrays.ArrayBraceSpacing.SpaceAfterArrayOpenerSingleLine"></exclude>
+        <exclude name="NormalizedArrays.Arrays.ArrayBraceSpacing.SpaceBeforeArrayCloserSingleLine"></exclude>
         <exclude name="PEAR"></exclude>
+        <exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"></exclude>
+        <exclude name="PSR2.Files.EndFileNewline.NoneFound"></exclude>
+        <exclude name="PSR2.Files.EndFileNewline.TooMany"></exclude>
         <exclude name="Squiz.Commenting.BlockComment.NoCapital"></exclude>
         <exclude name="Squiz.Commenting.BlockComment.NoEmptyLineBefore"></exclude>
         <exclude name="Squiz.Commenting.ClassComment.Missing"></exclude>
@@ -64,6 +69,7 @@
         <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"></exclude>
         <exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace"></exclude>
         <exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterOpen"></exclude>
+        <exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingBeforeClose"></exclude>
         <exclude name="Squiz.PHP.CommentedOutCode.Found"></exclude>
         <exclude name="Squiz.PHP.EmbeddedPhp.ContentAfterEnd"></exclude>
         <exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeEnd"></exclude>

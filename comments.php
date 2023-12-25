@@ -132,7 +132,7 @@ if (post_password_required()) {
             'comment_notes_after' => '<p class="help-block">' . 
                             /* translators: %s Allowed HTML tags for comment. */
                             sprintf(__('You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'bootstrap-basic'), $comment_allowed_tags) . 
-                            '</p>'
+                            '</p>',
         )
     ); 
     

@@ -8,7 +8,7 @@
 
 if (!class_exists('BootstrapBasicAdminHelp')) {
     class BootstrapBasicAdminHelp
-        {
+    {
 
 
         /**

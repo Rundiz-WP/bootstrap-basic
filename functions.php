@@ -69,7 +69,7 @@ if (!function_exists('bootstrapBasicSetup')) {
                 'bootstrap_basic_custom_background_args', 
                 array(
                     'default-color' => 'ffffff', 
-                    'default-image' => ''
+                    'default-image' => '',
                 )
             )
         );
