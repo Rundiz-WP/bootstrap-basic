@@ -1,6 +1,12 @@
 # Theme change log.
 Started since v1.1
 
+### v1.2.5
+2023-12-25
+
+* Add dropdown header supported in navbar.
+* Update BootstrapBasic help message.
+
 ### v1.2.4
 2022-12-29
 

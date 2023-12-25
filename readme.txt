@@ -4,7 +4,7 @@ Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custo
 Tested up to: 6.5
 Requires at least: 4.0
 Requires PHP: 5.4
-Stable Tag: 1.2.4
+Stable Tag: 1.2.5
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
