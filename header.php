@@ -74,17 +74,7 @@
                             </div>
                             
                             <div class="collapse navbar-collapse navbar-primary-collapse">
-                                <?php 
-                                wp_nav_menu(
-                                    array(
-                                        'theme_location' => 'primary', 
-                                        'container' => false, 
-                                        'depth' => 2,
-                                        'menu_class' => 'nav navbar-nav', 
-                                        'walker' => new BootstrapBasicMyWalkerNavMenu()
-                                    )
-                                ); 
-                                ?> 
+                                <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?> 
                                 <?php dynamic_sidebar('navbar-right'); ?> 
                             </div><!--.navbar-collapse-->
                         </nav>
