@@ -1,14 +1,14 @@
 === Bootstrap Basic ===
 Contributors: okvee, christianoliff
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, post-formats, threaded-comments, translation-ready
-Tested up to: 6.2
+Tested up to: 6.5
 Requires at least: 4.0
 Requires PHP: 5.4
 Stable Tag: 1.2.4
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
-Bootstrap Basic WordPress theme, Copyright (C) 2018 Rundiz.com
+Bootstrap Basic WordPress theme, Copyright (C) Rundiz.com
 Bootstrap Basic WordPress theme is licensed under the MIT.
 
 Bootstrap Basic Uses Bootstrap https://getbootstrap.com/ licensed under Apache 2.0.
