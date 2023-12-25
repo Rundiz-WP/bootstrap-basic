@@ -3,6 +3,24 @@
 
     <h3><?php _e('Menu', 'bootstrap-basic'); ?></h3>
     <p><?php _e('To display menu correctly, please create at least 1 menu and set as primary and save.', 'bootstrap-basic'); ?></p>
+    <h4><?php _e('Divider', 'bootstrap-basic'); ?></h4>
+    <p><?php 
+    printf(
+        /* translators: %1$s divider CSS class, %2$s the word CSS classes */
+        __('To display dropdown divier, add %1$s class to the menu\'s %2$s.', 'bootstrap-basic'),
+        '<code>divider</code>',
+        '<strong>' . __('CSS Classes', 'bootstrap-basic') . '</strong>'
+    );
+    ?></p>
+    <h4><?php _e('Dropdown header', 'bootstrap-basic'); ?></h4>
+    <p><?php 
+    printf(
+        /* translators: %1$s dropdown header CSS class, %2$s the word CSS classes */
+        __('To display dropdown header, add %1$s class to the menu\'s %2$s.', 'bootstrap-basic'),
+        '<code>dropdown-header</code>',
+        '<strong>' . __('CSS Classes', 'bootstrap-basic') . '</strong>'
+    );
+    ?></p>
 
     <h3><?php _e('Bootstrap features', 'bootstrap-basic'); ?></h3>
     <p><?php 
