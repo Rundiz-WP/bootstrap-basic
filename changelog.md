@@ -1,6 +1,11 @@
 # Theme change log.
 Started since v1.1
 
+### v1.2.6
+2024-07-07
+
+* Update style.css on these classes ( `.screen-reader-text`, `.aligncenter` ).
+
 ### v1.2.5
 2023-12-25
 
