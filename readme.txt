@@ -1,7 +1,7 @@
 === Bootstrap Basic ===
 Contributors: okvee, christianoliff
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, post-formats, threaded-comments, translation-ready
-Tested up to: 6.6
+Tested up to: 6.8
 Requires at least: 4.0
 Requires PHP: 5.4
 Stable Tag: 1.2.6
