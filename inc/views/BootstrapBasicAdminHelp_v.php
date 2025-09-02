@@ -54,7 +54,7 @@
     <p>
         <?php 
         printf(
-            /* translators: %1$s: Open link, %2$s: Close link */
+            /* translators: %1$s: Open link, %2$s: Close link. */
             __('You can see what was changed in each version or each commits on our %1$sGithub page%2$s.', 'bootstrap-basic'), 
             '<a href="https://github.com/Rundiz-WP/bootstrap-basic" target="bb_commits">', '</a>'
         ); 
@@ -62,5 +62,16 @@
         <?php _e('You can also see it on changelog.md file that come with the theme.', 'bootstrap-basic'); ?> 
     </p>
 
-    <?php do_action('bootstrapbasic_theme_help_content'); ?>
+    <?php do_action('bootstrapbasic_theme_help_content'); ?> 
+
+    <footer style="margin-top: 30px;">
+        <p><?php 
+        printf(
+            /* translators: %1$s Open link, %2$s Close link. */
+            __('Thank you for using Bootstrap Basic. Please %1$sdonate%2$s to support the developer.', 'bootstrap-basic'),
+            '<a href="https://rundiz.com/en/donate" target="donate">',
+            '</a>'
+        );
+        ?></p>
+    </footer>
 </div>
