@@ -1,33 +1,42 @@
-# Copyright (C) 2022 Vee Winch
+# Copyright (C) 2025 Rundiz-WP team
 # This file is distributed under the MIT.
 msgid ""
 msgstr ""
-"Project-Id-Version: Bootstrap Basic 1.2.3\n"
+"Project-Id-Version: Bootstrap Basic 1.2.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/bootstrap-basic\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-12-29T14:08:10+07:00\n"
+"POT-Creation-Date: 2025-09-02T13:30:04+07:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: bootstrap-basic\n"
 
 #. Theme Name of the theme
+#: style.css
 msgid "Bootstrap Basic"
 msgstr ""
 
 #. Theme URI of the theme
+#: style.css
 msgid "https://rundiz.com"
 msgstr ""
 
 #. Description of the theme
-msgid "Bootstrap v.3 basic theme for developers to build their new theme very fast and easy. To follow what was changed, please look for <a href=\"https://github.com/Rundiz-WP/bootstrap-basic\" target=\"commits\">commits</a> of this theme at Github or changelog.md file that come with the theme."
+#: style.css
+msgid "Bootstrap v.3 basic theme for developers to build their new theme very fast and easy. (WordPress 5 or Gutenberg ready.) The concept is to keep it basic, no rich features, no additional functions; all of these for theme developers will be easier to start develop their theme. Please read notice on Bootstrap Basic Help page in Dashboard > Appearance > Bootstrap Basic Help."
 msgstr ""
 
 #. Author of the theme
-msgid "Vee Winch"
+#: style.css
+msgid "Rundiz-WP team"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://github.com/Rundiz-WP"
 msgstr ""
 
 #: 404.php:7
@@ -44,26 +53,31 @@ msgstr ""
 
 #. translators: %1$s: smiley
 #: 404.php:39
+#, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
 #. translators: %s Author name.
 #: archive.php:36
+#, php-format
 msgid "Author: %s"
 msgstr ""
 
 #. translators: %s Date value.
 #: archive.php:46
+#, php-format
 msgid "Day: %s"
 msgstr ""
 
 #. translators: %s Month value.
 #: archive.php:50
+#, php-format
 msgid "Month: %s"
 msgstr ""
 
 #. translators: %s Year value.
 #: archive.php:54
+#, php-format
 msgid "Year: %s"
 msgstr ""
 
@@ -93,6 +107,7 @@ msgstr ""
 
 #. translators: %1$s: Number of comments, %2$s: Post title.
 #: comments.php:22
+#, php-format
 msgctxt "comments title"
 msgid "%1$s comment on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
@@ -132,6 +147,7 @@ msgstr ""
 
 #. translators: %s Allowed HTML tags for comment.
 #: comments.php:134
+#, php-format
 msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
 msgstr ""
 
@@ -160,16 +176,19 @@ msgstr ""
 
 #. translators: %1$s URL, %2$s: Post title.
 #: content-single.php:41
+#, php-format
 msgid "<span class=\"glyphicon glyphicon-link\"></span> <a href=\"%1$s\" title=\"Permalink to %2$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
 #. translators: %s WordPress with link.
 #: footer.php:18
+#, php-format
 msgid "Powered by %s"
 msgstr ""
 
 #. translators: %s Bootstrap Basic with link.
 #: footer.php:21
+#, php-format
 msgid "Theme: %s"
 msgstr ""
 
@@ -215,6 +234,7 @@ msgstr ""
 
 #. translators: %1$s: Date/time in datetime attribute, %2$s: Readable date/time, %3$s: URL, %4$s: Attachment width, %5$s: Attachment height, %6$s: Link to post parent, %7$s: Post parent title in the title attribute, %8$s: Post parent title.
 #: image.php:25
+#, php-format
 msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
 msgstr ""
 
@@ -233,6 +253,7 @@ msgstr ""
 
 #. translators: %s: Page number.
 #: inc/extras.php:156
+#, php-format
 msgid "Page %s"
 msgstr ""
 
@@ -252,6 +273,7 @@ msgstr ""
 
 #. translators: %1$s: Comment date, %2$s: Comment time.
 #: inc/template-tags.php:77
+#, php-format
 msgctxt "1: date, 2: time"
 msgid "%1$s at %2$s"
 msgstr ""
@@ -262,6 +284,7 @@ msgstr ""
 
 #. translators: %s: Comment author link.
 #: inc/template-tags.php:97
+#, php-format
 msgid "%s <span class=\"says\">says:</span>"
 msgstr ""
 
@@ -279,11 +302,13 @@ msgstr ""
 
 #. translators: %1$s: Link to post with date/time text, %2$s: Link to author with auth name.
 #: inc/template-tags.php:271
+#, php-format
 msgid "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
 msgstr ""
 
 #. translators: %s Author name.
 #: inc/template-tags.php:280
+#, php-format
 msgid "View all posts by %s"
 msgstr ""
 
@@ -299,44 +324,79 @@ msgstr ""
 msgid "To display menu correctly, please create at least 1 menu and set as primary and save."
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:7
+#: inc/views/BootstrapBasicAdminHelp_v.php:6
+msgid "Divider"
+msgstr ""
+
+#. translators: %1$s divider CSS class, %2$s the word CSS classes
+#: inc/views/BootstrapBasicAdminHelp_v.php:10
+#, php-format
+msgid "To display dropdown divier, add %1$s class to the menu's %2$s."
+msgstr ""
+
+#: inc/views/BootstrapBasicAdminHelp_v.php:12
+#: inc/views/BootstrapBasicAdminHelp_v.php:21
+msgid "CSS Classes"
+msgstr ""
+
+#: inc/views/BootstrapBasicAdminHelp_v.php:15
+msgid "Dropdown header"
+msgstr ""
+
+#. translators: %1$s dropdown header CSS class, %2$s the word CSS classes
+#: inc/views/BootstrapBasicAdminHelp_v.php:19
+#, php-format
+msgid "To display dropdown header, add %1$s class to the menu's %2$s."
+msgstr ""
+
+#: inc/views/BootstrapBasicAdminHelp_v.php:25
 msgid "Bootstrap features"
 msgstr ""
 
 #. translators: $1$s open link to Bootstrap doc, %2$s close link.
-#: inc/views/BootstrapBasicAdminHelp_v.php:11
+#: inc/views/BootstrapBasicAdminHelp_v.php:29
+#, php-format
 msgid "This theme can use all %1$sBootstrap 3%2$s classes, elements and styles."
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:17
+#: inc/views/BootstrapBasicAdminHelp_v.php:35
 msgid "Responsive image"
 msgstr ""
 
 #. translators: %1$s sample of responsive image HTML with class.
-#: inc/views/BootstrapBasicAdminHelp_v.php:21
+#: inc/views/BootstrapBasicAdminHelp_v.php:39
+#, php-format
 msgid "For responsive image please add img-responsive class to img element. Example: %1$s"
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:26
+#: inc/views/BootstrapBasicAdminHelp_v.php:44
 msgid "Responsive video</h3>"
 msgstr ""
 
 #. translators: %1$s sample of responsive video HTML with class.
-#: inc/views/BootstrapBasicAdminHelp_v.php:30
+#: inc/views/BootstrapBasicAdminHelp_v.php:48
+#, php-format
 msgid "Cloak video element (video element or embeded video) with %1$s."
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:35
+#: inc/views/BootstrapBasicAdminHelp_v.php:53
 msgid "Bootstrap Basic Change log"
 msgstr ""
 
-#. translators: %1$s: Open link, %2$s: Close link
-#: inc/views/BootstrapBasicAdminHelp_v.php:40
+#. translators: %1$s: Open link, %2$s: Close link.
+#: inc/views/BootstrapBasicAdminHelp_v.php:58
+#, php-format
 msgid "You can see what was changed in each version or each commits on our %1$sGithub page%2$s."
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:44
+#: inc/views/BootstrapBasicAdminHelp_v.php:62
 msgid "You can also see it on changelog.md file that come with the theme."
+msgstr ""
+
+#. translators: %1$s Open link, %2$s Close link.
+#: inc/views/BootstrapBasicAdminHelp_v.php:71
+#, php-format
+msgid "Thank you for using Bootstrap Basic. Please %1$sdonate%2$s to support the developer."
 msgstr ""
 
 #: inc/widgets/BootstrapBasicLegacySearchWidget.php:27
@@ -377,6 +437,7 @@ msgstr ""
 
 #. translators: %1$s: Link to add new post.
 #: no-results.php:17
+#, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
@@ -390,6 +451,7 @@ msgstr ""
 
 #. translators: %s Search value.
 #: search.php:22
+#, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
