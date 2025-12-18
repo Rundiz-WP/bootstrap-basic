@@ -165,6 +165,12 @@ if (!function_exists('bootstrapBasicEnqueueScripts')) {
      */
     function bootstrapBasicEnqueueScripts() 
     {
+        if (function_exists('wp_get_wp_version')) {
+            $wp_version = wp_get_wp_version();
+        } else {
+            global $wp_version;
+        }
+
         global $wp_scripts;
         $Theme = wp_get_theme();
         $themeVersion = $Theme->get('Version');
@@ -187,10 +193,12 @@ if (!function_exists('bootstrapBasicEnqueueScripts')) {
         wp_enqueue_script('modernizr-script', get_template_directory_uri() . '/js/vendor/modernizr.min.js', array(), '3.6.0-20190314', true);
         // js that is useful for old browsers.
         wp_register_script('respond-script', get_template_directory_uri() . '/js/vendor/respond.min.js', array(), '1.4.2', true);
-        $wp_scripts->add_data('respond-script', 'conditional', 'lt IE 9');
-        wp_enqueue_script('respond-script');
         wp_register_script('html5-shiv-script', get_template_directory_uri() . '/js/vendor/html5shiv.min.js', array(), '3.7.3', true);
-        $wp_scripts->add_data('html5-shiv-script', 'conditional', 'lte IE 9');
+        if (version_compare($wp_version, '6.9.0', '<')) {
+            wp_script_add_data('respond-script', 'conditional', 'lt IE 9');
+            wp_script_add_data('html5-shiv-script', 'conditional', 'lte IE 9');
+        }
+        wp_enqueue_script('respond-script');
         wp_enqueue_script('html5-shiv-script');
         
         if (is_singular() && get_option('thread_comments')) {
