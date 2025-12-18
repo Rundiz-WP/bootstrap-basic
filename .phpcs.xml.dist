@@ -6,6 +6,8 @@
     <file>.</file>
     <exclude-pattern>/\.backup/</exclude-pattern>
     <exclude-pattern>/\.dev-notes/</exclude-pattern>
+    <exclude-pattern>/\.dist/</exclude-pattern>
+    <exclude-pattern>/\.github/</exclude-pattern>
     <exclude-pattern>/\.img-src/</exclude-pattern>
     <exclude-pattern>/assets/css/bootstrap.*</exclude-pattern>
     <exclude-pattern>/assets/fontawesome/</exclude-pattern>
@@ -110,7 +112,9 @@
     <rule ref="WordPress.WP.I18n">
         <properties>
             <!-- Value: replace the text domain used. -->
-            <property name="text_domain" type="array" value="bootstrap-basic"/>
+            <property name="text_domain" type="array">
+                <element value="bootstrap-basic"/>
+            </property>
         </properties>
     </rule>
 </ruleset>

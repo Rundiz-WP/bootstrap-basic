@@ -1,8 +1,8 @@
 === Bootstrap Basic ===
 Contributors: okvee, christianoliff
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, post-formats, threaded-comments, translation-ready
-Tested up to: 6.8
-Requires at least: 4.0
+Tested up to: 7.0
+Requires at least: 4.2
 Requires PHP: 5.4
 Stable Tag: 1.2.6
 License: MIT
@@ -24,6 +24,8 @@ Bootstrap Basic is based on the _s (Underscores) starter theme by Automattic Inc
 
 Bootstrap v.3 basic theme for developers to build their new theme very fast and easy. 
 To follow what was changed, please look for commits ( https://github.com/Rundiz-WP/bootstrap-basic ) of this theme at Github or changelog.md file that come with the theme.
+
+Tested up to PHP 8.5.
 
 == More feature ==
 
