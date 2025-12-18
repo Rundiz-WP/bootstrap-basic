@@ -1,6 +1,11 @@
 # Theme change log.
 Started since v1.1
 
+### v1.3.0
+2025-12-18
+
+* Remove Internet Explorer supported.
+
 ### v1.2.6
 2024-07-07
 
