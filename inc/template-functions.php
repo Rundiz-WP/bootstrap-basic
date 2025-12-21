@@ -82,3 +82,28 @@ if (!function_exists('bootstrapBasicHasWidgetBlock')) {
         return false;
     }// bootstrapBasicHasWidgetBlock
 }
+
+
+if (!function_exists('bootstrapBasicIsWidgetRegistered')) {
+    /**
+     * Check if widget is already registered or not. If widget is not registered and calling `the_widget('widget_name')` will trigger error.
+     * 
+     * @since 1.3.1
+     * @global \WP_Widget_Factory $wp_widget_factory
+     * @param string $widgetName The widget name to check
+     * @return bool Return `true` if registered, `false` for otherwise.
+     */
+    function bootstrapBasicIsWidgetRegistered($widgetName)
+    {
+        if (!is_string($widgetName)) {
+            return false;
+        }
+
+        global $wp_widget_factory;
+        if (!empty($wp_widget_factory->widgets) && array_key_exists($widgetName, $wp_widget_factory->widgets)) {
+            return true;
+        } else {
+            return false;
+        }
+    }// bootstrapBasicIsWidgetRegistered
+}
