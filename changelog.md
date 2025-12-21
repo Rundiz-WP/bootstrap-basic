@@ -1,6 +1,11 @@
 # Theme change log.
 Started since v1.1
 
+### v1.3.1
+2025-12-21
+
+* Fix prevent call `the_widget()` while certain widget is not registered.
+
 ### v1.3.0
 2025-12-18
 
