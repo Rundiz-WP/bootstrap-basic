@@ -1,6 +1,14 @@
 # Theme change log.
 Started since v1.1
 
+### v1.3.2
+2026-02-21
+
+* Deleted files that is no longer use. (html5shiv.js, respond.js, fix-bootstrap.css).
+* Moved css, js, fonts, img folders into assets folder. Make file structure clean and related.
+* Update PHP register common styles and scripts into one method.
+* Add modern Bootstrap 3 ( [Original source](https://github.com/Rundiz/bootstrap3) ). Use filter `bootstrap_basic_use_modern_bootstrap` to set that modern or original will be use. Default is still use original Bootstrap 3.
+
 ### v1.3.1
 2025-12-21
 

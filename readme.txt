@@ -4,19 +4,18 @@ Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custo
 Tested up to: 7.0
 Requires at least: 4.2
 Requires PHP: 5.4
-Stable Tag: 1.3.1
+Stable Tag: 1.3.2
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
 Bootstrap Basic WordPress theme, Copyright (C) Rundiz.com
 Bootstrap Basic WordPress theme is licensed under the MIT.
 
-Bootstrap Basic Uses Bootstrap https://getbootstrap.com/ licensed under Apache 2.0.
+Bootstrap Basic Uses Bootstrap 3 https://getbootstrap.com/ licensed under Apache 2.0.
 Bootstrap Basic Uses Font Awesome https://fontawesome.com/ licensed under MIT.
 Bootstrap Basic Uses Font Awesome (font files) https://fontawesome.com/ licensed under SIL OFL 1.1.
-Bootstrap Basic Uses html5shiv https://github.com/afarkas/html5shiv licensed under MIT.
 Bootstrap Basic Uses Modernizr https://modernizr.com licensed under MIT.
-Bootstrap Basic Uses Respond https://github.com/scottjehl/Respond licensed under MIT.
+Modern Bootstrap 3 https://github.com/Rundiz/bootstrap3 licensed under the same as original Bootstrap 3.
 
 Bootstrap Basic is based on the _s (Underscores) starter theme by Automattic Inc., licensed under GPL.
 
@@ -39,4 +38,7 @@ Responsive image
 For responsive image please add img-responsive class to img element.
 
 Responsive video
-Cloak video element (video element or embeded video) with <div class="flexvideo">...</div>.
+Cloak video element (video element or embeded video) with `<div class="flexvideo">...</div>`.
+
+Modern Bootstrap 3
+Since v1.3.2 we add Modern Bootstrap 3 supported. To use it, set filter `bootstrap_basic_use_modern_bootstrap` to `true`.
