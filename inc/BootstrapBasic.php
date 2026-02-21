@@ -43,6 +43,14 @@ if (!class_exists('BootstrapBasic')) {
 
             // JS
             wp_register_script('bootstrap-script', get_template_directory_uri() . '/assets/js/vendor/bootstrap.min.js', ['jquery'], '3.4.1', true);
+
+            // below is modern Bootstrap 3. --------------------------------------------------------------------
+            // CSS
+            wp_register_style('bootstrap-basic-modern-bootstrap-style', get_template_directory_uri() . '/assets/vendor/modern-bootstrap/css/bootstrap.min.css', [], '3.4.3');
+            wp_register_style('bootstrap-basic-modern-bootstrap-theme-style', get_template_directory_uri() . '/assets/vendor/modern-bootstrap/css/bootstrap-theme.min.css', [], '3.4.3');
+
+            // JS
+            wp_register_script('bootstrap-basic-modern-bootstrap-script', get_template_directory_uri() . '/assets/vendor/modern-bootstrap/js/vendor/bootstrap.min.js', ['jquery'], '3.4.3', true);
         }// registerBootstrapAssets
 
 

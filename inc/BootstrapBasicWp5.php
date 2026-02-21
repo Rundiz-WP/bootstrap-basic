@@ -44,7 +44,18 @@ if (!class_exists('BootstrapBasicWp5')) {
                 $BootstrapBasic = new BootstrapBasic();
                 $BootstrapBasic->registerCommonStyles();
             }
-            wp_enqueue_style('bootstrap-style');
+
+            /**
+             * Use modern Bootstrap or not.
+             * 
+             * @see `bootstrapBasicEnqueueScripts()` function for more details.
+             */
+            $useModernBootstrap = apply_filters('bootstrap_basic_use_modern_bootstrap', false);
+            if (true === $useModernBootstrap) {
+                wp_enqueue_style('bootstrap-basic-modern-bootstrap-style');
+            } else {
+                wp_enqueue_style('bootstrap-style');
+            }
         }// enqueueBlockEditorAssets
 
 

@@ -1,0 +1,862 @@
+/*!
+ * Bootstrap v3.4.3 (https://getbootstrap.com/)
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/v3-dev/LICENSE)
+ */
+.btn-default,
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.btn-default:active,
+.btn-primary:active,
+.btn-success:active,
+.btn-info:active,
+.btn-warning:active,
+.btn-danger:active,
+.btn-default.active,
+.btn-primary.active,
+.btn-success.active,
+.btn-info.active,
+.btn-warning.active,
+.btn-danger.active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-default.disabled,
+.btn-primary.disabled,
+.btn-success.disabled,
+.btn-info.disabled,
+.btn-warning.disabled,
+.btn-danger.disabled,
+.btn-default[disabled],
+.btn-primary[disabled],
+.btn-success[disabled],
+.btn-info[disabled],
+.btn-warning[disabled],
+.btn-danger[disabled],
+fieldset[disabled] .btn-default,
+fieldset[disabled] .btn-primary,
+fieldset[disabled] .btn-success,
+fieldset[disabled] .btn-info,
+fieldset[disabled] .btn-warning,
+fieldset[disabled] .btn-danger {
+  box-shadow: none;
+}
+.btn-default .badge,
+.btn-primary .badge,
+.btn-success .badge,
+.btn-info .badge,
+.btn-warning .badge,
+.btn-danger .badge {
+  text-shadow: none;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+}
+.btn-default {
+  background-image: linear-gradient(to bottom, var(--bs-btn-default-bg) 0%, var(--bs-btn-default-bg) 100%);
+  background-repeat: repeat-x;
+  border-color: var(--bs-btn-default-bg);
+  text-shadow: 0 1px 0 #fff;
+  border-color: #ccc;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-default {
+    background-image: linear-gradient(to bottom, var(--bs-btn-default-bg) 0%, hsl(from var(--bs-btn-default-bg) h s calc(l - 12)) 100%);
+    background-repeat: repeat-x;
+    border-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 14));
+  }
+}
+.btn-default:hover,
+.btn-default:focus {
+  background-color: var(--bs-btn-default-bg);
+  background-position: 0 -15px;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-default:hover,
+  .btn-default:focus {
+    background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 12));
+  }
+}
+.btn-default:active,
+.btn-default.active {
+  background-color: var(--bs-btn-default-bg);
+  border-color: var(--bs-btn-default-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-default:active,
+  .btn-default.active {
+    background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 12));
+    border-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 14));
+  }
+}
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+  background-color: var(--bs-btn-default-bg);
+  background-image: none;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-default.disabled,
+  .btn-default[disabled],
+  fieldset[disabled] .btn-default,
+  .btn-default.disabled:hover,
+  .btn-default[disabled]:hover,
+  fieldset[disabled] .btn-default:hover,
+  .btn-default.disabled:focus,
+  .btn-default[disabled]:focus,
+  fieldset[disabled] .btn-default:focus,
+  .btn-default.disabled.focus,
+  .btn-default[disabled].focus,
+  fieldset[disabled] .btn-default.focus,
+  .btn-default.disabled:active,
+  .btn-default[disabled]:active,
+  fieldset[disabled] .btn-default:active,
+  .btn-default.disabled.active,
+  .btn-default[disabled].active,
+  fieldset[disabled] .btn-default.active {
+    background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 12));
+  }
+}
+.btn-primary {
+  background-image: linear-gradient(to bottom, var(--bs-btn-primary-bg) 0%, var(--bs-btn-primary-bg) 100%);
+  background-repeat: repeat-x;
+  border-color: var(--bs-btn-primary-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-primary {
+    background-image: linear-gradient(to bottom, var(--bs-btn-primary-bg) 0%, hsl(from var(--bs-btn-primary-bg) h s calc(l - 12)) 100%);
+    background-repeat: repeat-x;
+    border-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 14));
+  }
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--bs-btn-primary-bg);
+  background-position: 0 -15px;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 12));
+  }
+}
+.btn-primary:active,
+.btn-primary.active {
+  background-color: var(--bs-btn-primary-bg);
+  border-color: var(--bs-btn-primary-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-primary:active,
+  .btn-primary.active {
+    background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 12));
+    border-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 14));
+  }
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: var(--bs-btn-primary-bg);
+  background-image: none;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-primary.disabled,
+  .btn-primary[disabled],
+  fieldset[disabled] .btn-primary,
+  .btn-primary.disabled:hover,
+  .btn-primary[disabled]:hover,
+  fieldset[disabled] .btn-primary:hover,
+  .btn-primary.disabled:focus,
+  .btn-primary[disabled]:focus,
+  fieldset[disabled] .btn-primary:focus,
+  .btn-primary.disabled.focus,
+  .btn-primary[disabled].focus,
+  fieldset[disabled] .btn-primary.focus,
+  .btn-primary.disabled:active,
+  .btn-primary[disabled]:active,
+  fieldset[disabled] .btn-primary:active,
+  .btn-primary.disabled.active,
+  .btn-primary[disabled].active,
+  fieldset[disabled] .btn-primary.active {
+    background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 12));
+  }
+}
+.btn-success {
+  background-image: linear-gradient(to bottom, var(--bs-btn-success-bg) 0%, var(--bs-btn-success-bg) 100%);
+  background-repeat: repeat-x;
+  border-color: var(--bs-btn-success-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-success {
+    background-image: linear-gradient(to bottom, var(--bs-btn-success-bg) 0%, hsl(from var(--bs-btn-success-bg) h s calc(l - 12)) 100%);
+    background-repeat: repeat-x;
+    border-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 14));
+  }
+}
+.btn-success:hover,
+.btn-success:focus {
+  background-color: var(--bs-btn-success-bg);
+  background-position: 0 -15px;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-success:hover,
+  .btn-success:focus {
+    background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 12));
+  }
+}
+.btn-success:active,
+.btn-success.active {
+  background-color: var(--bs-btn-success-bg);
+  border-color: var(--bs-btn-success-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-success:active,
+  .btn-success.active {
+    background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 12));
+    border-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 14));
+  }
+}
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success,
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled.focus,
+.btn-success[disabled].focus,
+fieldset[disabled] .btn-success.focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+fieldset[disabled] .btn-success:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success.active {
+  background-color: var(--bs-btn-success-bg);
+  background-image: none;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-success.disabled,
+  .btn-success[disabled],
+  fieldset[disabled] .btn-success,
+  .btn-success.disabled:hover,
+  .btn-success[disabled]:hover,
+  fieldset[disabled] .btn-success:hover,
+  .btn-success.disabled:focus,
+  .btn-success[disabled]:focus,
+  fieldset[disabled] .btn-success:focus,
+  .btn-success.disabled.focus,
+  .btn-success[disabled].focus,
+  fieldset[disabled] .btn-success.focus,
+  .btn-success.disabled:active,
+  .btn-success[disabled]:active,
+  fieldset[disabled] .btn-success:active,
+  .btn-success.disabled.active,
+  .btn-success[disabled].active,
+  fieldset[disabled] .btn-success.active {
+    background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 12));
+  }
+}
+.btn-info {
+  background-image: linear-gradient(to bottom, var(--bs-btn-info-bg) 0%, var(--bs-btn-info-bg) 100%);
+  background-repeat: repeat-x;
+  border-color: var(--bs-btn-info-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-info {
+    background-image: linear-gradient(to bottom, var(--bs-btn-info-bg) 0%, hsl(from var(--bs-btn-info-bg) h s calc(l - 12)) 100%);
+    background-repeat: repeat-x;
+    border-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 14));
+  }
+}
+.btn-info:hover,
+.btn-info:focus {
+  background-color: var(--bs-btn-info-bg);
+  background-position: 0 -15px;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-info:hover,
+  .btn-info:focus {
+    background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 12));
+  }
+}
+.btn-info:active,
+.btn-info.active {
+  background-color: var(--bs-btn-info-bg);
+  border-color: var(--bs-btn-info-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-info:active,
+  .btn-info.active {
+    background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 12));
+    border-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 14));
+  }
+}
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info,
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled.focus,
+.btn-info[disabled].focus,
+fieldset[disabled] .btn-info.focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active {
+  background-color: var(--bs-btn-info-bg);
+  background-image: none;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-info.disabled,
+  .btn-info[disabled],
+  fieldset[disabled] .btn-info,
+  .btn-info.disabled:hover,
+  .btn-info[disabled]:hover,
+  fieldset[disabled] .btn-info:hover,
+  .btn-info.disabled:focus,
+  .btn-info[disabled]:focus,
+  fieldset[disabled] .btn-info:focus,
+  .btn-info.disabled.focus,
+  .btn-info[disabled].focus,
+  fieldset[disabled] .btn-info.focus,
+  .btn-info.disabled:active,
+  .btn-info[disabled]:active,
+  fieldset[disabled] .btn-info:active,
+  .btn-info.disabled.active,
+  .btn-info[disabled].active,
+  fieldset[disabled] .btn-info.active {
+    background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 12));
+  }
+}
+.btn-warning {
+  background-image: linear-gradient(to bottom, var(--bs-btn-warning-bg) 0%, var(--bs-btn-warning-bg) 100%);
+  background-repeat: repeat-x;
+  border-color: var(--bs-btn-warning-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-warning {
+    background-image: linear-gradient(to bottom, var(--bs-btn-warning-bg) 0%, hsl(from var(--bs-btn-warning-bg) h s calc(l - 12)) 100%);
+    background-repeat: repeat-x;
+    border-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 14));
+  }
+}
+.btn-warning:hover,
+.btn-warning:focus {
+  background-color: var(--bs-btn-warning-bg);
+  background-position: 0 -15px;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-warning:hover,
+  .btn-warning:focus {
+    background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 12));
+  }
+}
+.btn-warning:active,
+.btn-warning.active {
+  background-color: var(--bs-btn-warning-bg);
+  border-color: var(--bs-btn-warning-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-warning:active,
+  .btn-warning.active {
+    background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 12));
+    border-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 14));
+  }
+}
+.btn-warning.disabled,
+.btn-warning[disabled],
+fieldset[disabled] .btn-warning,
+.btn-warning.disabled:hover,
+.btn-warning[disabled]:hover,
+fieldset[disabled] .btn-warning:hover,
+.btn-warning.disabled:focus,
+.btn-warning[disabled]:focus,
+fieldset[disabled] .btn-warning:focus,
+.btn-warning.disabled.focus,
+.btn-warning[disabled].focus,
+fieldset[disabled] .btn-warning.focus,
+.btn-warning.disabled:active,
+.btn-warning[disabled]:active,
+fieldset[disabled] .btn-warning:active,
+.btn-warning.disabled.active,
+.btn-warning[disabled].active,
+fieldset[disabled] .btn-warning.active {
+  background-color: var(--bs-btn-warning-bg);
+  background-image: none;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-warning.disabled,
+  .btn-warning[disabled],
+  fieldset[disabled] .btn-warning,
+  .btn-warning.disabled:hover,
+  .btn-warning[disabled]:hover,
+  fieldset[disabled] .btn-warning:hover,
+  .btn-warning.disabled:focus,
+  .btn-warning[disabled]:focus,
+  fieldset[disabled] .btn-warning:focus,
+  .btn-warning.disabled.focus,
+  .btn-warning[disabled].focus,
+  fieldset[disabled] .btn-warning.focus,
+  .btn-warning.disabled:active,
+  .btn-warning[disabled]:active,
+  fieldset[disabled] .btn-warning:active,
+  .btn-warning.disabled.active,
+  .btn-warning[disabled].active,
+  fieldset[disabled] .btn-warning.active {
+    background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 12));
+  }
+}
+.btn-danger {
+  background-image: linear-gradient(to bottom, var(--bs-btn-danger-bg) 0%, var(--bs-btn-danger-bg) 100%);
+  background-repeat: repeat-x;
+  border-color: var(--bs-btn-danger-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-danger {
+    background-image: linear-gradient(to bottom, var(--bs-btn-danger-bg) 0%, hsl(from var(--bs-btn-danger-bg) h s calc(l - 12)) 100%);
+    background-repeat: repeat-x;
+    border-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 14));
+  }
+}
+.btn-danger:hover,
+.btn-danger:focus {
+  background-color: var(--bs-btn-danger-bg);
+  background-position: 0 -15px;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-danger:hover,
+  .btn-danger:focus {
+    background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 12));
+  }
+}
+.btn-danger:active,
+.btn-danger.active {
+  background-color: var(--bs-btn-danger-bg);
+  border-color: var(--bs-btn-danger-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-danger:active,
+  .btn-danger.active {
+    background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 12));
+    border-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 14));
+  }
+}
+.btn-danger.disabled,
+.btn-danger[disabled],
+fieldset[disabled] .btn-danger,
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled.focus,
+.btn-danger[disabled].focus,
+fieldset[disabled] .btn-danger.focus,
+.btn-danger.disabled:active,
+.btn-danger[disabled]:active,
+fieldset[disabled] .btn-danger:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger.active {
+  background-color: var(--bs-btn-danger-bg);
+  background-image: none;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-danger.disabled,
+  .btn-danger[disabled],
+  fieldset[disabled] .btn-danger,
+  .btn-danger.disabled:hover,
+  .btn-danger[disabled]:hover,
+  fieldset[disabled] .btn-danger:hover,
+  .btn-danger.disabled:focus,
+  .btn-danger[disabled]:focus,
+  fieldset[disabled] .btn-danger:focus,
+  .btn-danger.disabled.focus,
+  .btn-danger[disabled].focus,
+  fieldset[disabled] .btn-danger.focus,
+  .btn-danger.disabled:active,
+  .btn-danger[disabled]:active,
+  fieldset[disabled] .btn-danger:active,
+  .btn-danger.disabled.active,
+  .btn-danger[disabled].active,
+  fieldset[disabled] .btn-danger.active {
+    background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 12));
+  }
+}
+.thumbnail,
+.img-thumbnail {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-image: linear-gradient(to bottom, var(--bs-dropdown-link-hover-bg) 0%, var(--bs-dropdown-link-hover-bg) 100%);
+  background-repeat: repeat-x;
+  background-color: var(--bs-dropdown-link-hover-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .dropdown-menu > li > a:hover,
+  .dropdown-menu > li > a:focus {
+    background-image: linear-gradient(to bottom, var(--bs-dropdown-link-hover-bg) 0%, hsl(from var(--bs-dropdown-link-hover-bg) h s calc(l - 5)) 100%);
+    background-repeat: repeat-x;
+    background-color: hsl(from var(--bs-dropdown-link-hover-bg) h s calc(l - 5));
+  }
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  background-image: linear-gradient(to bottom, var(--bs-dropdown-link-active-bg) 0%, var(--bs-dropdown-link-active-bg) 100%);
+  background-repeat: repeat-x;
+  background-color: var(--bs-dropdown-link-active-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .dropdown-menu > .active > a,
+  .dropdown-menu > .active > a:hover,
+  .dropdown-menu > .active > a:focus {
+    background-image: linear-gradient(to bottom, var(--bs-dropdown-link-active-bg) 0%, hsl(from var(--bs-dropdown-link-active-bg) h s calc(l - 5)) 100%);
+    background-repeat: repeat-x;
+    background-color: hsl(from var(--bs-dropdown-link-active-bg) h s calc(l - 5));
+  }
+}
+.navbar-default {
+  background-image: linear-gradient(to bottom, var(--bs-navbar-default-bg) 0%, var(--bs-navbar-default-bg) 100%);
+  background-repeat: repeat-x;
+  border-radius: var(--bs-navbar-border-radius);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .navbar-default {
+    background-image: linear-gradient(to bottom, hsl(from var(--bs-navbar-default-bg) h s calc(l + 10)) 0%, var(--bs-navbar-default-bg) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .active > a {
+  background-image: linear-gradient(to bottom, var(--bs-navbar-default-link-active-bg) 0%, var(--bs-navbar-default-link-active-bg) 100%);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .active > a {
+    background-image: linear-gradient(to bottom, hsl(from var(--bs-navbar-default-link-active-bg) h s calc(l - 5)) 0%, hsl(from var(--bs-navbar-default-link-active-bg) h s calc(l - 2)) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.navbar-brand,
+.navbar-nav > li > a {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.navbar-inverse {
+  background-image: linear-gradient(to bottom, var(--bs-navbar-inverse-bg) 0%, var(--bs-navbar-inverse-bg) 100%);
+  background-repeat: repeat-x;
+  border-radius: var(--bs-navbar-border-radius);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .navbar-inverse {
+    background-image: linear-gradient(to bottom, hsl(from var(--bs-navbar-inverse-bg) h s calc(l + 10)) 0%, var(--bs-navbar-inverse-bg) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .active > a {
+  background-image: linear-gradient(to bottom, var(--bs-navbar-inverse-link-active-bg) 0%, var(--bs-navbar-inverse-link-active-bg) 100%);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.25);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .navbar-inverse .navbar-nav > .open > a,
+  .navbar-inverse .navbar-nav > .active > a {
+    background-image: linear-gradient(to bottom, var(--bs-navbar-inverse-link-active-bg) 0%, hsl(from var(--bs-navbar-inverse-link-active-bg) h s calc(l + 2.5)) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.navbar-static-top,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  border-radius: 0;
+}
+@media (max-width: 767px) {
+  .navbar .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-image: linear-gradient(to bottom, var(--bs-dropdown-link-active-bg) 0%, var(--bs-dropdown-link-active-bg) 100%);
+    background-repeat: repeat-x;
+  }
+  @supports (color: hsl(from #000 h s calc(l - 1))) {
+    .navbar .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+      background-image: linear-gradient(to bottom, var(--bs-dropdown-link-active-bg) 0%, hsl(from var(--bs-dropdown-link-active-bg) h s calc(l - 5)) 100%);
+      background-repeat: repeat-x;
+    }
+  }
+}
+.alert {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.alert-success {
+  background-image: linear-gradient(to bottom, var(--bs-alert-success-bg) 0%, var(--bs-alert-success-bg) 100%);
+  background-repeat: repeat-x;
+  border-color: var(--bs-alert-success-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .alert-success {
+    background-image: linear-gradient(to bottom, var(--bs-alert-success-bg) 0%, hsl(from var(--bs-alert-success-bg) h s calc(l - 7.5)) 100%);
+    background-repeat: repeat-x;
+    border-color: hsl(from var(--bs-alert-success-bg) h s calc(l - 15));
+  }
+}
+.alert-info {
+  background-image: linear-gradient(to bottom, var(--bs-alert-info-bg) 0%, var(--bs-alert-info-bg) 100%);
+  background-repeat: repeat-x;
+  border-color: var(--bs-alert-info-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .alert-info {
+    background-image: linear-gradient(to bottom, var(--bs-alert-info-bg) 0%, hsl(from var(--bs-alert-info-bg) h s calc(l - 7.5)) 100%);
+    background-repeat: repeat-x;
+    border-color: hsl(from var(--bs-alert-info-bg) h s calc(l - 15));
+  }
+}
+.alert-warning {
+  background-image: linear-gradient(to bottom, var(--bs-alert-warning-bg) 0%, var(--bs-alert-warning-bg) 100%);
+  background-repeat: repeat-x;
+  border-color: var(--bs-alert-warning-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .alert-warning {
+    background-image: linear-gradient(to bottom, var(--bs-alert-warning-bg) 0%, hsl(from var(--bs-alert-warning-bg) h s calc(l - 7.5)) 100%);
+    background-repeat: repeat-x;
+    border-color: hsl(from var(--bs-alert-warning-bg) h s calc(l - 15));
+  }
+}
+.alert-danger {
+  background-image: linear-gradient(to bottom, var(--bs-alert-danger-bg) 0%, var(--bs-alert-danger-bg) 100%);
+  background-repeat: repeat-x;
+  border-color: var(--bs-alert-danger-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .alert-danger {
+    background-image: linear-gradient(to bottom, var(--bs-alert-danger-bg) 0%, hsl(from var(--bs-alert-danger-bg) h s calc(l - 7.5)) 100%);
+    background-repeat: repeat-x;
+    border-color: hsl(from var(--bs-alert-danger-bg) h s calc(l - 15));
+  }
+}
+.progress {
+  background-image: linear-gradient(to bottom, var(--bs-progress-bg) 0%, var(--bs-progress-bg) 100%);
+  background-repeat: repeat-x;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .progress {
+    background-image: linear-gradient(to bottom, hsl(from var(--bs-progress-bg) h s calc(l - 4)) 0%, var(--bs-progress-bg) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.progress-bar {
+  background-image: linear-gradient(to bottom, var(--bs-progress-bar-bg) 0%, var(--bs-progress-bar-bg) 100%);
+  background-repeat: repeat-x;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .progress-bar {
+    background-image: linear-gradient(to bottom, var(--bs-progress-bar-bg) 0%, hsl(from var(--bs-progress-bar-bg) h s calc(l - 10)) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.progress-bar-success {
+  background-image: linear-gradient(to bottom, var(--bs-progress-bar-success-bg) 0%, var(--bs-progress-bar-success-bg) 100%);
+  background-repeat: repeat-x;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .progress-bar-success {
+    background-image: linear-gradient(to bottom, var(--bs-progress-bar-success-bg) 0%, hsl(from var(--bs-progress-bar-success-bg) h s calc(l - 10)) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.progress-bar-info {
+  background-image: linear-gradient(to bottom, var(--bs-progress-bar-info-bg) 0%, var(--bs-progress-bar-info-bg) 100%);
+  background-repeat: repeat-x;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .progress-bar-info {
+    background-image: linear-gradient(to bottom, var(--bs-progress-bar-info-bg) 0%, hsl(from var(--bs-progress-bar-info-bg) h s calc(l - 10)) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.progress-bar-warning {
+  background-image: linear-gradient(to bottom, var(--bs-progress-bar-warning-bg) 0%, var(--bs-progress-bar-warning-bg) 100%);
+  background-repeat: repeat-x;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .progress-bar-warning {
+    background-image: linear-gradient(to bottom, var(--bs-progress-bar-warning-bg) 0%, hsl(from var(--bs-progress-bar-warning-bg) h s calc(l - 10)) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.progress-bar-danger {
+  background-image: linear-gradient(to bottom, var(--bs-progress-bar-danger-bg) 0%, var(--bs-progress-bar-danger-bg) 100%);
+  background-repeat: repeat-x;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .progress-bar-danger {
+    background-image: linear-gradient(to bottom, var(--bs-progress-bar-danger-bg) 0%, hsl(from var(--bs-progress-bar-danger-bg) h s calc(l - 10)) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.progress-bar-striped {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.list-group {
+  border-radius: var(--bs-border-radius-base);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+}
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  text-shadow: 0 -1px 0 var(--bs-list-group-active-bg);
+  background-image: linear-gradient(to bottom, var(--bs-list-group-active-bg) 0%, var(--bs-list-group-active-bg) 100%);
+  background-repeat: repeat-x;
+  border-color: var(--bs-list-group-active-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .list-group-item.active,
+  .list-group-item.active:hover,
+  .list-group-item.active:focus {
+    text-shadow: 0 -1px 0 hsl(from var(--bs-list-group-active-bg) h s calc(l - 10));
+    background-image: linear-gradient(to bottom, var(--bs-list-group-active-bg) 0%, hsl(from var(--bs-list-group-active-bg) h s calc(l - 7.5)) 100%);
+    background-repeat: repeat-x;
+    border-color: hsl(from var(--bs-list-group-active-border) h s calc(l - 7.5));
+  }
+}
+.list-group-item.active .badge,
+.list-group-item.active:hover .badge,
+.list-group-item.active:focus .badge {
+  text-shadow: none;
+}
+.panel {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.panel-default > .panel-heading {
+  background-image: linear-gradient(to bottom, var(--bs-panel-default-heading-bg) 0%, var(--bs-panel-default-heading-bg) 100%);
+  background-repeat: repeat-x;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .panel-default > .panel-heading {
+    background-image: linear-gradient(to bottom, var(--bs-panel-default-heading-bg) 0%, hsl(from var(--bs-panel-default-heading-bg) h s calc(l - 5)) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.panel-primary > .panel-heading {
+  background-image: linear-gradient(to bottom, var(--bs-panel-primary-heading-bg) 0%, var(--bs-panel-primary-heading-bg) 100%);
+  background-repeat: repeat-x;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .panel-primary > .panel-heading {
+    background-image: linear-gradient(to bottom, var(--bs-panel-primary-heading-bg) 0%, hsl(from var(--bs-panel-primary-heading-bg) h s calc(l - 5)) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.panel-success > .panel-heading {
+  background-image: linear-gradient(to bottom, var(--bs-panel-success-heading-bg) 0%, var(--bs-panel-success-heading-bg) 100%);
+  background-repeat: repeat-x;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .panel-success > .panel-heading {
+    background-image: linear-gradient(to bottom, var(--bs-panel-success-heading-bg) 0%, hsl(from var(--bs-panel-success-heading-bg) h s calc(l - 5)) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.panel-info > .panel-heading {
+  background-image: linear-gradient(to bottom, var(--bs-panel-info-heading-bg) 0%, var(--bs-panel-info-heading-bg) 100%);
+  background-repeat: repeat-x;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .panel-info > .panel-heading {
+    background-image: linear-gradient(to bottom, var(--bs-panel-info-heading-bg) 0%, hsl(from var(--bs-panel-info-heading-bg) h s calc(l - 5)) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.panel-warning > .panel-heading {
+  background-image: linear-gradient(to bottom, var(--bs-panel-warning-heading-bg) 0%, var(--bs-panel-warning-heading-bg) 100%);
+  background-repeat: repeat-x;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .panel-warning > .panel-heading {
+    background-image: linear-gradient(to bottom, var(--bs-panel-warning-heading-bg) 0%, hsl(from var(--bs-panel-warning-heading-bg) h s calc(l - 5)) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.panel-danger > .panel-heading {
+  background-image: linear-gradient(to bottom, var(--bs-panel-danger-heading-bg) 0%, var(--bs-panel-danger-heading-bg) 100%);
+  background-repeat: repeat-x;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .panel-danger > .panel-heading {
+    background-image: linear-gradient(to bottom, var(--bs-panel-danger-heading-bg) 0%, hsl(from var(--bs-panel-danger-heading-bg) h s calc(l - 5)) 100%);
+    background-repeat: repeat-x;
+  }
+}
+.well {
+  background-image: linear-gradient(to bottom, var(--bs-well-bg) 0%, var(--bs-well-bg) 100%);
+  background-repeat: repeat-x;
+  border-color: var(--bs-well-bg);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .well {
+    background-image: linear-gradient(to bottom, hsl(from var(--bs-well-bg) h s calc(l - 5)) 0%, var(--bs-well-bg) 100%);
+    background-repeat: repeat-x;
+    border-color: hsl(from var(--bs-well-bg) h s calc(l - 10));
+  }
+}
+/*# sourceMappingURL=bootstrap-theme.css.map */

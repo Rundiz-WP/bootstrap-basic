@@ -170,8 +170,19 @@ if (!function_exists('bootstrapBasicEnqueueScripts')) {
         $themeVersion = $Theme->get('Version');
         unset($Theme);
 
-        wp_enqueue_style('bootstrap-style');
-        wp_enqueue_style('bootstrap-theme-style');
+        /**
+         * Use modern Bootstrap or not.
+         * 
+         * @param bool $useModernBootstrap Set to `true` to use modern Bootstrap. Default is `false`. The modern Bootstrap is from GitHub ( https://github.com/Rundiz/bootstrap3 ).
+         */
+        $useModernBootstrap = apply_filters('bootstrap_basic_use_modern_bootstrap', false);
+        if (true === $useModernBootstrap) {
+            wp_enqueue_style('bootstrap-basic-modern-bootstrap-style');
+            wp_enqueue_style('bootstrap-basic-modern-bootstrap-theme-style');
+        } else {
+            wp_enqueue_style('bootstrap-style');
+            wp_enqueue_style('bootstrap-theme-style');
+        }
         wp_enqueue_style('fontawesome-style', get_template_directory_uri() . '/assets/css/font-awesome.min.css', [], '4.7.0');
         wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/main.css', [], $themeVersion);
 
@@ -190,7 +201,11 @@ if (!function_exists('bootstrapBasicEnqueueScripts')) {
             wp_enqueue_script('comment-reply');
         }
 
-        wp_enqueue_script('bootstrap-script');
+        if (true === $useModernBootstrap) {
+            wp_enqueue_script('bootstrap-basic-modern-bootstrap-script');
+        } else {
+            wp_enqueue_script('bootstrap-script');
+        }
         wp_enqueue_script('main-script', get_template_directory_uri() . '/assets/js/main.js', ['jquery'], $themeVersion, true);
         wp_enqueue_style('bootstrap-basic-style', get_stylesheet_uri(), [], $themeVersion);
 
