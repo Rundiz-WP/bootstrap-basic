@@ -17,10 +17,10 @@ if (!class_exists('BootstrapBasicWp5')) {
         public function __construct()
         {
             // Add Bootstrap styles into Gutenberg editor.
-            add_action('enqueue_block_editor_assets', array($this, 'enqueueBlockEditorAssets'));
+            add_action('enqueue_block_editor_assets', [$this, 'enqueueBlockEditorAssets']);
 
             // Add Bootstrap styles into editor.
-            add_action('admin_init', array($this, 'addEditorStyles'));
+            add_action('admin_init', [$this, 'addEditorStyles']);
         }// __construct
 
 

@@ -19,27 +19,31 @@ if (!class_exists('BootstrapBasic')) {
          */
         public function __construct()
         {
-            add_action('wp_enqueue_scripts', array($this, 'registerCommonScripts'));
-            add_action('wp_enqueue_scripts', array($this, 'registerCommonStyles'));
+            add_action('init', [$this, 'registerBootstrapAssets']);
         }// __construct
 
 
         /**
-         * Register commonly use scripts.
+         * Register Bootstrap assets (CSS, JS).
+         * 
+         * The assets that was registered in this method can be enqueue later on any parts including hooks by `enqueue_block_assets`.<br>
+         * If not register with something earlier than `wp_enqueue_scripts`, it won't work.
+         * 
+         * @link https://developer.wordpress.org/reference/functions/wp_register_style/ Function reference.
+         * @link https://github.com/WordPress/WordPress/blob/master/wp-includes/functions.wp-scripts.php#L187 The register style function called to `_wp_scripts_maybe_doing_it_wrong()`
+         * @link https://github.com/WordPress/WordPress/blob/master/wp-includes/functions.wp-scripts.php#L41 The maybe doing it wrong function check that if `init` hook did called then it's work.
+         * @link https://developer.wordpress.org/themes/core-concepts/including-assets/ Functions to use when enqueue/register asset files.
+         * @since 1.3.2
          */
-        public function registerCommonScripts()
+        public function registerBootstrapAssets()
         {
-            wp_register_script('bootstrap-script', get_template_directory_uri() . '/assets/js/vendor/bootstrap.min.js', array('jquery'), '3.4.1', true);
-        }// registerCommonScripts
+            // CSS
+            wp_register_style('bootstrap-style', get_template_directory_uri() . '/assets/css/bootstrap.min.css', [], '3.4.1');
+            wp_register_style('bootstrap-theme-style', get_template_directory_uri() . '/assets/css/bootstrap-theme.min.css', [], '3.4.1');
 
-
-        /**
-         * Register commonly use stylesheets.
-         */
-        public function registerCommonStyles()
-        {
-            wp_register_style('bootstrap-style', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '3.4.1');
-        }// registerCommonStyles
+            // JS
+            wp_register_script('bootstrap-script', get_template_directory_uri() . '/assets/js/vendor/bootstrap.min.js', ['jquery'], '3.4.1', true);
+        }// registerBootstrapAssets
 
 
     }
