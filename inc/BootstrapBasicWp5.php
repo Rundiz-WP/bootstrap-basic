@@ -30,7 +30,7 @@ if (!class_exists('BootstrapBasicWp5')) {
         public function addEditorStyles()
         {
             if (function_exists('add_editor_style')) {
-                add_editor_style('css/bootstrap.min.css');
+                add_editor_style('assets/css/bootstrap.min.css');
             }
         }// addEditorStyles
 
