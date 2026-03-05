@@ -42,7 +42,7 @@ if (!class_exists('BootstrapBasicWp5')) {
         {
             if (!wp_script_is('bootstrap-style', 'registered')) {
                 $BootstrapBasic = new BootstrapBasic();
-                $BootstrapBasic->registerCommonStyles();
+                $BootstrapBasic->registerBootstrapAssets();
             }
 
             /**
