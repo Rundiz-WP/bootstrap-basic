@@ -50,7 +50,7 @@ if (!class_exists('BootstrapBasic')) {
             wp_register_style('bootstrap-basic-modern-bootstrap-theme-style', get_template_directory_uri() . '/assets/vendor/modern-bootstrap/css/bootstrap-theme.min.css', [], '3.4.3');
 
             // JS
-            wp_register_script('bootstrap-basic-modern-bootstrap-script', get_template_directory_uri() . '/assets/vendor/modern-bootstrap/js/vendor/bootstrap.min.js', ['jquery'], '3.4.3', true);
+            wp_register_script('bootstrap-basic-modern-bootstrap-script', get_template_directory_uri() . '/assets/vendor/modern-bootstrap/js/bootstrap.min.js', ['jquery'], '3.4.3', true);
         }// registerBootstrapAssets
 
 
