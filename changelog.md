@@ -1,6 +1,11 @@
 # Theme change log.
 Started since v1.1
 
+### v1.3.3
+2026-03-05
+
+* Fix wrong bootstrap JS path.
+
 ### v1.3.2
 2026-02-21
 
