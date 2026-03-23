@@ -7,6 +7,9 @@
 
 
 if (!class_exists('BootstrapBasicWp5')) {
+    /**
+     * Bootstrap Basic WP5 class.
+     */
     class BootstrapBasicWp5
     {
 
@@ -59,5 +62,5 @@ if (!class_exists('BootstrapBasicWp5')) {
         }// enqueueBlockEditorAssets
 
 
-    }
+    }// BootstrapBasicWp5
 }

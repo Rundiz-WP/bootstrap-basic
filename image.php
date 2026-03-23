@@ -3,6 +3,8 @@
  * The template for displaying image attachments.
  * 
  * @package bootstrap-basic
+ * 
+ * phpcs:disable Generic.WhiteSpace.ScopeIndent.Incorrect, Generic.WhiteSpace.ScopeIndent.IncorrectExact
  */
 
 get_header();
@@ -20,17 +22,19 @@ get_header();
 
                                 <div class="entry-meta">
                                     <?php
-                                        $metadata = wp_get_attachment_metadata();
-                                        /* translators: %1$s: Date/time in datetime attribute, %2$s: Readable date/time, %3$s: URL, %4$s: Attachment width, %5$s: Attachment height, %6$s: Link to post parent, %7$s: Post parent title in the title attribute, %8$s: Post parent title. */
-                                        printf(__('Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'bootstrap-basic'),
-                                            esc_attr(get_the_date('c')),
-                                            esc_html(get_the_date()),
-                                            esc_url(wp_get_attachment_url()),
-                                            $metadata['width'],
-                                            $metadata['height'],
-                                            esc_url(get_permalink($post->post_parent)),
-                                            esc_attr(strip_tags(get_the_title($post->post_parent))),
-                                            get_the_title($post->post_parent)
+                                        $bootstrap_basic_metadata = wp_get_attachment_metadata();
+                                        echo wp_kses_post(
+                                            /* translators: %1$s: Date/time in datetime attribute, %2$s: Readable date/time, %3$s: URL, %4$s: Attachment width, %5$s: Attachment height, %6$s: Link to post parent, %7$s: Post parent title in the title attribute, %8$s: Post parent title. */
+                                            sprintf(__('Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'bootstrap-basic'),
+                                                esc_attr(get_the_date('c')),
+                                                esc_html(get_the_date()),
+                                                esc_url(wp_get_attachment_url()),
+                                                $bootstrap_basic_metadata['width'],
+                                                $bootstrap_basic_metadata['height'],
+                                                esc_url(get_permalink($post->post_parent)),
+                                                esc_attr(wp_strip_all_tags(get_the_title($post->post_parent))),
+                                                get_the_title($post->post_parent)
+                                            )
                                         );
 
                                         echo ' ';
@@ -67,6 +71,7 @@ get_header();
                                  * 
                                  * NOPE! NO! DON'T! This function really does not works with WordPress image attachment page.
                                  * It exists on many official themes such as Twenty Sixteen, Twenty Twenty-One, etc but they are also not working.
+                                 * 
                                  * @todo Check again that WordPress already fix pages in image.php bug and re-enable it. (Last WP version checked but still not work is 6.2-alpha-55019)
                                 */
                                 /*
@@ -94,4 +99,5 @@ get_header();
                         ?> 
                     </main>
                 </div>
-<?php get_footer(); ?> 
+<?php 
+get_footer();

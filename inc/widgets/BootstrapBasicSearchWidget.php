@@ -7,6 +7,9 @@
 
 
 if (!class_exists('BootstrapBasicSearchWidget')) {
+    /**
+     * Bootstrap search widget class (for navbar).
+     */
     class BootstrapBasicSearchWidget extends WP_Widget
     {
 
@@ -23,15 +26,15 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
         public function __construct()
         {
             parent::__construct(
-                    'bootstrapbasic_search_widget', // base ID
-                    __('Bootstrap Navbar Search', 'bootstrap-basic'), 
-                    array('description' => __('Display Search widget for Bootstrap navbar.', 'bootstrap-basic'))
+                'bootstrapbasic_search_widget', // base ID
+                __('Bootstrap Navbar Search', 'bootstrap-basic'), 
+                array('description' => __('Display Search widget for Bootstrap navbar.', 'bootstrap-basic'))
             );
         }// __construct
 
 
         /**
-         * back-end widget form
+         * Back-end widget form.
          * 
          * @see WP_Widget::form()
          * @param array $instance Previously saved values from database.
@@ -47,13 +50,15 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
 
             // output form
             $output = '<p>';
-            $output .= '<label for="' . $this->get_field_id('navbaralign') . '">' . __('Form alignment:', 'bootstrap-basic') . '</label>';
+            $output .= '<label for="' . $this->get_field_id('navbaralign') . '">' . esc_html__('Form alignment:', 'bootstrap-basic') . '</label>';
             $output .= '<select id="' . $this->get_field_id('navbaralign') . '" name="' . $this->get_field_name('navbaralign') . '">';
-            $output .= '<option value="navbar-left"' . ($navbaralign === 'navbar-left' ? ' selected="selected"' : '') . '>' . __('Left', 'bootstrap-basic') . '</option>';
-            $output .= '<option value="navbar-right"' . ($navbaralign === 'navbar-right' ? ' selected="selected"' : '') . '>' . __('Right', 'bootstrap-basic') . '</option>';
+            $output .= '<option value="navbar-left"' . ('navbar-left' === $navbaralign ? ' selected="selected"' : '') . '>' . esc_html__('Left', 'bootstrap-basic') . '</option>';
+            $output .= '<option value="navbar-right"' . ('navbar-right' === $navbaralign ? ' selected="selected"' : '') . '>' . esc_html__('Right', 'bootstrap-basic') . '</option>';
             $output .= '</select>';
             $output .= '</p>';
 
+            // Cannot use any kses because it contains form.
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             echo $output;
 
             unset($output);
@@ -72,7 +77,7 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
         {
             $instance = array();
 
-            if ($new_instance['navbaralign'] !== 'navbar-left' && $new_instance['navbaralign'] !== 'navbar-right') {
+            if ('navbar-left' !== $new_instance['navbaralign'] && 'navbar-right' !== $new_instance['navbaralign']) {
                 $instance['navbaralign'] = $this->navbaralign;
             } else {
                 $instance['navbaralign'] = $new_instance['navbaralign'];
@@ -83,7 +88,7 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
 
 
         /**
-         * front-end display of widget
+         * Front-end display of widget.
          * 
          * @see WP_Widget::widget()
          * @param array $args     Widget arguments.
@@ -109,6 +114,8 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
 
             $output .= $args['after_widget'];
 
+            // Cannot use any kses because it contains form.
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             echo $output;
 
             // clear unused variables
@@ -116,5 +123,5 @@ if (!class_exists('BootstrapBasicSearchWidget')) {
         }// widget
 
 
-    }
+    }// BootstrapBasicSearchWidget
 }

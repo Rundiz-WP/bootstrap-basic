@@ -26,6 +26,7 @@
         if ( function_exists( 'wp_body_open' ) ) {
             wp_body_open();
         } else {
+            // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
             do_action( 'wp_body_open' );
         }
         ?> 
@@ -35,7 +36,7 @@
         
         
         <div class="container page-container">
-            <?php do_action('before'); ?> 
+            <?php do_action('before'); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound ?> 
             <header role="banner">
                 <div class="row row-with-vspace site-branding">
                     <div class="col-md-6 site-title">
@@ -50,7 +51,7 @@
                     </div>
                     <div class="col-md-6 page-header-top-right">
                         <div class="sr-only">
-                            <a href="#content" title="<?php esc_attr_e('Skip to content', 'bootstrap-basic'); ?>"><?php _e('Skip to content', 'bootstrap-basic'); ?></a>
+                            <a href="#content" title="<?php esc_attr_e('Skip to content', 'bootstrap-basic'); ?>"><?php esc_html_e('Skip to content', 'bootstrap-basic'); ?></a>
                         </div>
                         <?php if (is_active_sidebar('header-right')) { ?> 
                         <div class="pull-right">
@@ -66,7 +67,7 @@
                         <nav class="navbar navbar-default" role="navigation">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary-collapse">
-                                    <span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
+                                    <span class="sr-only"><?php esc_html_e('Toggle navigation', 'bootstrap-basic'); ?></span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>

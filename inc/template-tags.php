@@ -3,6 +3,8 @@
  * Custom template tags for this theme
  * 
  * @package bootstrap-basic
+ * 
+ * phpcs:disable Generic.WhiteSpace.ScopeIndent.Incorrect, Generic.WhiteSpace.ScopeIndent.IncorrectExact
  */
 
 
@@ -24,9 +26,9 @@ if (!function_exists('bootstrapBasicComment')) {
     /**
      * Displaying a comment
      * 
-     * @param object $comment
-     * @param array $args
-     * @param integer $depth
+     * @param \WP_Comment $comment Comment object.
+     * @param array $args Arguments.
+     * @param int $depth Depth.
      */
     function bootstrapBasicComment($comment, $args, $depth) {
         if ('pingback' === $comment->comment_type || 'trackback' === $comment->comment_type) { 
@@ -37,7 +39,7 @@ if (!function_exists('bootstrapBasicComment')) {
             echo '>';
             echo '<div class="comment-body media">';
                 echo '<div class="media-body">';
-                    _e('Pingback:', 'bootstrap-basic');
+                    esc_html_e('Pingback:', 'bootstrap-basic');
                     comment_author_link(); 
                     edit_comment_link(__('Edit', 'bootstrap-basic'), '<span class="edit-link">', '</span>');
                 echo '</div>';
@@ -73,8 +75,10 @@ if (!function_exists('bootstrapBasicComment')) {
                         echo '<time datetime="';
                             comment_time('c');
                         echo '">';
-                        /* translators: %1$s: Comment date, %2$s: Comment time. */
-                        printf(_x('%1$s at %2$s', '1: date, 2: time', 'bootstrap-basic'), get_comment_date(), get_comment_time());
+                        echo wp_kses_post(
+                            /* translators: %1$s: Comment date, %2$s: Comment time. */
+                            sprintf(_x('%1$s at %2$s', '1: date, 2: time', 'bootstrap-basic'), get_comment_date(), get_comment_time())
+                        );
                         echo '</time>';
                         echo '</a>';
                         // end date-time
@@ -88,13 +92,15 @@ if (!function_exists('bootstrapBasicComment')) {
                         // if comment was not approved
                         if ('0' === strval($comment->comment_approved)) {
                             echo '<div class="comment-awaiting-moderation text-warning"> <span class="glyphicon glyphicon-info-sign"></span> ';
-                                _e('Your comment is awaiting moderation.', 'bootstrap-basic');
+                                esc_html_e('Your comment is awaiting moderation.', 'bootstrap-basic');
                             echo '</div>';
                         } //endif;
 
                         // comment author says
-                        /* translators: %s: Comment author link. */
-                        printf(__('%s <span class="says">says:</span>', 'bootstrap-basic'), sprintf('<cite class="fn">%s</cite>', get_comment_author_link()));
+                        echo wp_kses_post(
+                            /* translators: %s: Comment author link. */
+                            sprintf(__('%s <span class="says">says:</span>', 'bootstrap-basic'), sprintf('<cite class="fn">%s</cite>', get_comment_author_link()))
+                        );
                     echo '</div><!-- .comment-author -->';
 
                     // comment content body
@@ -142,9 +148,9 @@ if (!function_exists('bootstrapBasicEditPostLink')) {
     {
         $edit_post_link = get_edit_post_link();
         if (!empty($edit_post_link)) {
-            $edit_btn = '<a class="post-edit-link btn btn-default btn-xs" href="'.$edit_post_link.'" title="' . __('Edit', 'bootstrap-basic') . '"><i class="edit-post-icon glyphicon glyphicon-pencil" title="' . __('Edit', 'bootstrap-basic') . '"></i></a>';
+            $edit_btn = '<a class="post-edit-link btn btn-default btn-xs" href="' . esc_url($edit_post_link) . '" title="' . esc_attr__('Edit', 'bootstrap-basic') . '"><i class="edit-post-icon glyphicon glyphicon-pencil" title="' . esc_attr__('Edit', 'bootstrap-basic') . '"></i></a>';
             unset($edit_post_link);
-            echo $edit_btn;
+            echo wp_kses_post($edit_btn);
         }
     }// bootstrapBasicEditPostLink
 }
@@ -167,7 +173,7 @@ if (!function_exists('bootstrapBasicFullPageSearchForm')) {
 
 if (!function_exists('bootstrapBasicGetLinkInContent')) {
     /**
-     * get the link in content
+     * Get the link in content.
      * 
      * @return string
      */
@@ -179,7 +185,7 @@ if (!function_exists('bootstrapBasicGetLinkInContent')) {
         if ($has_url) {
             return $has_url;
         } else {
-            return apply_filters('the_permalink', get_permalink());
+            return apply_filters('the_permalink', get_permalink());// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
         }
     }// bootstrapBasicGetLinkInContent
 }
@@ -187,7 +193,8 @@ if (!function_exists('bootstrapBasicGetLinkInContent')) {
 
 if (!function_exists('bootstrapBasicMoreLinkText')) {
     /**
-     * Custom more link (continue reading) text
+     * Custom more link (continue reading) text.
+     * 
      * @return string
      */
     function bootstrapBasicMoreLinkText() 
@@ -199,9 +206,9 @@ if (!function_exists('bootstrapBasicMoreLinkText')) {
 
 if (!function_exists('bootstrapBasicPagination')) {
     /**
-     * display pagination (1 2 3 ...) instead of previous, next of WordPress style.
+     * Display pagination (1 2 3 ...) instead of previous, next of WordPress style.
      * 
-     * @param string $pagination_align_class
+     * @param string $pagination_align_class Pagination HTML class.
      */
     function bootstrapBasicPagination($pagination_align_class = 'pagination-center pagination-row') 
     {
@@ -220,11 +227,11 @@ if (!function_exists('bootstrapBasicPagination')) {
         unset($big);
 
         if (is_array($pagination_array) && !empty($pagination_array)) {
-            echo '<nav class="' . $pagination_align_class . '">';
+            echo '<nav class="' . esc_attr($pagination_align_class) . '">';
             echo '<ul class="pagination">';
             foreach ($pagination_array as $page) {
                 if (!is_scalar($page)) {
-                    echo '<!-- $page is not scalar type: ' . gettext($page) . ' -->' . PHP_EOL;
+                    echo '<!-- $page is not scalar type: ' . esc_html(gettype($page)) . ' -->' . PHP_EOL;
                     continue;
                 }
 
@@ -234,9 +241,9 @@ if (!function_exists('bootstrapBasicPagination')) {
                 }
                 echo '>';
                 if (strpos($page, '<a') === false && strpos($page, '&hellip;') === false) {
-                    echo '<span>' . $page . '</span>';
+                    echo '<span>' . wp_kses_post($page) . '</span>';
                 } else {
-                    echo $page;
+                    echo wp_kses_post($page);
                 }
                 echo '</li>';
             }
@@ -251,7 +258,7 @@ if (!function_exists('bootstrapBasicPagination')) {
 
 if (!function_exists('bootstrapBasicPostOn')) {
     /**
-     * display post date/time and author
+     * Display post date/time and author.
      */
     function bootstrapBasicPostOn() 
     {
@@ -267,18 +274,20 @@ if (!function_exists('bootstrapBasicPostOn')) {
             esc_html(get_the_modified_date())
         );
 
-        /* translators: %1$s: Link to post with date/time text, %2$s: Link to author with auth name. */
-        printf(__('<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'bootstrap-basic'),
-            sprintf('<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
-                esc_url(get_permalink()),
-                esc_attr(get_the_time()),
-                $time_string
-            ),
-            sprintf('<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
-                esc_url(get_author_posts_url(get_the_author_meta('ID'))),
-                /* translators: %s Author name. */
-                esc_attr(sprintf(__('View all posts by %s', 'bootstrap-basic'), get_the_author())),
-                esc_html(get_the_author())
+        echo wp_kses_post(
+            /* translators: %1$s: Link to post with date/time text, %2$s: Link to author with auth name. */
+            sprintf(__('<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'bootstrap-basic'),
+                sprintf('<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
+                    esc_url(get_permalink()),
+                    esc_attr(get_the_time()),
+                    $time_string
+                ),
+                sprintf('<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
+                    esc_url(get_author_posts_url(get_the_author_meta('ID'))),
+                    /* translators: %s Author name. */
+                    esc_attr(sprintf(__('View all posts by %s', 'bootstrap-basic'), get_the_author())),
+                    esc_html(get_the_author())
+                )
             )
         );
     }// bootstrapBasicPostOn
@@ -287,9 +296,9 @@ if (!function_exists('bootstrapBasicPostOn')) {
 
 if (!function_exists('bootstrapBasicTagsList')) {
     /**
-     * display tags list
+     * Display tags list.
      * 
-     * @param string $tags_list
+     * @param string $tags_list HTML tag list.
      * @return string
      */
     function bootstrapBasicTagsList($tags_list = '') 

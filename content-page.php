@@ -1,3 +1,10 @@
+<?php
+/**
+ * Content page template.
+ * 
+ * @package bootstrap-basic
+ */
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
         <h1 class="entry-title"><?php the_title(); ?></h1>
@@ -12,7 +19,7 @@
          * The other part of this pager is in inc/template-tags.php function name bootstrapBasicLinkPagesLink() which is called by wp_link_pages_link filter.
          */
         wp_link_pages(array(
-            'before' => '<div class="page-links">' . __('Pages:', 'bootstrap-basic') . ' <ul class="pagination">',
+            'before' => '<div class="page-links">' . esc_html__('Pages:', 'bootstrap-basic') . ' <ul class="pagination">',
             'after'  => '</ul></div>',
             'separator' => '',
         ));

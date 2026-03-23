@@ -9,6 +9,9 @@
 
 
 if (!class_exists('BootstrapBasicAutoRegisterWidgets')) {
+    /**
+     * Auto register widgets class.
+     */
     class BootstrapBasicAutoRegisterWidgets
     {
 
@@ -26,9 +29,9 @@ if (!class_exists('BootstrapBasicAutoRegisterWidgets')) {
                     $file_name_only = $fileinfo->getBasename('.php');
                     $namespace = __NAMESPACE__;
                     $class_name = $namespace . (!empty($namespace) ? '\\' : '') . $file_name_only;
-                    require_once($fileinfo->getRealPath());// needs require to use `class_exists()`.
+                    require_once $fileinfo->getRealPath();// needs require to use `class_exists()`.
 
-                    if ($class_name !== __CLASS__ && class_exists($class_name)) {
+                    if (__CLASS__ !== $class_name && class_exists($class_name)) {
                         add_action('widgets_init', function () use ($class_name) {
                             return register_widget($class_name);
                         });

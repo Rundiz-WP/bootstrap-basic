@@ -3,17 +3,19 @@
  * Displaying archive page (category, tag, archives post, author's post)
  * 
  * @package bootstrap-basic
+ * 
+ * phpcs:disable Generic.WhiteSpace.ScopeIndent.Incorrect, Generic.WhiteSpace.ScopeIndent.IncorrectExact
  */
 
 get_header(); 
 
 /**
- * determine main column size from actived sidebar
+ * Determine main column size from actived sidebar
  */
-$main_column_size = bootstrapBasicGetMainColumnSize();
+$bootstrap_basic_main_column_size = bootstrapBasicGetMainColumnSize();
 ?> 
 <?php get_sidebar('left'); ?> 
-                <div class="col-md-<?php echo $main_column_size; ?> content-area" id="main-column">
+                <div class="col-md-<?php echo esc_attr($bootstrap_basic_main_column_size); ?> content-area" id="main-column">
                     <main id="main" class="site-main" role="main">
                         <?php if (have_posts()) { ?> 
 
@@ -33,7 +35,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
                                      */
                                     the_post();
                                     /* translators: %s Author name. */
-                                    printf(__('Author: %s', 'bootstrap-basic'), '<span class="vcard">' . get_the_author() . '</span>');
+                                    printf(esc_html__('Author: %s', 'bootstrap-basic'), '<span class="vcard">' . get_the_author() . '</span>');
                                     /* 
                                      * Since we called the_post() above, we need to
                                      * rewind the loop back to the beginning that way
@@ -43,33 +45,33 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 
                                 elseif (is_day()) :
                                     /* translators: %s Date value. */
-                                    printf(__('Day: %s', 'bootstrap-basic'), '<span>' . get_the_date() . '</span>');
+                                    printf(esc_html__('Day: %s', 'bootstrap-basic'), '<span>' . get_the_date() . '</span>');
 
                                 elseif (is_month()) :
                                     /* translators: %s Month value. */
-                                    printf(__('Month: %s', 'bootstrap-basic'), '<span>' . get_the_date('F Y') . '</span>');
+                                    printf(esc_html__('Month: %s', 'bootstrap-basic'), '<span>' . get_the_date('F Y') . '</span>');
 
                                 elseif (is_year()) :
                                     /* translators: %s Year value. */
-                                    printf(__('Year: %s', 'bootstrap-basic'), '<span>' . get_the_date('Y') . '</span>');
+                                    printf(esc_html__('Year: %s', 'bootstrap-basic'), '<span>' . get_the_date('Y') . '</span>');
 
                                 elseif (is_tax('post_format', 'post-format-aside')) :
-                                    _e('Asides', 'bootstrap-basic');
+                                    esc_html_e('Asides', 'bootstrap-basic');
 
                                 elseif (is_tax('post_format', 'post-format-image')) :
-                                    _e('Images', 'bootstrap-basic');
+                                    esc_html_e('Images', 'bootstrap-basic');
 
                                 elseif (is_tax('post_format', 'post-format-video')) :
-                                    _e('Videos', 'bootstrap-basic');
+                                    esc_html_e('Videos', 'bootstrap-basic');
 
                                 elseif (is_tax('post_format', 'post-format-quote')) :
-                                    _e('Quotes', 'bootstrap-basic');
+                                    esc_html_e('Quotes', 'bootstrap-basic');
 
                                 elseif (is_tax('post_format', 'post-format-link')) :
-                                    _e('Links', 'bootstrap-basic');
+                                    esc_html_e('Links', 'bootstrap-basic');
 
                                 else :
-                                    _e('Archives', 'bootstrap-basic');
+                                    esc_html_e('Archives', 'bootstrap-basic');
 
                                 endif;
                                 ?> 
@@ -77,10 +79,12 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
                             
                             <?php
                             // Show an optional term description.
-                            $term_description = term_description();
-                            if (!empty($term_description)) {
-                                /* translators: %s Description. */
-                                printf('<div class="taxonomy-description">%s</div>', $term_description);
+                            $bootstrap_basic_term_description = term_description();
+                            if (!empty($bootstrap_basic_term_description)) {
+                                echo wp_kses_post(
+                                    /* translators: %s Description. */
+                                    sprintf('<div class="taxonomy-description">%s</div>', $bootstrap_basic_term_description)
+                                );
                             } //endif;
                             ?>
                         </header><!-- .page-header -->
@@ -109,4 +113,5 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
                     </main>
                 </div>
 <?php get_sidebar('right'); ?> 
-<?php get_footer(); ?> 
+<?php 
+get_footer();

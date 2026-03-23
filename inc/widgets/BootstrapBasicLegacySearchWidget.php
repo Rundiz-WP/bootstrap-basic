@@ -7,6 +7,9 @@
 
 
 if (!class_exists('BootstrapBasicLegacySearchWidget')) {
+    /**
+     * Legacy search widget class.
+     */
     class BootstrapBasicLegacySearchWidget extends WP_Widget
     {
 
@@ -23,15 +26,15 @@ if (!class_exists('BootstrapBasicLegacySearchWidget')) {
         public function __construct()
         {
             parent::__construct(
-                    'bootstrapbasic_legacysearch_widget', // base ID
-                    __('Bootstrap Legacy Search', 'bootstrap-basic'), 
-                    array('description' => __('Display Search widget for Bootstrap that can be use in sidebar.', 'bootstrap-basic'))
+                'bootstrapbasic_legacysearch_widget', // base ID
+                __('Bootstrap Legacy Search', 'bootstrap-basic'), 
+                array('description' => __('Display Search widget for Bootstrap that can be use in sidebar.', 'bootstrap-basic'))
             );
         }// __construct
 
 
         /**
-         * back-end widget form
+         * Back-end widget form.
          * 
          * @see WP_Widget::form()
          * @param array $instance Previously saved values from database.
@@ -45,10 +48,12 @@ if (!class_exists('BootstrapBasicLegacySearchWidget')) {
 
             // output form
             $output = '<p>';
-            $output .= '<label for="' . $this->get_field_id('bootstrapbasic-legacysearch-widget-title') . '">' . __('Title:', 'bootstrap-basic') . '</label>';
+            $output .= '<label for="' . $this->get_field_id('bootstrapbasic-legacysearch-widget-title') . '">' . esc_html__('Title:', 'bootstrap-basic') . '</label>';
             $output .= '<input id="' . $this->get_field_id('bootstrapbasic-legacysearch-widget-title') . '" class="widefat" type="text" value="' . esc_attr($this->widget_title) . '" name="' . $this->get_field_name('bootstrapbasic-legacysearch-widget-title') . '">';
             $output .= '</p>';
 
+            // Cannot use any kses because it contains form.
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             echo $output;
 
             unset($output);
@@ -68,7 +73,7 @@ if (!class_exists('BootstrapBasicLegacySearchWidget')) {
             $instance = array();
 
             if (isset($new_instance['bootstrapbasic-legacysearch-widget-title'])) {
-                $instance['bootstrapbasic-legacysearch-widget-title'] = strip_tags($new_instance['bootstrapbasic-legacysearch-widget-title']);
+                $instance['bootstrapbasic-legacysearch-widget-title'] = wp_strip_all_tags($new_instance['bootstrapbasic-legacysearch-widget-title']);
             } else {
                 $instance['bootstrapbasic-legacysearch-widget-title'] = '';
             }
@@ -78,10 +83,10 @@ if (!class_exists('BootstrapBasicLegacySearchWidget')) {
 
 
         /**
-         * front-end display of widget
+         * Front-end display of widget.
          * 
          * @see WP_Widget::widget()
-         * @param array $args     Widget arguments.
+         * @param array $args Widget arguments.
          * @param array $instance Saved values from database.
          */
         public function widget($args, $instance) 
@@ -106,6 +111,8 @@ if (!class_exists('BootstrapBasicLegacySearchWidget')) {
 
             $output .= $args['after_widget'];
 
+            // Cannot use any kses because it contains form.
+            // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
             echo $output;
 
             // clear unused variables
@@ -113,5 +120,5 @@ if (!class_exists('BootstrapBasicLegacySearchWidget')) {
         }// widget
 
 
-    }
+    }// BootstrapBasicLegacySearchWidget
 }

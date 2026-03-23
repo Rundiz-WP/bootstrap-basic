@@ -7,6 +7,9 @@
 
 
 if (!class_exists('BootstrapBasicAdminHelp')) {
+    /**
+     * Bootstrap Basic admin help page class.
+     */
     class BootstrapBasicAdminHelp
     {
 
@@ -30,5 +33,5 @@ if (!class_exists('BootstrapBasicAdminHelp')) {
         }// themeHelpPage
 
 
-    }
+    }// BootstrapBasicAdminHelp
 }

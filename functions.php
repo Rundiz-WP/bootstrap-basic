@@ -37,7 +37,7 @@ if (!function_exists('bootstrapBasicSetup')) {
          * Make theme available for translation
          * Translations can be filed in the /languages/ directory
          * 
-         * copy from underscores theme
+         * Copy from underscores theme
          */
         load_theme_textdomain('bootstrap-basic', get_template_directory() . '/languages');
 
@@ -219,13 +219,13 @@ add_action('wp_enqueue_scripts', 'bootstrapBasicEnqueueScripts');
 
 
 /**
- * admin page displaying help.
+ * Admin page displaying help.
  */
 if (is_admin()) {
     require get_template_directory() . '/inc/BootstrapBasicAdminHelp.php';
-    $bbsc_adminhelp = new BootstrapBasicAdminHelp();
-    add_action('admin_menu', [$bbsc_adminhelp, 'themeHelpMenu']);
-    unset($bbsc_adminhelp);
+    $bootstrap_basic_adminhelp = new BootstrapBasicAdminHelp();
+    add_action('admin_menu', [$bootstrap_basic_adminhelp, 'themeHelpMenu']);
+    unset($bootstrap_basic_adminhelp);
 }
 
 
@@ -233,8 +233,8 @@ if (is_admin()) {
  * Make WordPress 5 (Gutenberg) editor support Bootstrap CSS.
  */
 require_once get_template_directory() . '/inc/BootstrapBasicWp5.php';
-$BbWp5 = new BootstrapBasicWp5();
-unset($BbWp5);
+$bootstrap_basic_BbWp5 = new BootstrapBasicWp5();
+unset($bootstrap_basic_BbWp5);
 
 
 /**
@@ -271,4 +271,3 @@ $BootstrapBasicAutoRegisterWidgets = new BootstrapBasicAutoRegisterWidgets();
 $BootstrapBasicAutoRegisterWidgets->registerAll();
 unset($BootstrapBasicAutoRegisterWidgets);
 require get_template_directory() . '/inc/template-widgets-hook.php';
-

@@ -40,80 +40,76 @@
     <!-- https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/wiki/Customizable-sniff-properties -->
     <config name="minimum_supported_wp_version" value="5.0"/>
     <rule ref="WordPress">
-        <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"></exclude>
         <exclude name="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine"></exclude>
-        <exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.Found"></exclude>
-        <exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed"></exclude>
-        <exclude name="Generic.Files.EndFileNewline.NotFound"></exclude>
+        <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedIf"></exclude>
+        <exclude name="Generic.Commenting.DocComment.MissingShort"></exclude>
         <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning"></exclude>
         <exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine"></exclude>
+        <exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound"></exclude>
         <exclude name="Generic.WhiteSpace.ArbitraryParenthesesSpacing.SpaceAfterOpen"></exclude>
         <exclude name="Generic.WhiteSpace.ArbitraryParenthesesSpacing.SpaceBeforeClose"></exclude>
         <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"></exclude>
-        <exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect"></exclude>
-        <exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact"></exclude>
         <exclude name="NormalizedArrays.Arrays.ArrayBraceSpacing.SpaceAfterArrayOpenerSingleLine"></exclude>
         <exclude name="NormalizedArrays.Arrays.ArrayBraceSpacing.SpaceBeforeArrayCloserSingleLine"></exclude>
-        <exclude name="PEAR"></exclude>
+        <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"></exclude>
+        <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"></exclude>
+        <exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments"></exclude>
+        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"></exclude>
+        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracket"></exclude>
         <exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"></exclude>
-        <exclude name="PSR2.Files.EndFileNewline.NoneFound"></exclude>
-        <exclude name="PSR2.Files.EndFileNewline.TooMany"></exclude>
+        <exclude name="PSR2.Namespaces.NamespaceDeclaration.BlankLineAfter"></exclude>
         <exclude name="Squiz.Commenting.BlockComment.NoCapital"></exclude>
         <exclude name="Squiz.Commenting.BlockComment.NoEmptyLineBefore"></exclude>
-        <exclude name="Squiz.Commenting.ClassComment.Missing"></exclude>
         <exclude name="Squiz.Commenting.ClosingDeclarationComment.Incorrect"></exclude>
-        <exclude name="Squiz.Commenting.FileComment.Missing"></exclude>
         <exclude name="Squiz.Commenting.FileComment.SpacingAfterComment"></exclude>
-        <exclude name="Squiz.Commenting.FunctionComment.MissingParamComment"></exclude>
-        <exclude name="Squiz.Commenting.FunctionComment.MissingParamTag"></exclude>
         <exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"></exclude>
         <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"></exclude>
         <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"></exclude>
+        <exclude name="Squiz.Commenting.InlineComment.NoSpaceBefore"></exclude>
         <exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace"></exclude>
         <exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterOpen"></exclude>
         <exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingBeforeClose"></exclude>
-        <exclude name="Squiz.PHP.CommentedOutCode.Found"></exclude>
+        <exclude name="Squiz.PHP.CommentedOutCode.Found"></exclude><!-- use when scan for commented out code. only enabled if need. -->
         <exclude name="Squiz.PHP.EmbeddedPhp.ContentAfterEnd"></exclude>
+        <exclude name="Squiz.PHP.EmbeddedPhp.ContentAfterOpen"></exclude>
         <exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeEnd"></exclude>
         <exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeOpen"></exclude>
-        <exclude name="Squiz.PHP.EmbeddedPhp.SpacingBeforeClose"></exclude>
-        <exclude name="Squiz.Strings.ConcatenationSpacing.PaddingFound"></exclude>
-        <exclude name="Squiz.WhiteSpace.SemicolonSpacing.Incorrect"></exclude>
-        <exclude name="Squiz.WhiteSpace.SuperfluousWhitespace.EndFile"></exclude>
         <exclude name="Squiz.WhiteSpace.SuperfluousWhitespace.EndLine"></exclude>
         <exclude name="Universal.Arrays.DisallowShortArraySyntax.Found"></exclude>
-        <exclude name="WordPress.Arrays.ArrayDeclarationSpacing.NoSpaceAfterArrayOpener"></exclude>
-        <exclude name="WordPress.Arrays.ArrayDeclarationSpacing.NoSpaceBeforeArrayCloser"></exclude>
+        <exclude name="Universal.ControlStructures.DisallowLonelyIf.Found"></exclude>
+        <exclude name="Universal.NamingConventions.NoReservedKeywordParameterNames.require_onceFound"></exclude>
+        <exclude name="Universal.WhiteSpace.CommaSpacing.NoSpaceAfter"></exclude>
         <exclude name="WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound"></exclude>
         <exclude name="WordPress.Arrays.ArrayKeySpacingRestrictions.NoSpacesAroundArrayKeys"></exclude>
-        <exclude name="WordPress.Arrays.CommaAfterArrayItem.NoComma"></exclude>
         <exclude name="WordPress.Arrays.MultipleStatementAlignment.DoubleArrowNotAligned"></exclude>
-        <exclude name="WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition"></exclude>
         <exclude name="WordPress.Files.FileName.InvalidClassFileName"></exclude>
         <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"></exclude>
         <exclude name="WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid"></exclude>
         <exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid"></exclude>
+        <exclude name="WordPress.NamingConventions.ValidVariableName.PropertyNotSnakeCase"></exclude>
+        <exclude name="WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase"></exclude>
         <exclude name="WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase"></exclude>
-        <exclude name="WordPress.PHP.StrictComparisons.LooseComparison"></exclude>
-        <exclude name="WordPress.PHP.StrictInArray.MissingTrueStrict"></exclude>
-        <exclude name="WordPress.PHP.YodaConditions.NotYoda"></exclude>
-        <exclude name="WordPress.Security.EscapeOutput.OutputNotEscaped"></exclude>
-        <exclude name="WordPress.Security.EscapeOutput.UnsafePrintingFunction"></exclude>
-        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing"></exclude>
+        <exclude name="WordPress.WhiteSpace.CastStructureSpacing.NoSpaceBeforeOpenParenthesis"></exclude>
+        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOpenParenthesis"></exclude>
+        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeCloseParenthesis"></exclude>
         <exclude name="WordPress.WhiteSpace.OperatorSpacing.NoSpaceBefore"></exclude>
         <exclude name="WordPress.WhiteSpace.OperatorSpacing.NoSpaceAfter"></exclude>
-        <exclude name="WordPress.WhiteSpace.PrecisionAlignment.Found"></exclude>
-        <exclude name="WordPress.WP.AlternativeFunctions.strip_tags_strip_tags"></exclude>
-        <exclude name="WordPress.WP.CapitalPDangit.Misspelled"></exclude>
-        <exclude name="WordPress.WP.I18n.MissingArgDomain"></exclude>
-        <exclude name="WordPress.WP.I18n.MissingSingularPlaceholder"></exclude>
-        <exclude name="WordPress.WP.I18n.NonSingularStringLiteralText"></exclude>
     </rule>
     <rule ref="WordPress.WP.I18n">
         <properties>
             <!-- Value: replace the text domain used. -->
             <property name="text_domain" type="array">
                 <element value="bootstrap-basic"/>
+            </property>
+        </properties>
+    </rule>
+
+    <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+        <properties>
+            <property name="prefixes" type="array">
+                <element value="bootstrap_basic"/>
+                <element value="BOOTSTRAPBASIC"/>
+                <element value="BootstrapBasic"/>
             </property>
         </properties>
     </rule>

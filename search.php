@@ -3,23 +3,27 @@
  * The template for displaying search results.
  * 
  * @package bootstrap-basic
+ * 
+ * phpcs:disable Generic.WhiteSpace.ScopeIndent.Incorrect, Generic.WhiteSpace.ScopeIndent.IncorrectExact
  */
 
 get_header();
 
 /**
- * determine main column size from active sidebar
+ * Determine main column size from active sidebar.
  */
-$main_column_size = bootstrapBasicGetMainColumnSize();
+$bootstrap_basic_main_column_size = bootstrapBasicGetMainColumnSize();
 ?> 
 <?php get_sidebar('left'); ?> 
-                <div class="col-md-<?php echo $main_column_size; ?> content-area" id="main-column">
+                <div class="col-md-<?php echo esc_attr($bootstrap_basic_main_column_size); ?> content-area" id="main-column">
                     <main id="main" class="site-main" role="main">
                         <?php if (have_posts()) { ?> 
                         <header class="page-header">
                             <h1 class="page-title"><?php 
-                            /* translators: %s Search value. */
-                            printf(__('Search Results for: %s', 'bootstrap-basic'), '<span>' . get_search_query() . '</span>'); 
+                            echo wp_kses_post(
+                                /* translators: %s Search value. */
+                                sprintf(__('Search Results for: %s', 'bootstrap-basic'), '<span>' . get_search_query() . '</span>')
+                            ); 
                             ?></h1>
                         </header><!-- .page-header -->
                         <?php 
@@ -43,4 +47,5 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
                     </main>
                 </div>
 <?php get_sidebar('right'); ?> 
-<?php get_footer(); ?> 
+<?php 
+get_footer();

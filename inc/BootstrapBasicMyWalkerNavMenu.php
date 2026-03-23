@@ -7,6 +7,9 @@
 
 
 if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
+    /**
+     * Bootstrap Basic Walker nav menu class.
+     */
     class BootstrapBasicMyWalkerNavMenu extends \Walker_Nav_Menu
     {
 
@@ -15,7 +18,12 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
          * Overwrite display_element function to add has_children attribute. Not needed in >= WordPress 3.4
          * 
          * @link https://gist.github.com/duanecilliers/1817371 copy from this url
-         * @inheritDoc
+         * @param object $element The HTML element.
+         * @param array $children_elements The HTML children elements.
+         * @param int $max_depth Max depth.
+         * @param int $depth Current depth.
+         * @param array $args Another arguments.
+         * @param array $output The output.
          */
         public function display_element($element, &$children_elements, $max_depth, $depth, $args, &$output)
         {
@@ -73,11 +81,16 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
          * Start element.
          * 
          * @link https://gist.github.com/duanecilliers/1817371 copy from this URL.
+         * @param array $output The output.
+         * @param object $item The HTML element item.
+         * @param int $depth Current depth.
+         * @param array $args Another arguments.
+         * @param string $id HTML id attribute.
          */
         public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) 
         {
             if ((is_object($item) && empty($item->title)) || (!is_object($item))) {
-                return ;
+                return;
             }
             if (!is_numeric($depth)) {
                 $depth = 0;
@@ -96,7 +109,7 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
                 // $classes[] = 'dropdown';
                 $li_attributes .= ' data-dropdown="dropdown"';
             }
-            if (isset($classes) && in_array('divider', $classes)) {
+            if (isset($classes) && in_array('divider', $classes, true)) {
                 $li_attributes .= ' role="separator"';
             }
             $classes[] = 'menu-item-' . $item->ID;
@@ -104,23 +117,27 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
             $classes[] = ($item->current) ? 'active' : '';
 
             // Make sure you still add all of the WordPress classes.
+            // Use WP core hook.
+            // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
             $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args, $depth));
             if (strpos($class_names, 'current-menu-parent') !== false && strpos($class_names, 'active') === false) {
                 $class_names .= ' active';
             }
             $class_names = ' class="' . esc_attr($class_names) . '"';
 
+            // Use WP core hook.
+            // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
             $id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth);
             $id = strlen($id) ? ' id="' . esc_attr($id) . '"' : '';
 
             $output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
 
-            if (isset($classes) && in_array('divider', $classes)) {
+            if (isset($classes) && in_array('divider', $classes, true)) {
                 // if it is Bootstrap dropdown divider, use this instead of link.
                 $item_output = (is_object($args)) ? $args->before : '';
                 // no need to set link item content. refer to Bootstrap 3 document, it has just `<li role="separator" class="divider"></li>`.
                 $item_output .= (is_object($args) ? $args->after : '');
-            } elseif (isset($classes) && in_array('dropdown-header', $classes)) {
+            } elseif (isset($classes) && in_array('dropdown-header', $classes, true)) {
                 // if it is Bootstrap dropdown header, use this instead of link.
                 $item_output = (is_object($args)) ? $args->before : '';
                 $item_output .= $item->title;
@@ -135,6 +152,8 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
 
                 $item_output = (is_object($args)) ? $args->before : '';
                 $item_output .= '<a' . $attributes . '>';
+                // Use WP core hook.
+                // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
                 $item_output .= (is_object($args) ? $args->link_before : '') . apply_filters('the_title', $item->title, $item->ID) . (is_object($args) ? $args->link_after : '');
                 $item_output .= (is_object($args) && $args->has_children) ? ' <span class="caret"></span> ' : '';
                 $item_output .= '</a>';
@@ -144,6 +163,8 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
             // cleanup.
             unset($class_names, $classes, $li_attributes);
 
+            // Use WP core hook.
+            // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
             $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
         }// start_el
 
@@ -151,9 +172,9 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
         /**
          * Set start level HTML.
          * 
-         * @param string $output
-         * @param int $depth
-         * @param array $args
+         * @param string $output Passed by reference. Used to append additional content.
+         * @param int $depth Depth of menu item. Used for padding.
+         * @param array $args An array of arguments. @see wp_nav_menu()
          */
         public function start_lvl(&$output, $depth = 0, $args = array()) 
         {
@@ -162,6 +183,5 @@ if (!class_exists('BootstrapBasicMyWalkerNavMenu')) {
         }
 
 
-    }
+    }// BootstrapBasicMyWalkerNavMenu
 }// endif;
-

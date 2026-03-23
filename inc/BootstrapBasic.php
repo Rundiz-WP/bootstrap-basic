@@ -54,5 +54,5 @@ if (!class_exists('BootstrapBasic')) {
         }// registerBootstrapAssets
 
 
-    }
+    }// BootstrapBasic
 }

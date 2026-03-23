@@ -8,10 +8,10 @@
 
 if (!function_exists('bootstrapBasicWidgetHooksGetCalendar')) {
     /**
-     * change WordPress calendar widget table to add bootstrap class into it.
+     * Change WordPress calendar widget table to add bootstrap class into it.
      * 
      * @todo change code in this function when WordPress allowed to hook into that widget.
-     * @param string $calendar
+     * @param string $calendar Calendar HTML string.
      * @return string
      */
     function bootstrapBasicWidgetHooksGetCalendar($calendar) 
@@ -23,4 +23,3 @@ if (!function_exists('bootstrapBasicWidgetHooksGetCalendar')) {
     }// bootstrapBasicWidgetHooksGetCalendar
 }
 add_filter('get_calendar', 'bootstrapBasicWidgetHooksGetCalendar', 10, 1);
-
