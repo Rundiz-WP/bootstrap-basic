@@ -103,7 +103,7 @@ if (!function_exists('bootstrapBasicNavMenuCssClass')) {
      */
     function bootstrapBasicNavMenuCssClass($classes = array(), $menu_item = false) 
     {
-        if (!is_array($menu_item->classes, true)) {
+        if (!is_array($menu_item->classes)) {
             return $classes;
         }
 
