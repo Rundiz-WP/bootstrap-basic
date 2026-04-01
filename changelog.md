@@ -1,6 +1,11 @@
 # Theme change log.
 Started since v1.1
 
+### v1.3.7
+2026-04-01
+
+* Add CSS to make it full working with theme unit test ( https://codex.wordpress.org/Theme_Unit_Test ).
+
 ### v1.3.6
 2026-03-23
 

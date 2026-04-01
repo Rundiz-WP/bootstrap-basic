@@ -4,7 +4,18 @@
 @import 'flexvideo.css';
 
 
+iframe:not(.flex-video iframe) {
+    aspect-ratio: 16/9;
+    border: none;
+    height: auto;
+    width: 100%;
+}
 
+
+img {
+    height: auto;
+    max-width: 100%;
+}
 img.aligncenter {
     display: block;
     margin: 0 auto;
