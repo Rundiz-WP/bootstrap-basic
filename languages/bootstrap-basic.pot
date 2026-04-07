@@ -1,15 +1,15 @@
-# Copyright (C) 2025 Rundiz-WP team
+# Copyright (C) 2026 Rundiz-WP team
 # This file is distributed under the MIT.
 msgid ""
 msgstr ""
-"Project-Id-Version: Bootstrap Basic 1.3.0\n"
+"Project-Id-Version: Bootstrap Basic 1.3.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/bootstrap-basic\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-12-18T11:41:43+07:00\n"
+"POT-Creation-Date: 2026-04-07T14:34:23+07:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: bootstrap-basic\n"
@@ -39,74 +39,74 @@ msgstr ""
 msgid "https://github.com/Rundiz-WP"
 msgstr ""
 
-#: 404.php:7
+#: 404.php:14
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:11
+#: 404.php:18
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: 404.php:22
+#: 404.php:33
 msgid "Most Used Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
-#: 404.php:39
+#: 404.php:51
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
 #. translators: %s Author name.
-#: archive.php:36
+#: archive.php:38
 #, php-format
 msgid "Author: %s"
 msgstr ""
 
 #. translators: %s Date value.
-#: archive.php:46
+#: archive.php:48
 #, php-format
 msgid "Day: %s"
 msgstr ""
 
 #. translators: %s Month value.
-#: archive.php:50
+#: archive.php:52
 #, php-format
 msgid "Month: %s"
 msgstr ""
 
 #. translators: %s Year value.
-#: archive.php:54
+#: archive.php:56
 #, php-format
 msgid "Year: %s"
 msgstr ""
 
-#: archive.php:57
+#: archive.php:59
 msgid "Asides"
 msgstr ""
 
-#: archive.php:60
+#: archive.php:62
 msgid "Images"
 msgstr ""
 
-#: archive.php:63
+#: archive.php:65
 msgid "Videos"
 msgstr ""
 
-#: archive.php:66
+#: archive.php:68
 msgid "Quotes"
 msgstr ""
 
-#: archive.php:69
+#: archive.php:71
 msgid "Links"
 msgstr ""
 
-#: archive.php:72
+#: archive.php:74
 msgid "Archives"
 msgstr ""
 
 #. translators: %1$s: Number of comments, %2$s: Post title.
-#: comments.php:22
+#: comments.php:25
 #, php-format
 msgctxt "comments title"
 msgid "%1$s comment on &ldquo;%2$s&rdquo;"
@@ -114,68 +114,72 @@ msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:36
-#: comments.php:57
+#: comments.php:40
+#: comments.php:61
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:38
-#: comments.php:59
+#: comments.php:42
+#: comments.php:63
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:39
-#: comments.php:60
+#: comments.php:43
+#: comments.php:64
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:69
+#: comments.php:73
 msgid "Comments are closed."
 msgstr ""
 
-#: comments.php:108
+#: comments.php:112
 msgid "Name"
 msgstr ""
 
-#: comments.php:114
+#: comments.php:118
 msgid "Email"
 msgstr ""
 
-#: comments.php:120
+#: comments.php:124
 msgid "Website"
 msgstr ""
 
+#: comments.php:131
+msgid "Comment"
+msgstr ""
+
 #. translators: %s Allowed HTML tags for comment.
-#: comments.php:134
+#: comments.php:138
 #, php-format
 msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
 msgstr ""
 
-#: content-aside.php:18
-#: content-link.php:30
-#: content-page.php:15
-#: content-quote.php:18
-#: content-single.php:19
-#: content.php:28
+#: content-aside.php:20
+#: content-link.php:32
+#: content-page.php:22
+#: content-quote.php:20
+#: content-single.php:27
+#: content.php:36
 msgid "Pages:"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: content-aside.php:33
-#: content-aside.php:43
-#: content-link.php:43
-#: content-link.php:53
-#: content-quote.php:30
-#: content-quote.php:40
-#: content-single.php:29
-#: content-single.php:32
-#: content.php:42
-#: content.php:52
+#: content-aside.php:35
+#: content-aside.php:45
+#: content-link.php:45
+#: content-link.php:55
+#: content-quote.php:32
+#: content-quote.php:42
+#: content-single.php:37
+#: content-single.php:40
+#: content.php:50
+#: content.php:60
 msgid ", "
 msgstr ""
 
 #. translators: %1$s URL, %2$s: Post title.
-#: content-single.php:41
+#: content-single.php:50
 #, php-format
 msgid "<span class=\"glyphicon glyphicon-link\"></span> <a href=\"%1$s\" title=\"Permalink to %2$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
@@ -224,255 +228,255 @@ msgstr ""
 msgid "Footer right"
 msgstr ""
 
-#: header.php:53
+#: header.php:54
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:69
+#: header.php:70
 msgid "Toggle navigation"
 msgstr ""
 
 #. translators: %1$s: Date/time in datetime attribute, %2$s: Readable date/time, %3$s: URL, %4$s: Attachment width, %5$s: Attachment height, %6$s: Link to post parent, %7$s: Post parent title in the title attribute, %8$s: Post parent title.
-#: image.php:25
+#: image.php:28
 #, php-format
 msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
 msgstr ""
 
-#: image.php:43
+#: image.php:47
 msgid "<span class=\"meta-nav\">&larr;</span> Previous"
 msgstr ""
 
-#: image.php:44
+#: image.php:48
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/BootstrapBasicAdminHelp.php:19
-#: inc/views/BootstrapBasicAdminHelp_v.php:2
+#: inc/BootstrapBasicAdminHelp.php:22
+#: inc/views/BootstrapBasicAdminHelp_v.php:9
 msgid "Bootstrap Basic help"
 msgstr ""
 
 #. translators: %s: Page number.
-#: inc/extras.php:156
+#: inc/extras.php:160
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: inc/template-tags.php:18
+#: inc/template-tags.php:20
 msgid "Posted in"
 msgstr ""
 
-#: inc/template-tags.php:40
+#: inc/template-tags.php:42
 msgid "Pingback:"
 msgstr ""
 
-#: inc/template-tags.php:42
-#: inc/template-tags.php:84
-#: inc/template-tags.php:145
+#: inc/template-tags.php:44
+#: inc/template-tags.php:88
+#: inc/template-tags.php:151
 msgid "Edit"
 msgstr ""
 
 #. translators: %1$s: Comment date, %2$s: Comment time.
-#: inc/template-tags.php:77
+#: inc/template-tags.php:80
 #, php-format
 msgctxt "1: date, 2: time"
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/template-tags.php:91
+#: inc/template-tags.php:95
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
 #. translators: %s: Comment author link.
-#: inc/template-tags.php:97
+#: inc/template-tags.php:102
 #, php-format
 msgid "%s <span class=\"says\">says:</span>"
 msgstr ""
 
-#: inc/template-tags.php:109
+#: inc/template-tags.php:115
 msgid "Reply"
 msgstr ""
 
-#: inc/template-tags.php:110
+#: inc/template-tags.php:116
 msgid "Log in to Reply"
 msgstr ""
 
-#: inc/template-tags.php:195
+#: inc/template-tags.php:202
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #. translators: %1$s: Link to post with date/time text, %2$s: Link to author with auth name.
-#: inc/template-tags.php:271
+#: inc/template-tags.php:279
 #, php-format
 msgid "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
 msgstr ""
 
 #. translators: %s Author name.
-#: inc/template-tags.php:280
+#: inc/template-tags.php:288
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:297
+#: inc/template-tags.php:306
 msgid "Tagged"
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:4
+#: inc/views/BootstrapBasicAdminHelp_v.php:11
 msgid "Menu"
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:5
+#: inc/views/BootstrapBasicAdminHelp_v.php:12
 msgid "To display menu correctly, please create at least 1 menu and set as primary and save."
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:6
+#: inc/views/BootstrapBasicAdminHelp_v.php:13
 msgid "Divider"
 msgstr ""
 
 #. translators: %1$s divider CSS class, %2$s the word CSS classes
-#: inc/views/BootstrapBasicAdminHelp_v.php:10
+#: inc/views/BootstrapBasicAdminHelp_v.php:17
 #, php-format
 msgid "To display dropdown divier, add %1$s class to the menu's %2$s."
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:12
-#: inc/views/BootstrapBasicAdminHelp_v.php:21
+#: inc/views/BootstrapBasicAdminHelp_v.php:19
+#: inc/views/BootstrapBasicAdminHelp_v.php:28
 msgid "CSS Classes"
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:15
+#: inc/views/BootstrapBasicAdminHelp_v.php:22
 msgid "Dropdown header"
 msgstr ""
 
 #. translators: %1$s dropdown header CSS class, %2$s the word CSS classes
-#: inc/views/BootstrapBasicAdminHelp_v.php:19
+#: inc/views/BootstrapBasicAdminHelp_v.php:26
 #, php-format
 msgid "To display dropdown header, add %1$s class to the menu's %2$s."
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:25
+#: inc/views/BootstrapBasicAdminHelp_v.php:32
 msgid "Bootstrap features"
 msgstr ""
 
 #. translators: $1$s open link to Bootstrap doc, %2$s close link.
-#: inc/views/BootstrapBasicAdminHelp_v.php:29
+#: inc/views/BootstrapBasicAdminHelp_v.php:36
 #, php-format
 msgid "This theme can use all %1$sBootstrap 3%2$s classes, elements and styles."
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:35
+#: inc/views/BootstrapBasicAdminHelp_v.php:42
 msgid "Responsive image"
 msgstr ""
 
 #. translators: %1$s sample of responsive image HTML with class.
-#: inc/views/BootstrapBasicAdminHelp_v.php:39
+#: inc/views/BootstrapBasicAdminHelp_v.php:46
 #, php-format
 msgid "For responsive image please add img-responsive class to img element. Example: %1$s"
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:44
-msgid "Responsive video</h3>"
+#: inc/views/BootstrapBasicAdminHelp_v.php:51
+msgid "Responsive video"
 msgstr ""
 
 #. translators: %1$s sample of responsive video HTML with class.
-#: inc/views/BootstrapBasicAdminHelp_v.php:48
+#: inc/views/BootstrapBasicAdminHelp_v.php:55
 #, php-format
 msgid "Cloak video element (video element or embeded video) with %1$s."
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:53
+#: inc/views/BootstrapBasicAdminHelp_v.php:60
 msgid "Bootstrap Basic Change log"
 msgstr ""
 
 #. translators: %1$s: Open link, %2$s: Close link.
-#: inc/views/BootstrapBasicAdminHelp_v.php:58
+#: inc/views/BootstrapBasicAdminHelp_v.php:65
 #, php-format
 msgid "You can see what was changed in each version or each commits on our %1$sGithub page%2$s."
 msgstr ""
 
-#: inc/views/BootstrapBasicAdminHelp_v.php:62
+#: inc/views/BootstrapBasicAdminHelp_v.php:69
 msgid "You can also see it on changelog.md file that come with the theme."
 msgstr ""
 
 #. translators: %1$s Open link, %2$s Close link.
-#: inc/views/BootstrapBasicAdminHelp_v.php:71
+#: inc/views/BootstrapBasicAdminHelp_v.php:78
 #, php-format
 msgid "Thank you for using Bootstrap Basic. Please %1$sdonate%2$s to support the developer."
 msgstr ""
 
-#: inc/widgets/BootstrapBasicLegacySearchWidget.php:27
+#: inc/widgets/BootstrapBasicLegacySearchWidget.php:30
 msgid "Bootstrap Legacy Search"
 msgstr ""
 
-#: inc/widgets/BootstrapBasicLegacySearchWidget.php:28
+#: inc/widgets/BootstrapBasicLegacySearchWidget.php:31
 msgid "Display Search widget for Bootstrap that can be use in sidebar."
 msgstr ""
 
-#: inc/widgets/BootstrapBasicLegacySearchWidget.php:48
+#: inc/widgets/BootstrapBasicLegacySearchWidget.php:51
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/BootstrapBasicSearchWidget.php:27
+#: inc/widgets/BootstrapBasicSearchWidget.php:30
 msgid "Bootstrap Navbar Search"
 msgstr ""
 
-#: inc/widgets/BootstrapBasicSearchWidget.php:28
+#: inc/widgets/BootstrapBasicSearchWidget.php:31
 msgid "Display Search widget for Bootstrap navbar."
 msgstr ""
 
-#: inc/widgets/BootstrapBasicSearchWidget.php:50
+#: inc/widgets/BootstrapBasicSearchWidget.php:53
 msgid "Form alignment:"
 msgstr ""
 
-#: inc/widgets/BootstrapBasicSearchWidget.php:52
+#: inc/widgets/BootstrapBasicSearchWidget.php:55
 msgid "Left"
 msgstr ""
 
-#: inc/widgets/BootstrapBasicSearchWidget.php:53
+#: inc/widgets/BootstrapBasicSearchWidget.php:56
 msgid "Right"
 msgstr ""
 
-#: no-results.php:10
+#: no-results.php:12
 msgid "Nothing Found"
 msgstr ""
 
 #. translators: %1$s: Link to add new post.
-#: no-results.php:17
+#: no-results.php:20
 #, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: no-results.php:20
+#: no-results.php:24
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: no-results.php:23
+#: no-results.php:31
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
 #. translators: %s Search value.
-#: search.php:22
+#: search.php:25
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: searchform.php:23
-#: searchform.php:29
+#: searchform.php:33
+#: searchform.php:39
 msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""
 
-#: searchform.php:23
-#: searchform.php:29
+#: searchform.php:33
+#: searchform.php:39
 msgctxt "label"
 msgid "Search for:"
 msgstr ""
 
-#: searchform.php:25
-#: searchform.php:31
+#: searchform.php:35
+#: searchform.php:41
 msgid "Search"
 msgstr ""
 
-#: searchform.php:27
+#: searchform.php:37
 msgctxt "label"
 msgid "Search for"
 msgstr ""

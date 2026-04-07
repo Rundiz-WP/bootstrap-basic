@@ -1,6 +1,11 @@
 # Theme change log.
 Started since v1.1
 
+### v1.3.8
+2026-04-07
+
+* Fix incorrect translation in help page.
+
 ### v1.3.7
 2026-04-01
 

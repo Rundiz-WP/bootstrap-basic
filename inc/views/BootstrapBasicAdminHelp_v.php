@@ -48,7 +48,7 @@
     );
     ?></p>
 
-    <h3><?php esc_html_e('Responsive video</h3>', 'bootstrap-basic'); ?>
+    <h3><?php esc_html_e('Responsive video', 'bootstrap-basic'); ?></h3>
     <?php
     printf(
         /* translators: %1$s sample of responsive video HTML with class. */
