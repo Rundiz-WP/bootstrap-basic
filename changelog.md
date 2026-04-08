@@ -1,6 +1,11 @@
 # Theme change log.
 Started since v1.1
 
+### v1.3.9
+2026-04-08
+
+* [Fix incorrect escape URL](https://github.com/Rundiz-WP/bootstrap-basic/commit/3cfedeaa51e17a26c338b1b61316ec731198ecaf).
+
 ### v1.3.8
 2026-04-07
 
