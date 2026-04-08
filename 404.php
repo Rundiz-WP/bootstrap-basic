@@ -3,6 +3,8 @@
  * 404 page template.
  * 
  * @package bootstrap-basic
+ * 
+ * phpcs:disable Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace
  */
 get_header(); 
 ?> 

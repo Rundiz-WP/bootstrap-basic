@@ -66,7 +66,6 @@
         <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"></exclude>
         <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"></exclude>
         <exclude name="Squiz.Commenting.InlineComment.NoSpaceBefore"></exclude>
-        <exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace"></exclude>
         <exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterOpen"></exclude>
         <exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingBeforeClose"></exclude>
         <exclude name="Squiz.PHP.CommentedOutCode.Found"></exclude><!-- use when scan for commented out code. only enabled if need. -->
@@ -84,7 +83,7 @@
         <exclude name="WordPress.Arrays.MultipleStatementAlignment.DoubleArrowNotAligned"></exclude>
         <exclude name="WordPress.Files.FileName.InvalidClassFileName"></exclude>
         <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"></exclude>
-        <exclude name="WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid"></exclude>
+        <exclude name="WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid"></exclude><!-- it is already has prefixed. no need snake_case. -->
         <exclude name="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid"></exclude>
         <exclude name="WordPress.NamingConventions.ValidVariableName.PropertyNotSnakeCase"></exclude>
         <exclude name="WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase"></exclude>
@@ -95,6 +94,10 @@
         <exclude name="WordPress.WhiteSpace.OperatorSpacing.NoSpaceBefore"></exclude>
         <exclude name="WordPress.WhiteSpace.OperatorSpacing.NoSpaceAfter"></exclude>
     </rule>
+
+    <!-- Let's also check that everything is properly documented. -->
+    <rule ref="WordPress-Docs" />
+
     <rule ref="WordPress.WP.I18n">
         <properties>
             <!-- Value: replace the text domain used. -->
